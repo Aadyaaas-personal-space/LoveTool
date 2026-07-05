@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Writing Tools - Smart Writing Assistant for Blogs, Emails, Captions & More | LoveTool.in</title>
+  <meta name="description" content="Use AI Writing Tools on LoveTool.in to generate blogs, captions, emails, bios, product descriptions, social content and more. Responsive, SEO-friendly and easy to use." />
+  <meta name="keywords" content="AI writing tools, blog generator, email writer, caption generator, content writer, paragraph writer, product description generator, LoveTool.in" />
+  <meta name="author" content="LoveTool.in" />
+  <meta name="robots" content="index, follow" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #edf9ff 0%, #f8fdff 45%, #eef8ff 100%);
+      color: #12344d;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      padding: 16px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 22px rgba(0, 80, 130, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #1177b6;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: #00a6d6;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #184d6b;
+      font-weight: 600;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #009ed8;
+    }
+
+    .nav-btn {
+      padding: 11px 18px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #00b4db, #4fc3ff);
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(0, 170, 220, 0.2);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 70px 6% 55px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-text h1 {
+      font-size: 52px;
+      line-height: 1.15;
+      color: #073b63;
+      margin-bottom: 18px;
+    }
+
+    .hero-text h1 span {
+      color: #07a7dd;
+    }
+
+    .hero-text p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #44667d;
+      margin-bottom: 25px;
+      max-width: 650px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      padding: 14px 22px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s ease;
+    }
+
+    .primary-btn {
+      background: linear-gradient(135deg, #00a8d8, #58c9ff);
+      color: white;
+      box-shadow: 0 10px 18px rgba(0, 168, 216, 0.22);
+    }
+
+    .secondary-btn {
+      border: 2px solid #9bdfff;
+      color: #0d6fa7;
+      background: white;
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover,
+    .nav-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .stat-box {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid #d9f2ff;
+      padding: 16px 18px;
+      border-radius: 18px;
+      min-width: 150px;
+      box-shadow: 0 8px 20px rgba(31, 121, 168, 0.08);
+    }
+
+    .stat-box h3 {
+      color: #059cd2;
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .stat-box p {
+      font-size: 14px;
+      color: #57768a;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #ffffff, #eefaff);
+      border-radius: 30px;
+      padding: 28px;
+      box-shadow: 0 18px 40px rgba(0, 110, 160, 0.12);
+      border: 1px solid #ddf3ff;
+    }
+
+    .mini-window {
+      background: #f7fdff;
+      border-radius: 22px;
+      padding: 20px;
+      border: 1px solid #d8f0fb;
+    }
+
+    .mini-head {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .red { background: #ff7b7b; }
+    .yellow { background: #ffd666; }
+    .green { background: #71dd96; }
+
+    .mini-window h3 {
+      font-size: 21px;
+      color: #0b4d78;
+      margin-bottom: 10px;
+    }
+
+    .mini-window p {
+      color: #5a7990;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .output-box {
+      background: white;
+      border-radius: 18px;
+      padding: 16px;
+      border-left: 5px solid #52c8ff;
+      color: #37627d;
+      font-size: 14px;
+      line-height: 1.7;
+      box-shadow: inset 0 0 0 1px #e3f7ff;
+    }
+
+    /* Section Common */
+    .section {
+      padding: 70px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 38px;
+      color: #0a446e;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 45px;
+      color: #56788f;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* Tool Cards */
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .tool-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 12px 28px rgba(15, 109, 156, 0.08);
+      border: 1px solid #ddf5ff;
+      transition: 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-card::before {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle, rgba(91, 211, 255, 0.14), transparent 65%);
+      top: -40px;
+      right: -40px;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 18px 32px rgba(15, 109, 156, 0.14);
+    }
+
+    .tool-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #dff6ff, #f1fbff);
+      color: #059ad1;
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+
+    .tool-card h3 {
+      font-size: 21px;
+      color: #0d486f;
+      margin-bottom: 12px;
+    }
+
+    .tool-card p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #5a778c;
+      margin-bottom: 18px;
+    }
+
+    .tool-card button {
+      border: none;
+      background: linear-gradient(135deg, #0eb0df, #66d0ff);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 25px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Generator Demo */
+    .generator-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .generator-box,
+    .result-box {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid #d8f3ff;
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: 0 15px 32px rgba(0, 93, 139, 0.08);
+    }
+
+    .generator-box h3,
+    .result-box h3 {
+      font-size: 28px;
+      margin-bottom: 14px;
+      color: #0c4770;
+    }
+
+    .generator-box p,
+    .result-box p {
+      color: #5b7c91;
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .generator-box input,
+    .generator-box select,
+    .generator-box textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid #cceeff;
+      background: #fbfeff;
+      margin-bottom: 14px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .generator-box textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .generator-box .generate-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #04aad9, #60ceff);
+      color: white;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 10px 18px rgba(0, 170, 220, 0.2);
+    }
+
+    .result-display {
+      min-height: 320px;
+      background: linear-gradient(180deg, #fafdff, #f3fbff);
+      border-radius: 20px;
+      border: 1px solid #d7f0ff;
+      padding: 18px;
+      line-height: 1.9;
+      color: #355f78;
+      white-space: pre-line;
+    }
+
+    /* Features */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid #ddf4ff;
+      box-shadow: 0 10px 24px rgba(0, 94, 139, 0.07);
+    }
+
+    .feature-card h3 {
+      color: #0b4872;
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      color: #5d7d92;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    /* Use Cases */
+    .usecase-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .usecase-box {
+      background: linear-gradient(145deg, #ffffff, #f5fcff);
+      border: 1px solid #d9f0ff;
+      border-radius: 26px;
+      padding: 26px;
+      box-shadow: 0 12px 24px rgba(0, 91, 138, 0.08);
+    }
+
+    .usecase-box h3 {
+      margin-bottom: 12px;
+      color: #0a4973;
+      font-size: 23px;
+    }
+
+    .usecase-box ul {
+      padding-left: 20px;
+      color: #59798f;
+      line-height: 2;
+      font-size: 15px;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 75px 6%;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #0aa9d9, #79d8ff);
+      color: white;
+      border-radius: 30px;
+      padding: 45px 30px;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(0, 143, 209, 0.22);
+    }
+
+    .cta-box h2 {
+      font-size: 38px;
+      margin-bottom: 14px;
+    }
+
+    .cta-box p {
+      max-width: 800px;
+      margin: 0 auto 24px;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .cta-box a {
+      display: inline-block;
+      background: white;
+      color: #0d7db0;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 14px 22px;
+      border-radius: 30px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #050b12;
+      color: #d6eaf5;
+      padding: 65px 6% 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1.1fr;
+      gap: 30px;
+      margin-bottom: 35px;
+    }
+
+    .footer h3,
+    .footer h4 {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .footer p,
+    .footer a {
+      color: #bfd2de;
+      font-size: 14px;
+      line-height: 1.9;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #74d2ff;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-form input,
+    .footer-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      border: 1px solid #1d3342;
+      background: #0c1720;
+      color: white;
+      border-radius: 12px;
+      outline: none;
+    }
+
+    .footer-form button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #0db1e0, #5ecfff);
+      color: white;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #162733;
+      padding-top: 20px;
+      text-align: center;
+      color: #a6bfce;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .hero,
+      .generator-wrap,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .tool-grid,
+      .feature-grid,
+      .usecase-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-box {
+        width: 100%;
+      }
+
+      .cta-box h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Love<span>Tool</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="all-tools.html">All Tools</a>
+      <a href="ai-writing-tools.html">AI Writing</a>
+      <a href="caption-generator.html">Captions</a>
+      <a href="seo-tools.html">SEO Tools</a>
+      <a href="contact.html">Contact</a>
+      <button class="nav-btn">Explore Tools</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Smart <span>AI Writing Tools</span> for Faster, Better and Creative Content</h1>
+      <p>
+        Create blog intros, social media content, short captions, professional emails, product descriptions,
+        ad copies, rewrites, summaries and more using a beautifully designed AI Writing Tools page. This layout
+        is crafted for responsive performance, strong content presentation, modern UX and better SEO structure
+        for your LoveTool.in platform.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#generator" class="primary-btn">Start Writing</a>
+        <a href="#tools" class="secondary-btn">View AI Tools</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-box">
+          <h3>25+</h3>
+          <p>Writing formats for content creators, students, marketers and business users.</p>
+        </div>
+        <div class="stat-box">
+          <h3>10k+</h3>
+          <p>Generated writing ideas for captions, bios, blogs and promotional content.</p>
+        </div>
+        <div class="stat-box">
+          <h3>SEO+</h3>
+          <p>Designed with heading structure, content-rich sections and mobile responsiveness.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="mini-window">
+        <div class="mini-head">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <h3>AI Content Preview</h3>
+        <p>Below is an example of how modern AI-generated writing output can be shown in a clean, professional and readable style.</p>
+        <div class="output-box">
+          Subject: Launch Announcement
+
+          We are excited to introduce our new digital tools platform designed to help users create smarter content,
+          save time and improve daily productivity. From creative captions to polished emails and blog-ready text,
+          our writing tools help turn simple ideas into powerful words.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tools">
+    <h2 class="section-title">Popular AI Writing Tool Categories</h2>
+    <p class="section-subtitle">
+      This section presents multiple AI writing-focused cards that can be used as tool categories or direct feature links.
+      The structure is ideal for a rich content website and helps users quickly discover useful writing generators.
+    </p>
+
+    <div class="tool-grid">
+      <div class="tool-card">
+        <div class="tool-icon">✍</div>
+        <h3>Blog Intro Generator</h3>
+        <p>Create powerful introductions for blog posts, articles and website pages with engaging and easy-to-read wording.</p>
+        <button>Use Tool</button>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">📧</div>
+        <h3>Email Writer</h3>
+        <p>Generate formal, polite and professional email drafts for business, school, customer support and office communication.</p>
+        <button>Use Tool</button>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">📱</div>
+        <h3>Caption Creator</h3>
+        <p>Write catchy and trendy captions for Instagram, Facebook, WhatsApp status, reels and personal social posts.</p>
+        <button>Use Tool</button>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🛍</div>
+        <h3>Product Description Tool</h3>
+        <p>Generate attractive product descriptions for ecommerce stores, online sellers and promotional product listings.</p>
+        <button>Use Tool</button>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">📝</div>
+        <h3>Paragraph Writer</h3>
+        <p>Turn short ideas into complete paragraphs with better structure, grammar flow and clean readability.</p>
+        <button>Use Tool</button>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🔁</div>
+        <h3>Text Rewriter</h3>
+        <p>Rewrite old or simple content into polished, clearer and more effective writing without changing the meaning.</p>
+        <button>Use Tool</button>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">📚</div>
+        <h3>Summary Generator</h3>
+        <p>Convert long content into short summaries for notes, studies, quick reading and important highlights.</p>
+        <button>Use Tool</button>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">👤</div>
+        <h3>Bio Generator</h3>
+        <p>Create professional, personal or social media bios for profiles, portfolios, startups and creators.</p>
+        <button>Use Tool</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="generator">
+    <h2 class="section-title">Live AI Writing Demo Section</h2>
+    <p class="section-subtitle">
+      This demo area gives your page an interactive feel. Users can select content type, enter a topic and instantly
+      see a sample generated output. This makes the page look more premium, practical and engaging.
+    </p>
+
+    <div class="generator-wrap">
+      <div class="generator-box">
+        <h3>Create Your Content</h3>
+        <p>Select a writing type, add a topic or prompt, and generate a sample response instantly.</p>
+
+        <select id="toolType">
+          <option value="blog">Blog Intro</option>
+          <option value="email">Professional Email</option>
+          <option value="caption">Social Caption</option>
+          <option value="product">Product Description</option>
+          <option value="bio">Short Bio</option>
+        </select>
+
+        <input type="text" id="topicInput" placeholder="Enter your topic, brand, idea or purpose..." />
+
+        <textarea id="extraInput" placeholder="Add extra details, tone, audience or keywords..."></textarea>
+
+        <button class="generate-btn" onclick="generateContent()">Generate Content</button>
+      </div>
+
+      <div class="result-box">
+        <h3>Generated Output</h3>
+        <p>A sample AI-style response will appear below based on your selected writing type.</p>
+        <div class="result-display" id="resultDisplay">
+Your generated writing will appear here...
+
+Try:
+- Blog intro for healthy morning routine
+- Email for internship request
+- Caption for travel photo
+- Product description for smartwatch
+- Bio for student portfolio
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Why Users Love AI Writing Tools</h2>
+    <p class="section-subtitle">
+      A powerful AI writing section improves the value of your tools website by helping users with daily writing work.
+      It also adds strong utility content, which is useful for AdSense-friendly, content-rich website presentation.
+    </p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Faster Content Creation</h3>
+        <p>Users can quickly draft emails, captions, blog paragraphs and descriptions without spending too much time thinking about wording.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Better Readability</h3>
+        <p>AI writing layouts can help structure rough ideas into polished, smooth and more readable text formats.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Useful for Many Categories</h3>
+        <p>Students, creators, freelancers, marketers, business owners and casual users can all benefit from writing support tools.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Modern User Experience</h3>
+        <p>Interactive sections, tool cards, sample outputs and soft gradients make the page look advanced and user-focused.</p>
+      </div>
+      <div class="feature-card">
+        <h3>SEO Friendly Page Structure</h3>
+        <p>Rich content blocks, headings, descriptions and responsive elements help improve the overall quality and indexing value of the page.</p>
+      </div>
+      <div class="feature-card">
+        <h3>High Engagement Potential</h3>
+        <p>Users naturally spend more time on pages where they can test writing demos, read feature sections and explore multiple generators.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Best Use Cases for This Page</h2>
+    <p class="section-subtitle">
+      This AI writing tools interface is suitable for many practical and commercial categories. You can later connect each card
+      to a separate tool page and expand your platform with more detailed utilities.
+    </p>
+
+    <div class="usecase-wrap">
+      <div class="usecase-box">
+        <h3>For Content Creators</h3>
+        <ul>
+          <li>Generate captions for reels, posts and stories</li>
+          <li>Write video descriptions and channel bios</li>
+          <li>Create hooks and short promotional text</li>
+          <li>Draft quick ideas for social media content</li>
+        </ul>
+      </div>
+
+      <div class="usecase-box">
+        <h3>For Students and Professionals</h3>
+        <ul>
+          <li>Write application emails and formal messages</li>
+          <li>Create short bios for projects and resumes</li>
+          <li>Summarize notes and improve assignments</li>
+          <li>Draft introductions and academic paragraphs</li>
+        </ul>
+      </div>
+
+      <div class="usecase-box">
+        <h3>For Business and Marketing</h3>
+        <ul>
+          <li>Create product descriptions and ad text</li>
+          <li>Write welcome messages and announcements</li>
+          <li>Generate business profile summaries</li>
+          <li>Produce landing page content ideas</li>
+        </ul>
+      </div>
+
+      <div class="usecase-box">
+        <h3>For Website Growth</h3>
+        <ul>
+          <li>Add value-rich utility content to your website</li>
+          <li>Improve user retention with interactive sections</li>
+          <li>Expand into multiple AI tool sub-pages</li>
+          <li>Support SEO and monetization-friendly structure</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-box">
+      <h2>Write Smarter with LoveTool.in AI Tools</h2>
+      <p>
+        Build better text in seconds with elegant AI writing interfaces made for creators, students, businesses and daily users.
+        Add more connected writing pages and expand your website into a complete content utility platform.
+      </p>
+      <a href="all-tools.html">Explore More Tools</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>LoveTool.in</h3>
+        <p>
+          LoveTool.in is a multi-category online tools platform designed to offer smart, simple and engaging digital tools.
+          From love tools and calculators to AI writing, games, captions, SEO and student utilities, our mission is to make
+          web tools more useful, more beautiful and more user-friendly.
+        </p>
+      </div>
+
+      <div>
+        <h4>Tool Links</h4>
+        <div class="footer-links">
+          <a href="love-meter.html">Love Meter</a>
+          <a href="calculator.html">Calculator</a>
+          <a href="games.html">Games</a>
+          <a href="ai-writing-tools.html">AI Writing Tools</a>
+          <a href="caption-generator.html">Caption Generator</a>
+          <a href="seo-tools.html">SEO Tools</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Useful Pages</h4>
+        <div class="footer-links">
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms & Conditions</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Message</h4>
+        <form class="footer-form">
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Your Email">
+          <textarea rows="4" placeholder="Your Message"></textarea>
+          <button type="button">Send Now</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 LoveTool.in | AI Writing Tools Page | Responsive, Modern and SEO-Friendly Interface
+    </div>
+  </footer>
+
+  <script>
+    function generateContent() {
+      const type = document.getElementById("toolType").value;
+      const topic = document.getElementById("topicInput").value.trim() || "your topic";
+      const extra = document.getElementById("extraInput").value.trim();
+      const result = document.getElementById("resultDisplay");
+
+      let output = "";
+
+      if (type === "blog") {
+        output = "Looking for an easy way to begin your content on " + topic + "? This topic is becoming increasingly useful for readers who want practical, simple and effective ideas. In this article, we explore the key points, benefits and helpful tips related to " + topic + " in a clear and reader-friendly way.";
+      } 
+      else if (type === "email") {
+        output = "Subject: Regarding " + topic + "\n\nDear Sir/Madam,\n\nI hope you are doing well. I am writing to you regarding " + topic + ". I would like to request your kind attention and support on this matter. " + (extra ? "Additional details: " + extra + ". " : "") + "Please let me know if any further information is needed.\n\nThank you and regards.";
+      } 
+      else if (type === "caption") {
+        output = "✨ " + topic + " vibes only! Turning simple moments into unforgettable memories. " + (extra ? extra + " " : "") + "#GoodVibes #CreativeLife #LoveTool";
+      } 
+      else if (type === "product") {
+        output = topic + " is designed for users who want style, performance and everyday convenience in one smart solution. Built with user-friendly features and a modern design, it offers a reliable experience that fits perfectly into daily life. " + (extra ? "Highlights: " + extra + "." : "");
+      } 
+      else if (type === "bio") {
+        output = "Passionate and creative individual focused on " + topic + ". Dedicated to learning, building and growing through practical work, fresh ideas and consistent improvement. " + (extra ? extra + "." : "");
+      }
+
+      result.innerText = output;
+    }
+  </script>
+
+</body>
+</html>

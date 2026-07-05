@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Motivation, AI, Productivity & Practical Thinking Videos</title>
+  <meta name="description" content="Explore a rich video blog featuring motivation, artificial intelligence, critical thinking, productivity, mindset, and practical learning resources. Designed for SEO, user engagement, and a premium reading-viewing experience." />
+  <meta name="keywords" content="motivation videos, AI videos, practical thinking, productivity videos, critical thinking videos, mindset blog, educational youtube videos, self improvement blog, AI learning blog" />
+  <meta name="author" content="LoveTool" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lovetool.in/blog.html" />
+
+  <meta property="og:title" content="Blog | Motivation, AI, Productivity & Practical Thinking Videos" />
+  <meta property="og:description" content="A detailed, SEO-friendly blog page packed with educational and inspiring video resources." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lovetool.in/blog.html" />
+
+  <style>
+    :root{
+      --bg:#f7f9ff;
+      --white:#ffffff;
+      --primary:#5b4bff;
+      --primary-dark:#3525cc;
+      --secondary:#00bcd4;
+      --text:#162033;
+      --muted:#5f6b85;
+      --card:#ffffff;
+      --border:#e8ecf7;
+      --shadow:0 18px 60px rgba(43,72,152,0.10);
+      --shadow-soft:0 10px 30px rgba(26,38,87,0.08);
+      --footer:#0c1220;
+      --accent:#ff5ca8;
+      --gold:#ffcc4d;
+      --success:#1faa59;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(91,75,255,0.08), transparent 24%),
+        radial-gradient(circle at top right, rgba(0,188,212,0.09), transparent 22%),
+        linear-gradient(180deg, #f9fbff 0%, #f5f8ff 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:min(1200px, 92%);
+      margin:auto;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,0.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(91,75,255,0.08);
+      box-shadow:0 8px 24px rgba(20,33,77,0.04);
+    }
+
+    .nav-wrap{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:16px 0;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:1.5rem;
+      font-weight:800;
+      color:var(--primary-dark);
+    }
+
+    .logo-badge{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .nav-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+      align-items:center;
+    }
+
+    .nav-links a{
+      font-weight:600;
+      color:#25304a;
+      position:relative;
+      transition:0.3s ease;
+    }
+
+    .nav-links a:hover{
+      color:var(--primary);
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-6px;
+      width:0;
+      height:2px;
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      transition:0.3s ease;
+    }
+
+    .nav-links a:hover::after{
+      width:100%;
+    }
+
+    .nav-btn{
+      padding:11px 18px;
+      border-radius:30px;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#fff !important;
+      box-shadow:0 10px 25px rgba(91,75,255,0.25);
+    }
+
+    .nav-btn::after{
+      display:none;
+    }
+
+    /* HERO */
+    .hero{
+      padding:78px 0 46px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .hero-card{
+      background:rgba(255,255,255,0.88);
+      border:1px solid rgba(255,255,255,0.7);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      padding:40px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      background:rgba(91,75,255,0.08);
+      right:-60px;
+      top:-60px;
+    }
+
+    .hero-card::after{
+      content:"";
+      position:absolute;
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      background:rgba(255,92,168,0.08);
+      left:-50px;
+      bottom:-50px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 16px;
+      border-radius:999px;
+      background:#eef0ff;
+      color:var(--primary-dark);
+      font-weight:700;
+      font-size:0.9rem;
+      margin-bottom:18px;
+    }
+
+    .hero h1{
+      font-size:3rem;
+      line-height:1.15;
+      margin-bottom:18px;
+      color:#121b35;
+    }
+
+    .hero p{
+      font-size:1.05rem;
+      color:var(--muted);
+      margin-bottom:22px;
+      max-width:760px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:10px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      border-radius:16px;
+      font-weight:700;
+      transition:0.3s ease;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+      color:#fff;
+      box-shadow:0 14px 28px rgba(91,75,255,0.22);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-light{
+      background:#fff;
+      color:var(--primary-dark);
+      border:1px solid var(--border);
+    }
+
+    .hero-side{
+      display:grid;
+      gap:18px;
+    }
+
+    .mini-card{
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:22px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .mini-card h3{
+      margin-bottom:8px;
+      color:#16203c;
+      font-size:1.15rem;
+    }
+
+    .mini-card p{
+      color:var(--muted);
+      font-size:0.98rem;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .stat-box{
+      background:linear-gradient(135deg,#f8faff,#eef3ff);
+      border:1px solid #e5ebff;
+      border-radius:18px;
+      padding:18px;
+      text-align:center;
+    }
+
+    .stat-box h4{
+      font-size:1.8rem;
+      color:var(--primary-dark);
+      margin-bottom:6px;
+    }
+
+    .stat-box span{
+      color:var(--muted);
+      font-weight:600;
+      font-size:0.92rem;
+    }
+
+    /* INFO STRIP */
+    .info-strip{
+      padding:18px 0 10px;
+    }
+
+    .info-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .info-item{
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .info-item h3{
+      font-size:1.05rem;
+      margin-bottom:10px;
+      color:#1a2140;
+    }
+
+    .info-item p{
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    /* SECTION HEAD */
+    .section{
+      padding:70px 0;
+    }
+
+    .section-head{
+      text-align:center;
+      margin-bottom:34px;
+    }
+
+    .section-head span{
+      display:inline-block;
+      padding:8px 16px;
+      border-radius:999px;
+      background:#eef7ff;
+      color:#0477a3;
+      font-weight:700;
+      margin-bottom:14px;
+      font-size:0.9rem;
+    }
+
+    .section-head h2{
+      font-size:2.3rem;
+      margin-bottom:12px;
+      color:#15203a;
+    }
+
+    .section-head p{
+      width:min(900px, 100%);
+      margin:auto;
+      color:var(--muted);
+      font-size:1rem;
+    }
+
+    /* FILTER */
+    .filter-bar{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-bottom:30px;
+    }
+
+    .filter-btn{
+      border:none;
+      outline:none;
+      cursor:pointer;
+      padding:12px 18px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--border);
+      font-weight:700;
+      color:#32415f;
+      transition:0.3s ease;
+      box-shadow:0 6px 18px rgba(31,46,95,0.05);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover{
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#fff;
+      border-color:transparent;
+    }
+
+    /* VIDEO GRID */
+    .video-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .video-card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--shadow-soft);
+      transition:0.35s ease;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .video-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 20px 40px rgba(34,54,110,0.12);
+    }
+
+    .video-frame{
+      position:relative;
+      width:100%;
+      padding-top:56.25%;
+      background:#000;
+    }
+
+    .video-frame iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:none;
+    }
+
+    .video-content{
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      flex:1;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:7px 12px;
+      border-radius:999px;
+      font-size:0.8rem;
+      font-weight:700;
+      width:max-content;
+      background:#f1f5ff;
+      color:var(--primary-dark);
+    }
+
+    .video-content h3{
+      font-size:1.13rem;
+      line-height:1.4;
+      color:#15203a;
+      min-height:62px;
+    }
+
+    .video-content p{
+      color:var(--muted);
+      font-size:0.95rem;
+      flex:1;
+    }
+
+    .video-links{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      margin-top:4px;
+    }
+
+    .video-links a{
+      font-size:0.92rem;
+      font-weight:700;
+      color:var(--primary);
+    }
+
+    .video-links a:hover{
+      color:var(--primary-dark);
+    }
+
+    /* CONTENT SECTION */
+    .content-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+
+    .content-card{
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:26px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .content-card h3{
+      margin-bottom:12px;
+      font-size:1.3rem;
+      color:#17203c;
+    }
+
+    .content-card p{
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+
+    .content-card ul{
+      padding-left:20px;
+      color:var(--muted);
+    }
+
+    .content-card li{
+      margin-bottom:10px;
+    }
+
+    /* NEWSLETTER */
+    .newsletter{
+      padding:10px 0 70px;
+    }
+
+    .newsletter-box{
+      background:linear-gradient(135deg,#121937,#1f2b59);
+      border-radius:30px;
+      padding:42px;
+      color:#fff;
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr;
+      gap:24px;
+      align-items:center;
+      box-shadow:0 22px 50px rgba(18,25,55,0.28);
+    }
+
+    .newsletter-box h2{
+      font-size:2rem;
+      margin-bottom:12px;
+    }
+
+    .newsletter-box p{
+      color:rgba(255,255,255,0.82);
+      max-width:700px;
+    }
+
+    .newsletter-form{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .newsletter-form input{
+      flex:1 1 240px;
+      min-width:220px;
+      padding:15px 16px;
+      border:none;
+      outline:none;
+      border-radius:14px;
+      font-size:1rem;
+    }
+
+    .newsletter-form button{
+      border:none;
+      cursor:pointer;
+      padding:15px 24px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),#ff7cc0);
+      color:#fff;
+      font-weight:800;
+      box-shadow:0 10px 24px rgba(255,92,168,0.28);
+    }
+
+    /* FOOTER */
+    .footer{
+      background:var(--footer);
+      color:#fff;
+      padding:70px 0 25px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr 0.8fr 1fr;
+      gap:26px;
+      margin-bottom:28px;
+    }
+
+    .footer-brand h3{
+      font-size:1.8rem;
+      margin-bottom:12px;
+    }
+
+    .footer-brand p{
+      color:rgba(255,255,255,0.72);
+      margin-bottom:18px;
+    }
+
+    .footer-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .footer-badges span{
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.1);
+      color:#fff;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:0.86rem;
+    }
+
+    .footer-col h4{
+      font-size:1.1rem;
+      margin-bottom:14px;
+      color:#fff;
+    }
+
+    .footer-col a,
+    .footer-col p{
+      display:block;
+      color:rgba(255,255,255,0.72);
+      margin-bottom:10px;
+      font-size:0.96rem;
+      transition:0.3s ease;
+    }
+
+    .footer-col a:hover{
+      color:#fff;
+      transform:translateX(4px);
+    }
+
+    .mini-form{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .mini-form input,
+    .mini-form textarea{
+      width:100%;
+      padding:12px 14px;
+      border:none;
+      outline:none;
+      border-radius:12px;
+      background:rgba(255,255,255,0.09);
+      color:#fff;
+      font-size:0.95rem;
+    }
+
+    .mini-form input::placeholder,
+    .mini-form textarea::placeholder{
+      color:rgba(255,255,255,0.58);
+    }
+
+    .mini-form button{
+      border:none;
+      padding:12px 16px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,0.10);
+      padding-top:18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .footer-bottom p,
+    .footer-bottom a{
+      color:rgba(255,255,255,0.68);
+      font-size:0.92rem;
+    }
+
+    /* SCROLL TOP */
+    .scroll-top{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:48px;
+      height:48px;
+      border:none;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#fff;
+      font-size:1.2rem;
+      font-weight:800;
+      box-shadow:0 12px 28px rgba(91,75,255,0.26);
+      cursor:pointer;
+      display:none;
+      z-index:999;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px){
+      .hero-grid,
+      .newsletter-box,
+      .footer-grid,
+      .content-grid{
+        grid-template-columns:1fr;
+      }
+
+      .video-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .info-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .newsletter-form{
+        justify-content:flex-start;
+      }
+    }
+
+    @media (max-width: 780px){
+      .nav-wrap{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        gap:14px;
+      }
+
+      .hero h1{
+        font-size:2.2rem;
+      }
+
+      .section-head h2{
+        font-size:1.8rem;
+      }
+
+      .video-grid,
+      .info-grid,
+      .stats{
+        grid-template-columns:1fr;
+      }
+
+      .hero-card,
+      .mini-card,
+      .info-item,
+      .content-card,
+      .newsletter-box{
+        padding:22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">LT</span>
+        LoveTool
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="all-tools.html">All Tools</a>
+        <a href="ai-writing-tools.html">AI Tools</a>
+        <a href="seo-tools.html">SEO Tools</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-card">
+        <span class="eyebrow">Video Blog • Learn, Think, Grow</span>
+        <h1>Watch the Best Motivation, AI, Productivity & Practical Thinking Videos in One Place</h1>
+        <p>
+          Welcome to our powerful learning blog page designed for readers, learners, creators, students, and self-growth enthusiasts.
+          This page combines handpicked educational and motivational YouTube resources with rich blog-style content so users can discover
+          valuable ideas, improve practical thinking, stay updated with AI trends, and build a smarter daily routine.
+        </p>
+        <p>
+          The page structure is intentionally detailed, professional, SEO-friendly, and trust-focused so it feels useful for both visitors
+          and search engines. It offers meaningful content depth, categorized media resources, informative descriptions, and a premium visual experience.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#video-library" class="btn btn-primary">Explore Video Library</a>
+          <a href="#why-this-blog" class="btn btn-light">Why This Blog Helps</a>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="mini-card">
+          <h3>Why this blog page is powerful</h3>
+          <p>
+            Instead of a thin page with only a few links, this layout gives users real content value through categorized learning,
+            strong structure, watchable resources, descriptions, keyword-rich headings, and engagement-focused design.
+          </p>
+          <div class="stats">
+            <div class="stat-box">
+              <h4>16</h4>
+              <span>Embedded videos</span>
+            </div>
+            <div class="stat-box">
+              <h4>4+</h4>
+              <span>Learning categories</span>
+            </div>
+            <div class="stat-box">
+              <h4>SEO</h4>
+              <span>Rich blog structure</span>
+            </div>
+            <div class="stat-box">
+              <h4>100%</h4>
+              <span>Responsive design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini-card">
+          <h3>Best for students, creators & smart learners</h3>
+          <p>
+            This page supports visitors who want motivation, career growth, mindset improvement, artificial intelligence learning,
+            critical thinking, and better productivity habits in one detailed and easy-to-browse interface.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO STRIP -->
+  <section class="info-strip">
+    <div class="container info-grid">
+      <div class="info-item">
+        <h3>Motivation & Growth</h3>
+        <p>Videos that improve mindset, discipline, consistency, and long-term self-belief.</p>
+      </div>
+      <div class="info-item">
+        <h3>Artificial Intelligence</h3>
+        <p>Learn AI, machine learning, generative AI, and practical future-ready concepts.</p>
+      </div>
+      <div class="info-item">
+        <h3>Critical Thinking</h3>
+        <p>Develop better decision-making, reasoning, and practical analysis in the digital age.</p>
+      </div>
+      <div class="info-item">
+        <h3>Productivity & Focus</h3>
+        <p>Discover work habits, deep focus strategies, and systems that improve everyday output.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THIS BLOG -->
+  <section class="section" id="why-this-blog">
+    <div class="container">
+      <div class="section-head">
+        <span>Detailed Blog Experience</span>
+        <h2>A Video Blog Page Built for Real Value, Better SEO, and Strong User Trust</h2>
+        <p>
+          Search engines and visitors both prefer pages that are helpful, structured, informative, and engaging.
+          This blog page is built around those principles. Instead of only adding random embeds, the content is grouped into meaningful
+          learning categories so users can watch with purpose and spend more time on the site.
+        </p>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Why such a page supports better website quality</h3>
+          <p>
+            A strong blog page improves the overall quality of a tools website by adding educational depth, fresh user interest,
+            and topic relevance beyond only utility-based pages.
+          </p>
+          <ul>
+            <li>Creates longer session time through video engagement and related content exploration.</li>
+            <li>Adds useful informational content that supports a broader SEO strategy.</li>
+            <li>Improves website trust by showing curated learning resources and clear category organization.</li>
+            <li>Balances tool pages with blog-style, content-rich sections that feel more complete and premium.</li>
+            <li>Helps build topical authority around self-growth, AI, digital learning, and productivity.</li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h3>How users benefit from this content</h3>
+          <p>
+            Visitors are not only searching for tools—they also want learning, improvement, and inspiration.
+            This page gives them one destination to discover content that can help in studies, career planning, confidence building,
+            modern technology awareness, and practical life improvement.
+          </p>
+          <ul>
+            <li>Students can discover thought-provoking educational content.</li>
+            <li>Beginners can learn AI concepts from foundational resources.</li>
+            <li>Professionals can sharpen productivity and practical decision-making.</li>
+            <li>General visitors can enjoy motivating and meaningful content without feeling lost.</li>
+            <li>Creators and entrepreneurs can find videos that improve long-term thinking and action.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO LIBRARY -->
+  <section class="section" id="video-library">
+    <div class="container">
+      <div class="section-head">
+        <span>Featured Video Library</span>
+        <h2>Watch Curated Videos on Motivation, AI, Productivity and Smart Thinking</h2>
+        <p>
+          Browse our rich collection of selected videos. Use the category buttons to quickly filter the topics you want to watch.
+          Every card includes a meaningful title, quick description, and direct watch link for better usability.
+        </p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Videos</button>
+        <button class="filter-btn" data-filter="motivation">Motivation</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="thinking">Practical Thinking</button>
+        <button class="filter-btn" data-filter="productivity">Productivity</button>
+      </div>
+
+      <div class="video-grid">
+
+        <!-- 1 -->
+        <article class="video-card" data-category="motivation">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/_X0mgOOSpLU" title="The power of believing that you can improve" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">Motivation</span>
+            <h3>The Power of Believing That You Can Improve</h3>
+            <p>A timeless mindset video that helps viewers understand the value of growth, effort, and learning from challenges.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=_X0mgOOSpLU" target="_blank">Watch on YouTube</a>
+              <a href="#">Growth Mindset</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="video-card" data-category="motivation">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/H14bBuluwB8" title="Grit The Power of Passion and Perseverance" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">Motivation</span>
+            <h3>Grit: The Power of Passion and Perseverance</h3>
+            <p>An inspiring talk about long-term effort, resilience, and why consistent passion matters more than quick success.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=H14bBuluwB8" target="_blank">Watch on YouTube</a>
+              <a href="#">Consistency</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="video-card" data-category="motivation">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/hiiEeMN7vbQ" title="Developing a Growth Mindset with Carol Dweck" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">Motivation</span>
+            <h3>Developing a Growth Mindset with Carol Dweck</h3>
+            <p>A strong resource for students and learners who want to improve confidence, skill development, and self-belief.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=hiiEeMN7vbQ" target="_blank">Watch on YouTube</a>
+              <a href="#">Self Growth</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="video-card" data-category="productivity">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/arj7oStGLkU" title="Inside the Mind of a Master Procrastinator" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">Productivity</span>
+            <h3>Inside the Mind of a Master Procrastinator</h3>
+            <p>A relatable and memorable talk that helps users understand procrastination and the hidden cost of delay.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=arj7oStGLkU" target="_blank">Watch on YouTube</a>
+              <a href="#">Time Management</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="video-card" data-category="thinking">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/dItUGF8GdTw" title="5 tips to improve your critical thinking" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">Practical Thinking</span>
+            <h3>5 Tips to Improve Your Critical Thinking</h3>
+            <p>A practical and easy-to-understand video for building stronger judgment, logic, and everyday analysis skills.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=dItUGF8GdTw" target="_blank">Watch on YouTube</a>
+              <a href="#">Critical Thinking</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="video-card" data-category="thinking">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/Bry8J78Awq0" title="4 tips for developing critical thinking skills" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">Practical Thinking</span>
+            <h3>4 Tips for Developing Critical Thinking Skills</h3>
+            <p>Useful for students, professionals, and decision-makers who want sharper reasoning and better argument evaluation.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=Bry8J78Awq0" target="_blank">Watch on YouTube</a>
+              <a href="#">Reasoning Skills</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="video-card" data-category="thinking">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/vNDYUlxNIAA" title="This tool will help improve your critical thinking" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">Practical Thinking</span>
+            <h3>This Tool Will Help Improve Your Critical Thinking</h3>
+            <p>A useful talk centered around questioning, reflection, and thoughtful examination of assumptions and beliefs.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=vNDYUlxNIAA" target="_blank">Watch on YouTube</a>
+              <a href="#">Smarter Decisions</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="video-card" data-category="thinking">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/Vqg3Irr5-14" title="The Importance of Critical Thinking" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">Practical Thinking</span>
+            <h3>The Importance of Critical Thinking</h3>
+            <p>A broad and helpful video for understanding why objective analysis matters in study, work, and modern life.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=Vqg3Irr5-14" target="_blank">Watch on YouTube</a>
+              <a href="#">Better Judgment</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="video-card" data-category="ai">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/NWONeJKn6kc" title="Machine Learning Course for Beginners" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">AI</span>
+            <h3>Machine Learning Course for Beginners</h3>
+            <p>A beginner-friendly entry point for those who want to understand machine learning theory and practical foundations.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=NWONeJKn6kc" target="_blank">Watch on YouTube</a>
+              <a href="#">Machine Learning</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10 -->
+        <article class="video-card" data-category="ai">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/5NgNicANyqM" title="Harvard CS50's Artificial Intelligence with Python" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">AI</span>
+            <h3>Harvard CS50’s Artificial Intelligence with Python</h3>
+            <p>A premium academic-style video resource for users who want more serious, structured AI learning content.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=5NgNicANyqM" target="_blank">Watch on YouTube</a>
+              <a href="#">Academic AI</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11 -->
+        <article class="video-card" data-category="ai">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/k7HaeJs-N-o" title="Generative AI for Beginners" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">AI</span>
+            <h3>Generative AI for Beginners</h3>
+            <p>A great resource for users who want to understand modern generative AI concepts in a more approachable format.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=k7HaeJs-N-o" target="_blank">Watch on YouTube</a>
+              <a href="#">Gen AI</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12 -->
+        <article class="video-card" data-category="ai">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/QnzZNKueUmo" title="Generative AI Full Course 2026" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">AI</span>
+            <h3>Generative AI Full Course for Beginners</h3>
+            <p>Good for learners who want one long-form resource covering LLMs, AI ideas, and beginner pathways.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=QnzZNKueUmo" target="_blank">Watch on YouTube</a>
+              <a href="#">Beginner AI Path</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 13 -->
+        <article class="video-card" data-category="ai">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/qpp1G0iEL_c" title="The Ethics of AI and Machine Learning" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">AI</span>
+            <h3>The Ethics of AI & Machine Learning</h3>
+            <p>A valuable perspective on responsible AI, fairness, and the importance of thoughtful technology development.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=qpp1G0iEL_c" target="_blank">Watch on YouTube</a>
+              <a href="#">AI Ethics</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 14 -->
+        <article class="video-card" data-category="ai thinking">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/3lPnN8omdPA" title="How to Stop AI from Killing Your Critical Thinking" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">AI + Thinking</span>
+            <h3>How to Stop AI from Killing Your Critical Thinking</h3>
+            <p>A modern and highly relevant video about balancing AI convenience with independent human reasoning.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=3lPnN8omdPA" target="_blank">Watch on YouTube</a>
+              <a href="#">Modern Thinking</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 15 -->
+        <article class="video-card" data-category="productivity">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/CHxhjDPKfbY" title="The Art of Stress Free Productivity" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">Productivity</span>
+            <h3>The Art of Stress-Free Productivity</h3>
+            <p>A strong productivity talk that focuses on mental clarity, smoother work systems, and reduced pressure.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=CHxhjDPKfbY" target="_blank">Watch on YouTube</a>
+              <a href="#">Focus Systems</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 16 -->
+        <article class="video-card" data-category="productivity">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/REFh5TMOoS0" title="A More Human Approach to Productivity" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <span class="tag">Productivity</span>
+            <h3>A More Human Approach to Productivity</h3>
+            <p>Perfect for viewers who want practical productivity without burnout, overload, or unrealistic expectations.</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=REFh5TMOoS0" target="_blank">Watch on YouTube</a>
+              <a href="#">Healthy Productivity</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXTRA SEO CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span>Helpful Reading Section</span>
+        <h2>Why Motivation, AI Awareness and Practical Thinking Matter Today</h2>
+        <p>
+          In today’s fast-changing world, people are not only searching for entertainment but also meaningful learning.
+          Motivation helps maintain action. Artificial intelligence helps shape future-ready awareness. Practical thinking improves decision quality.
+          Productivity supports better output without wasting energy. When these themes are brought together in one useful blog page,
+          visitors get a more complete and rewarding experience.
+        </p>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Motivation is more than inspiration</h3>
+          <p>
+            Real motivation is not only about temporary excitement. It is about building internal strength, focus, patience, and belief in gradual improvement.
+            When users consume strong motivational content, they often feel more ready to work on studies, personal goals, and career growth.
+          </p>
+          <p>
+            That is why this page includes videos around growth mindset, grit, and long-term self-development.
+          </p>
+        </div>
+
+        <div class="content-card">
+          <h3>AI knowledge is now a basic advantage</h3>
+          <p>
+            Artificial intelligence is becoming a central topic in education, business, software, and everyday digital experiences.
+            A blog page that helps users discover beginner-friendly AI resources builds relevance and trust.
+          </p>
+          <p>
+            By including AI, machine learning, generative AI, and AI ethics topics, the page becomes more informative and future-oriented.
+          </p>
+        </div>
+
+        <div class="content-card">
+          <h3>Practical thinking makes users smarter online</h3>
+          <p>
+            In a world full of information, critical thinking helps people avoid confusion, weak arguments, manipulation, and poor decisions.
+            It supports stronger learning, better communication, and more informed action.
+          </p>
+          <p>
+            This is especially important for students, content consumers, and anyone using modern digital tools regularly.
+          </p>
+        </div>
+
+        <div class="content-card">
+          <h3>Productivity should support life, not pressure</h3>
+          <p>
+            Many people want to work better, study better, and manage time more effectively. But true productivity is not just about doing more.
+            It is about doing important things with clarity and sustainable energy.
+          </p>
+          <p>
+            That is why this page also includes thoughtful productivity videos that focus on healthy effectiveness.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-box">
+        <div>
+          <h2>Stay Updated with Smart Blogs, Useful Tools & Learning Content</h2>
+          <p>
+            Join our growing community of readers and learners who want access to practical tools, rich blog resources,
+            meaningful tips, and future-ready content that supports daily growth and digital knowledge.
+          </p>
+        </div>
+
+        <form class="newsletter-form" onsubmit="subscribeUser(event)">
+          <input type="email" id="emailInput" placeholder="Enter your email address" required />
+          <button type="submit">Subscribe Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>LoveTool</h3>
+          <p>
+            LoveTool is built to deliver useful, engaging, and content-rich digital experiences.
+            From smart tools to educational blogs and practical resources, our mission is to create pages that are valuable,
+            user-friendly, SEO-strong, and visually impressive.
+          </p>
+          <div class="footer-badges">
+            <span>SEO Focused</span>
+            <span>Responsive UI</span>
+            <span>AdSense Friendly Layout</span>
+            <span>Educational Content</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="all-tools.html">All Tools</a>
+          <a href="blog.html">Blog</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Pages</h4>
+          <a href="ai-writing-tools.html">AI Writing Tools</a>
+          <a href="seo-tools.html">SEO Tools</a>
+          <a href="caption-generator.html">Caption Generator</a>
+          <a href="student-tools.html">Student Tools</a>
+          <a href="daily-utility-tools.html">Daily Utility Tools</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Message</h4>
+          <form class="mini-form" onsubmit="sendMessage(event)">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Your email" required />
+            <textarea rows="4" placeholder="Write your message"></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 LoveTool. All rights reserved. Built for learning, engagement and better user experience.</p>
+        <p>
+          <a href="privacy-policy.html">Privacy Policy</a> |
+          <a href="terms-and-conditions.html">Terms & Conditions</a> |
+          <a href="faq.html">FAQ</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" title="Go to top">↑</button>
+
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const videoCards = document.querySelectorAll(".video-card");
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.getAttribute("data-filter");
+
+        videoCards.forEach(card => {
+          const category = card.getAttribute("data-category");
+          if (filter === "all" || category.includes(filter)) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+
+    function subscribeUser(e){
+      e.preventDefault();
+      const email = document.getElementById("emailInput").value.trim();
+      if(email){
+        alert("Thank you for subscribing, " + email + "!");
+        e.target.reset();
+      }
+    }
+
+    function sendMessage(e){
+      e.preventDefault();
+      alert("Your message has been received successfully!");
+      e.target.reset();
+    }
+
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", function(){
+      if(window.scrollY > 300){
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    });
+
+    scrollTopBtn.addEventListener("click", function(){
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+</body>
+</html>

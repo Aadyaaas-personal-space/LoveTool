@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Check zodiac love compatibility with our Zodiac Love Match tool. Explore romantic match percentages, signs overview, and relationship tips in a beautiful responsive interface." />
+  <meta name="keywords" content="zodiac love match, astrology compatibility, love meter zodiac, zodiac signs relationship, horoscope love match" />
+  <meta name="author" content="LoveTool.in" />
+  <title>Zodiac Love Match | LoveTool.in</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,sans-serif;
+      background:linear-gradient(180deg,#fff8fc,#fdfcff,#f6f9ff);
+      color:#222;
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .navbar{
+      position:sticky;top:0;z-index:1000;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:16px 7%;
+      background:rgba(255,255,255,0.9);
+      backdrop-filter:blur(14px);
+      box-shadow:0 6px 20px rgba(0,0,0,0.06);
+    }
+    .logo{
+      font-size:1.6rem;font-weight:800;
+      background:linear-gradient(90deg,#ff4fa3,#7b61ff);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .nav-links{
+      display:flex;gap:22px;flex-wrap:wrap;
+      font-size:0.95rem;font-weight:600;
+    }
+    .nav-links a:hover{color:#ff4fa3}
+    .hero{
+      min-height:88vh;
+      display:flex;align-items:center;justify-content:center;
+      padding:70px 7%;
+      background:
+        radial-gradient(circle at top left, rgba(255,79,163,0.16), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(123,97,255,0.14), transparent 30%);
+    }
+    .hero-wrap{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:40px;
+      align-items:center;
+      width:100%;
+      max-width:1250px;
+    }
+    .hero h1{
+      font-size:3rem;
+      line-height:1.15;
+      margin-bottom:18px;
+    }
+    .hero p{
+      font-size:1.05rem;
+      color:#555;
+      margin-bottom:28px;
+      max-width:620px;
+    }
+    .hero-btns{
+      display:flex;gap:14px;flex-wrap:wrap;
+    }
+    .btn{
+      padding:13px 22px;
+      border:none;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:700;
+      transition:0.3s;
+    }
+    .btn-primary{
+      background:linear-gradient(90deg,#ff4fa3,#ff7ac3);
+      color:#fff;
+      box-shadow:0 10px 25px rgba(255,79,163,0.25);
+    }
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-secondary{
+      background:#fff;color:#333;border:1px solid #eee;
+    }
+    .hero-card{
+      background:#fff;
+      border-radius:28px;
+      padding:30px;
+      box-shadow:0 20px 50px rgba(0,0,0,0.08);
+      border:1px solid rgba(255,255,255,0.7);
+    }
+    .floating-icons{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+    .icon-box{
+      background:linear-gradient(180deg,#fff,#fff7fb);
+      border-radius:20px;
+      padding:20px 10px;
+      text-align:center;
+      box-shadow:0 10px 25px rgba(0,0,0,0.04);
+      font-size:0.95rem;
+      font-weight:700;
+      color:#444;
+    }
+    .section{
+      padding:80px 7%;
+    }
+    .section-title{
+      text-align:center;
+      margin-bottom:18px;
+      font-size:2.2rem;
+    }
+    .section-sub{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 45px;
+      color:#666;
+    }
+    .tool-box{
+      max-width:1050px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      background:#fff;
+      padding:30px;
+      border-radius:30px;
+      box-shadow:0 16px 45px rgba(0,0,0,0.07);
+    }
+    .panel{
+      background:#fcfcff;
+      border:1px solid #f0f0f7;
+      border-radius:24px;
+      padding:24px;
+    }
+    label{
+      display:block;
+      font-weight:700;
+      margin-bottom:8px;
+      margin-top:14px;
+    }
+    select,input{
+      width:100%;
+      padding:14px;
+      border-radius:14px;
+      border:1px solid #ddd;
+      outline:none;
+      font-size:1rem;
+    }
+    select:focus,input:focus{
+      border-color:#ff4fa3;
+      box-shadow:0 0 0 4px rgba(255,79,163,0.09);
+    }
+    .result-card{
+      text-align:center;
+      background:linear-gradient(180deg,#fff9fc,#ffffff);
+    }
+    .circle{
+      width:200px;height:200px;
+      margin:18px auto 20px;
+      border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      font-size:2.4rem;font-weight:800;color:#ff4fa3;
+      background:conic-gradient(#ff4fa3 0deg, #ffb0d4 0deg, #f2f2f7 0deg);
+      box-shadow:0 0 35px rgba(255,79,163,0.18);
+      position:relative;
+    }
+    .circle::before{
+      content:"";
+      position:absolute;
+      width:145px;height:145px;border-radius:50%;
+      background:#fff;
+      box-shadow:inset 0 0 10px rgba(0,0,0,0.04);
+    }
+    .circle span{
+      position:relative;z-index:2;
+    }
+    .match-text{
+      font-size:1.05rem;
+      color:#555;
+      margin-top:10px;
+    }
+    .tip-box{
+      margin-top:18px;
+      background:#fff;
+      border-radius:18px;
+      padding:16px;
+      color:#555;
+      border:1px solid #f0ecf5;
+    }
+    .grid-cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+      max-width:1200px;
+      margin:auto;
+    }
+    .card{
+      background:#fff;
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 12px 35px rgba(0,0,0,0.06);
+      transition:0.3s;
+    }
+    .card:hover{transform:translateY(-6px)}
+    .card h3{margin-bottom:10px;color:#7b61ff}
+    .faq{
+      max-width:1000px;
+      margin:auto;
+      display:grid;
+      gap:16px;
+    }
+    .faq-item{
+      background:#fff;
+      border-radius:18px;
+      padding:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    }
+    footer{
+      background:#0f0f14;
+      color:#fff;
+      padding:60px 7% 30px;
+      margin-top:50px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr 1.2fr;
+      gap:30px;
+      margin-bottom:30px;
+    }
+    .footer-grid h4{margin-bottom:14px;color:#ff95ca}
+    .footer-grid a{
+      display:block;
+      color:#ddd;
+      margin-bottom:10px;
+      font-size:0.95rem;
+    }
+    .footer-grid input{
+      margin-bottom:10px;
+      border:none;
+    }
+    .copyright{
+      text-align:center;
+      color:#bbb;
+      border-top:1px solid rgba(255,255,255,0.08);
+      padding-top:18px;
+      margin-top:18px;
+      font-size:0.92rem;
+    }
+    @media(max-width:992px){
+      .hero-wrap,.tool-box,.footer-grid,.grid-cards{
+        grid-template-columns:1fr;
+      }
+      .hero h1{font-size:2.4rem}
+    }
+    @media(max-width:768px){
+      .nav-links{display:none}
+      .section-title{font-size:1.8rem}
+      .circle{width:170px;height:170px}
+      .circle::before{width:122px;height:122px}
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">LoveTool.in</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="all-tools.html">All Tools</a>
+      <a href="love-meter.html">Love Meter</a>
+      <a href="relationship-guidance.html">Guidance</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-wrap">
+      <div>
+        <h1>Discover Your <span style="color:#ff4fa3;">Zodiac Love Match</span> With A Beautiful Astrology Compatibility Tool</h1>
+        <p>Explore romantic chemistry between zodiac signs with an elegant love match calculator. Perfect for users who want fun, engaging, and shareable compatibility insights based on astrology signs.</p>
+        <div class="hero-btns">
+          <a href="#tool"><button class="btn btn-primary">Check Match</button></a>
+          <a href="#about"><button class="btn btn-secondary">Learn More</button></a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="floating-icons">
+          <div class="icon-box">♈ Aries</div>
+          <div class="icon-box">♉ Taurus</div>
+          <div class="icon-box">♊ Gemini</div>
+          <div class="icon-box">♋ Cancer</div>
+          <div class="icon-box">♌ Leo</div>
+          <div class="icon-box">♎ Libra</div>
+          <div class="icon-box">♏ Scorpio</div>
+          <div class="icon-box">♐ Sagittarius</div>
+          <div class="icon-box">♓ Pisces</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tool">
+    <h2 class="section-title">Zodiac Compatibility Checker</h2>
+    <p class="section-sub">Select your zodiac sign and your partner’s sign to reveal a fun compatibility percentage, romantic vibe, and a quick relationship tip.</p>
+
+    <div class="tool-box">
+      <div class="panel">
+        <label for="yourSign">Your Zodiac Sign</label>
+        <select id="yourSign">
+          <option value="">Select your sign</option>
+          <option>Aries</option><option>Taurus</option><option>Gemini</option><option>Cancer</option>
+          <option>Leo</option><option>Virgo</option><option>Libra</option><option>Scorpio</option>
+          <option>Sagittarius</option><option>Capricorn</option><option>Aquarius</option><option>Pisces</option>
+        </select>
+
+        <label for="partnerSign">Partner's Zodiac Sign</label>
+        <select id="partnerSign">
+          <option value="">Select partner sign</option>
+          <option>Aries</option><option>Taurus</option><option>Gemini</option><option>Cancer</option>
+          <option>Leo</option><option>Virgo</option><option>Libra</option><option>Scorpio</option>
+          <option>Sagittarius</option><option>Capricorn</option><option>Aquarius</option><option>Pisces</option>
+        </select>
+
+        <label for="name1">Your Name</label>
+        <input type="text" id="name1" placeholder="Enter your name">
+
+        <label for="name2">Partner Name</label>
+        <input type="text" id="name2" placeholder="Enter partner name">
+
+        <button class="btn btn-primary" style="margin-top:20px;width:100%;" onclick="calculateMatch()">Reveal Love Match</button>
+      </div>
+
+      <div class="panel result-card">
+        <h3 style="font-size:1.5rem;">Your Match Result</h3>
+        <div class="circle" id="circle">
+          <span id="percentText">0%</span>
+        </div>
+        <h4 id="pairTitle">Select signs to begin</h4>
+        <p class="match-text" id="matchText">Your zodiac love result will appear here.</p>
+        <div class="tip-box" id="tipBox">Relationship tip: Mutual understanding creates lasting chemistry.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2 class="section-title">Why People Love Zodiac Love Matching</h2>
+    <p class="section-sub">This page is made to be engaging, informative, and highly shareable — ideal for entertainment-based traffic and user retention.</p>
+    <div class="grid-cards">
+      <div class="card">
+        <h3>Fun & Interactive</h3>
+        <p>Users enjoy checking romantic compatibility using astrology signs in a playful and emotionally engaging way.</p>
+      </div>
+      <div class="card">
+        <h3>Shareable Results</h3>
+        <p>Love match scores make great content for screenshots, reels, stories, and social sharing across platforms.</p>
+      </div>
+      <div class="card">
+        <h3>SEO Friendly Tool Page</h3>
+        <p>Well-structured headings, descriptive content, and tool interaction help make the page stronger for discoverability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq">
+      <div class="faq-item"><strong>What is a zodiac love match?</strong><br>It is a fun compatibility estimate based on two zodiac signs and their general personality chemistry.</div>
+      <div class="faq-item"><strong>Is this tool scientifically accurate?</strong><br>This tool is designed for entertainment, inspiration, and user engagement.</div>
+      <div class="faq-item"><strong>Can I use it on mobile?</strong><br>Yes, this responsive page works smoothly on mobile, tablet, and desktop devices.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>LoveTool.in</h4>
+        <p style="color:#ddd;max-width:320px;">LoveTool.in offers fun, useful, and engaging online tools for love, captions, guidance, calculators, and more in a responsive experience.</p>
+      </div>
+      <div>
+        <h4>Popular Tools</h4>
+        <a href="love-meter.html">Love Meter</a>
+        <a href="zodiac-love-match.html">Zodiac Match</a>
+        <a href="love-letter-generator.html">Love Letter Generator</a>
+        <a href="instagram-caption-generator.html">Instagram Captions</a>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <input type="email" placeholder="Enter your email">
+        <button class="btn btn-primary" style="width:100%;">Subscribe</button>
+      </div>
+    </div>
+    <div class="copyright">© 2026 LoveTool.in | All Rights Reserved</div>
+  </footer>
+
+  <script>
+    const tips = [
+      "Give each other space while keeping communication honest and warm.",
+      "Patience and trust can make this relationship even more beautiful.",
+      "Celebrate your differences instead of trying to change each other.",
+      "A little appreciation every day can strengthen your emotional bond.",
+      "Kind communication is the secret ingredient to a long-lasting match."
+    ];
+
+    function calculateMatch(){
+      const yourSign = document.getElementById("yourSign").value;
+      const partnerSign = document.getElementById("partnerSign").value;
+      const name1 = document.getElementById("name1").value || "You";
+      const name2 = document.getElementById("name2").value || "Partner";
+
+      if(!yourSign || !partnerSign){
+        alert("Please select both zodiac signs.");
+        return;
+      }
+
+      const combined = yourSign + partnerSign + name1 + name2;
+      let total = 0;
+      for(let i=0;i<combined.length;i++){
+        total += combined.charCodeAt(i);
+      }
+
+      let percentage = 55 + (total % 41); // 55 to 95
+      const degrees = (percentage / 100) * 360;
+
+      document.getElementById("percentText").textContent = percentage + "%";
+      document.getElementById("circle").style.background =
+        `conic-gradient(#ff4fa3 ${degrees}deg, #ffb0d4 ${degrees}deg, #f2f2f7 ${degrees}deg)`;
+
+      document.getElementById("pairTitle").textContent = `${name1} (${yourSign}) ❤ ${name2} (${partnerSign})`;
+
+      let message = "";
+      if(percentage >= 85){
+        message = "This looks like a highly passionate and harmonious zodiac connection.";
+      }else if(percentage >= 70){
+        message = "A strong love match with exciting emotional potential.";
+      }else{
+        message = "A balanced match that can grow beautifully with care and understanding.";
+      }
+
+      document.getElementById("matchText").textContent = message;
+      document.getElementById("tipBox").textContent = "Relationship tip: " + tips[total % tips.length];
+    }
+  </script>
+</body>
+</html>

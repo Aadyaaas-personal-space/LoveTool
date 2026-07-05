@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Tools | LoveTool.in - Smart Online Utility Tools</title>
+  <meta name="description" content="Explore all tools on LoveTool.in. Access free online utilities including calculators, generators, converters, text tools, productivity tools, and more with a clean responsive interface." />
+  <meta name="keywords" content="all tools, online tools, free tools, utility tools, text tools, calculators, converters, generators, LoveTool.in" />
+  <meta name="author" content="LoveTool.in" />
+  <meta name="robots" content="index, follow" />
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color:#1e293b;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 6%;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      box-shadow:0 8px 25px rgba(0,0,0,0.06);
+      border-bottom:1px solid rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo-icon{
+      width:46px;
+      height:46px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#2563eb,#7c3aed);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      font-weight:bold;
+      box-shadow:0 10px 25px rgba(37,99,235,0.25);
+    }
+
+    .logo-text h1{
+      font-size:24px;
+      color:#0f172a;
+      margin-bottom:2px;
+    }
+
+    .logo-text span{
+      font-size:12px;
+      color:#64748b;
+      letter-spacing:0.5px;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
+      font-size:15px;
+      font-weight:600;
+      color:#334155;
+      transition:0.3s ease;
+      position:relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active{
+      color:#2563eb;
+    }
+
+    .nav-links a.active::after,
+    .nav-links a:hover::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:100%;
+      height:2px;
+      background:#2563eb;
+      border-radius:4px;
+    }
+
+    .nav-btn{
+      padding:11px 20px;
+      background:linear-gradient(135deg,#2563eb,#7c3aed);
+      color:#fff !important;
+      border-radius:30px;
+      font-weight:700;
+      box-shadow:0 8px 20px rgba(37,99,235,0.25);
+    }
+
+    .nav-btn::after{
+      display:none !important;
+    }
+
+    /* HERO */
+    .hero{
+      padding:80px 6% 60px;
+      background:
+        radial-gradient(circle at top left, rgba(37,99,235,0.10), transparent 30%),
+        radial-gradient(circle at top right, rgba(124,58,237,0.09), transparent 25%),
+        linear-gradient(180deg,#ffffff,#f8fafc);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr;
+      gap:35px;
+      align-items:center;
+    }
+
+    .hero-content h2{
+      font-size:52px;
+      line-height:1.15;
+      color:#0f172a;
+      margin-bottom:18px;
+    }
+
+    .hero-content h2 span{
+      color:#2563eb;
+    }
+
+    .hero-content p{
+      font-size:18px;
+      color:#475569;
+      max-width:760px;
+      margin-bottom:28px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+      padding:14px 24px;
+      border-radius:35px;
+      font-weight:700;
+      display:inline-block;
+      transition:0.3s ease;
+    }
+
+    .primary-btn{
+      background:linear-gradient(135deg,#2563eb,#7c3aed);
+      color:#fff;
+      box-shadow:0 10px 24px rgba(37,99,235,0.25);
+    }
+
+    .secondary-btn{
+      background:#fff;
+      color:#0f172a;
+      border:1px solid #dbeafe;
+      box-shadow:0 8px 22px rgba(0,0,0,0.05);
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .hero-panel{
+      background:#fff;
+      border-radius:28px;
+      padding:28px;
+      box-shadow:0 18px 50px rgba(0,0,0,0.08);
+      border:1px solid rgba(0,0,0,0.04);
+    }
+
+    .hero-panel h3{
+      font-size:22px;
+      margin-bottom:18px;
+      color:#0f172a;
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    .stat-box{
+      background:#f8fbff;
+      border:1px solid #e2e8f0;
+      border-radius:18px;
+      padding:20px;
+      transition:0.3s ease;
+    }
+
+    .stat-box:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 26px rgba(0,0,0,0.06);
+    }
+
+    .stat-box h4{
+      font-size:28px;
+      color:#2563eb;
+      margin-bottom:8px;
+    }
+
+    .stat-box p{
+      font-size:14px;
+      color:#64748b;
+    }
+
+    /* SECTION COMMON */
+    section{
+      padding:75px 6%;
+    }
+
+    .section-title{
+      text-align:center;
+      max-width:900px;
+      margin:0 auto 45px;
+    }
+
+    .section-title h2{
+      font-size:40px;
+      color:#0f172a;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      font-size:17px;
+      color:#64748b;
+    }
+
+    /* HERO STRIPS */
+    .hero-strip-wrap{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+    }
+
+    .hero-strip{
+      background:#fff;
+      padding:28px;
+      border-radius:24px;
+      box-shadow:0 14px 35px rgba(0,0,0,0.06);
+      border:1px solid rgba(0,0,0,0.04);
+      transition:0.3s ease;
+    }
+
+    .hero-strip:hover{
+      transform:translateY(-6px);
+    }
+
+    .hero-strip .icon{
+      width:60px;
+      height:60px;
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      margin-bottom:18px;
+      background:linear-gradient(135deg,#eff6ff,#ede9fe);
+    }
+
+    .hero-strip h3{
+      margin-bottom:12px;
+      font-size:23px;
+      color:#0f172a;
+    }
+
+    .hero-strip p{
+      color:#64748b;
+      font-size:15px;
+    }
+
+    /* FEATURE BANNER */
+    .feature-banner{
+      background:linear-gradient(135deg,#0f172a,#1e293b);
+      color:#fff;
+      border-radius:28px;
+      padding:40px;
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr;
+      gap:25px;
+      align-items:center;
+      box-shadow:0 18px 40px rgba(15,23,42,0.22);
+    }
+
+    .feature-banner h2{
+      font-size:38px;
+      margin-bottom:14px;
+    }
+
+    .feature-banner p{
+      color:#cbd5e1;
+      font-size:16px;
+      max-width:720px;
+    }
+
+    .feature-points{
+      display:grid;
+      gap:14px;
+    }
+
+    .feature-point{
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:16px 18px;
+      border-radius:18px;
+      color:#e2e8f0;
+      font-size:15px;
+    }
+
+    /* TOOLS */
+    .tools-section{
+      background:linear-gradient(180deg,#f8fafc,#eef4ff);
+    }
+
+    .tools-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:24px;
+    }
+
+    .tool-card{
+      background:#fff;
+      border-radius:24px;
+      padding:25px;
+      box-shadow:0 15px 30px rgba(0,0,0,0.06);
+      border:1px solid rgba(0,0,0,0.05);
+      cursor:pointer;
+      transition:0.35s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .tool-card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:5px;
+      background:linear-gradient(135deg,#2563eb,#7c3aed);
+    }
+
+    .tool-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 20px 40px rgba(37,99,235,0.14);
+    }
+
+    .tool-icon{
+      width:64px;
+      height:64px;
+      border-radius:20px;
+      background:linear-gradient(135deg,#eff6ff,#ede9fe);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      margin-bottom:18px;
+    }
+
+    .tool-card h3{
+      font-size:22px;
+      color:#0f172a;
+      margin-bottom:10px;
+    }
+
+    .tool-card p{
+      font-size:14px;
+      color:#64748b;
+      margin-bottom:16px;
+      min-height:66px;
+    }
+
+    .tool-meta{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .tool-tag{
+      font-size:12px;
+      background:#eff6ff;
+      color:#2563eb;
+      padding:7px 12px;
+      border-radius:20px;
+      font-weight:700;
+    }
+
+    .tool-link{
+      font-size:14px;
+      font-weight:700;
+      color:#7c3aed;
+    }
+
+    .locked{
+      background:linear-gradient(135deg,#1e293b,#0f172a);
+      color:#fff;
+      cursor:not-allowed;
+      opacity:0.96;
+    }
+
+    .locked::before{
+      background:linear-gradient(135deg,#64748b,#0f172a);
+    }
+
+    .locked .tool-icon{
+      background:rgba(255,255,255,0.08);
+      color:#fff;
+    }
+
+    .locked h3,
+    .locked p,
+    .locked .tool-link{
+      color:#f1f5f9;
+    }
+
+    .locked .tool-tag{
+      background:rgba(255,255,255,0.12);
+      color:#fff;
+    }
+
+    /* CTA */
+    .cta-section{
+      text-align:center;
+    }
+
+    .cta-box{
+      background:linear-gradient(135deg,#ffffff,#f1f5ff);
+      border-radius:28px;
+      padding:50px 30px;
+      box-shadow:0 18px 38px rgba(0,0,0,0.06);
+      border:1px solid rgba(0,0,0,0.04);
+    }
+
+    .cta-box h2{
+      font-size:38px;
+      margin-bottom:15px;
+      color:#0f172a;
+    }
+
+    .cta-box p{
+      max-width:800px;
+      margin:0 auto 22px;
+      color:#64748b;
+      font-size:16px;
+    }
+
+    /* FOOTER */
+    .footer{
+      background:#000;
+      color:#fff;
+      padding:70px 6% 25px;
+      margin-top:40px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.3fr 1fr 1fr 1fr;
+      gap:30px;
+      margin-bottom:35px;
+    }
+
+    .footer-brand h2{
+      font-size:30px;
+      margin-bottom:14px;
+    }
+
+    .footer-brand p{
+      color:#cbd5e1;
+      font-size:15px;
+      max-width:360px;
+      margin-bottom:20px;
+    }
+
+    .footer-title{
+      font-size:20px;
+      margin-bottom:18px;
+      color:#fff;
+    }
+
+    .footer-links a{
+      display:block;
+      color:#cbd5e1;
+      margin-bottom:12px;
+      font-size:15px;
+      transition:0.3s;
+    }
+
+    .footer-links a:hover{
+      color:#60a5fa;
+      padding-left:4px;
+    }
+
+    .mini-form{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .mini-form input,
+    .mini-form textarea{
+      padding:13px 14px;
+      border:none;
+      border-radius:12px;
+      background:#111827;
+      color:#fff;
+      outline:none;
+      resize:none;
+    }
+
+    .mini-form button{
+      padding:13px 14px;
+      border:none;
+      border-radius:12px;
+      background:linear-gradient(135deg,#2563eb,#7c3aed);
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .social-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:8px;
+    }
+
+    .social-links a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#111827;
+      color:#fff;
+      font-size:14px;
+      border:1px solid rgba(255,255,255,0.08);
+      transition:0.3s;
+    }
+
+    .social-links a:hover{
+      background:#2563eb;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,0.12);
+      padding-top:22px;
+      text-align:center;
+      color:#94a3b8;
+      font-size:14px;
+    }
+
+    /* REVEAL */
+    .reveal{
+      opacity:0;
+      transform:translateY(40px);
+      transition:all 0.8s ease;
+    }
+
+    .reveal.active{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width:1100px){
+      .hero-grid,
+      .feature-banner,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .tools-grid{
+        grid-template-columns:repeat(3,1fr);
+      }
+
+      .hero-strip-wrap{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media (max-width:768px){
+      .navbar{
+        flex-direction:column;
+        gap:14px;
+      }
+
+      .nav-links{
+        justify-content:center;
+        gap:16px;
+      }
+
+      .hero-content h2{
+        font-size:36px;
+      }
+
+      .section-title h2,
+      .feature-banner h2,
+      .cta-box h2{
+        font-size:30px;
+      }
+
+      .tools-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .hero-strip-wrap,
+      .hero-stats{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width:520px){
+      .tools-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-content h2{
+        font-size:30px;
+      }
+
+      .section-title h2{
+        font-size:27px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-icon">❤</div>
+      <div class="logo-text">
+        <h1>LoveTool.in</h1>
+        <span>Smart Tools for Everyday Digital Needs</span>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="all-tools.html" class="active">All Tools</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="nav-btn">Explore Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero reveal">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <h2>Explore Our <span>Complete Tool Collection</span> Built for Speed, Simplicity and Daily Productivity</h2>
+        <p>
+          Welcome to the all tools page of LoveTool.in, where users can discover a wide range of useful online tools designed for text processing, calculations, generators, converters, smart utilities, and everyday digital productivity. Each card below takes users directly to its own dedicated interface so navigation remains smooth, fast, and user-friendly.
+        </p>
+        <div class="hero-buttons">
+          <a href="#tools" class="primary-btn">Browse Tools</a>
+          <a href="contact.html" class="secondary-btn">Request a New Tool</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <h3>Platform Highlights</h3>
+        <div class="hero-stats">
+          <div class="stat-box">
+            <h4>20+</h4>
+            <p>Utility tools designed for common online needs and fast access.</p>
+          </div>
+          <div class="stat-box">
+            <h4>15K+</h4>
+            <p>Growing users trust LoveTool.in for clean and simple interfaces.</p>
+          </div>
+          <div class="stat-box">
+            <h4>SEO+</h4>
+            <p>Structured pages built with readability and discoverability in mind.</p>
+          </div>
+          <div class="stat-box">
+            <h4>24/7</h4>
+            <p>Tools available anytime on desktop, laptop, tablet and mobile.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO STRIPS -->
+  <section class="reveal">
+    <div class="section-title">
+      <h2>Why Users Love Our Tools Section</h2>
+      <p>
+        This page is designed to look premium, feel modern, and help users quickly identify the exact tool they need without confusion. The structure is clean, detailed, and professional for a better browsing experience.
+      </p>
+    </div>
+
+    <div class="hero-strip-wrap">
+      <div class="hero-strip">
+        <div class="icon">⚡</div>
+        <h3>Fast Navigation Experience</h3>
+        <p>
+          Each card acts like a direct gateway to a dedicated tool page, allowing users to jump to the exact interface they want in one click with no unnecessary distractions.
+        </p>
+      </div>
+
+      <div class="hero-strip">
+        <div class="icon">🎯</div>
+        <h3>Purpose Driven Design</h3>
+        <p>
+          The card layout is carefully structured to showcase utility categories, short descriptions, and strong action cues, making the page more useful and attractive for visitors.
+        </p>
+      </div>
+
+      <div class="hero-strip">
+        <div class="icon">📱</div>
+        <h3>Responsive and Clean UI</h3>
+        <p>
+          From large screens to mobile devices, the interface remains readable, elegant, responsive, and easy to use, helping improve engagement and retention on the site.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER -->
+  <section class="reveal">
+    <div class="feature-banner">
+      <div>
+        <h2>All-in-One Utility Hub for Modern Users</h2>
+        <p>
+          LoveTool.in aims to provide practical online tools in one organized place. Whether a visitor needs a generator, calculator, converter, checker, or smart text utility, this section makes discovery easier and improves overall site experience for both usability and SEO value.
+        </p>
+      </div>
+      <div class="feature-points">
+        <div class="feature-point">✔ Well-organized card based layout for better user flow</div>
+        <div class="feature-point">✔ Easy access to dedicated tool pages from one central dashboard</div>
+        <div class="feature-point">✔ Locked upcoming tools section to create curiosity and engagement</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="tools-section reveal" id="tools">
+    <div class="section-title">
+      <h2>Browse All Available Tools</h2>
+      <p>
+        Below are different tool categories and utility pages. Click any active card to open its corresponding interface. One special card is intentionally locked to display future expansion and upcoming premium additions.
+      </p>
+    </div>
+
+    <div class="tools-grid">
+      <div class="tool-card" onclick="openTool('word-counter.html')">
+        <div class="tool-icon">📝</div>
+        <h3>Word Counter</h3>
+        <p>Count words, characters, spaces, paragraphs and reading length with a clean writing utility interface.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Text Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('case-converter.html')">
+        <div class="tool-icon">🔠</div>
+        <h3>Case Converter</h3>
+        <p>Convert text into uppercase, lowercase, sentence case, title case and more instantly.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Editor Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('text-repeater.html')">
+        <div class="tool-icon">🔁</div>
+        <h3>Text Repeater</h3>
+        <p>Repeat any text multiple times for creative writing, formatting, testing or social media usage.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Text Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('character-counter.html')">
+        <div class="tool-icon">📏</div>
+        <h3>Character Counter</h3>
+        <p>Analyze character count and text length for content writing, captions, forms and posts.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Analyzer</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('age-calculator.html')">
+        <div class="tool-icon">🎂</div>
+        <h3>Age Calculator</h3>
+        <p>Calculate exact age in years, months and days from your birth date with a friendly interface.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Calculator</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('emi-calculator.html')">
+        <div class="tool-icon">💰</div>
+        <h3>EMI Calculator</h3>
+        <p>Estimate monthly loan installments, total interest and repayment amount with quick inputs.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Finance Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('percentage-calculator.html')">
+        <div class="tool-icon">📊</div>
+        <h3>Percentage Calculator</h3>
+        <p>Find percentages, increases, decreases and ratio based values using simple calculations.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Math Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('bmi-calculator.html')">
+        <div class="tool-icon">⚖</div>
+        <h3>BMI Calculator</h3>
+        <p>Check body mass index based on height and weight with informative result sections.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Health Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('currency-converter.html')">
+        <div class="tool-icon">💱</div>
+        <h3>Currency Converter</h3>
+        <p>Convert between popular currency formats through a modern financial utility layout.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Converter</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('password-generator.html')">
+        <div class="tool-icon">🔐</div>
+        <h3>Password Generator</h3>
+        <p>Create strong random passwords for secure account usage with custom options and length control.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Security Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('username-generator.html')">
+        <div class="tool-icon">👤</div>
+        <h3>Username Generator</h3>
+        <p>Generate catchy usernames, brand handles and profile names for personal or business use.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Generator</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('hashtag-generator.html')">
+        <div class="tool-icon">#️⃣</div>
+        <h3>Hashtag Generator</h3>
+        <p>Build trending and niche hashtags for social media captions, reels, posts and digital campaigns.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Social Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('qr-generator.html')">
+        <div class="tool-icon">🔳</div>
+        <h3>QR Code Generator</h3>
+        <p>Create quick QR codes for links, business pages, contact cards, promotions and sharing purposes.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Utility Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('resume-headline-generator.html')">
+        <div class="tool-icon">📄</div>
+        <h3>Resume Headline Generator</h3>
+        <p>Generate professional profile headlines for resumes, job portals and career-focused digital profiles.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Career Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('love-meter.html')">
+        <div class="tool-icon">❤️</div>
+        <h3>Love Meter</h3>
+        <p>Interactive entertainment tool with attractive design for fun compatibility style calculations.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Fun Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('unit-converter.html')">
+        <div class="tool-icon">📐</div>
+        <h3>Unit Converter</h3>
+        <p>Convert length, weight, speed, temperature and more with a broad utility format.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Converter</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('gst-calculator.html')">
+        <div class="tool-icon">🧾</div>
+        <h3>GST Calculator</h3>
+        <p>Calculate tax inclusive and exclusive values quickly for billing, selling and pricing support.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Tax Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('random-number-generator.html')">
+        <div class="tool-icon">🎲</div>
+        <h3>Random Number Generator</h3>
+        <p>Generate random numbers between custom ranges for games, tests, sampling and experiments.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Generator</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card" onclick="openTool('youtube-tag-extractor.html')">
+        <div class="tool-icon">▶</div>
+        <h3>YouTube Tag Extractor</h3>
+        <p>Useful content creator tool for discovering keyword style tags from video based inputs.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Creator Tool</span>
+          <span class="tool-link">Open Tool →</span>
+        </div>
+      </div>
+
+      <div class="tool-card locked">
+        <div class="tool-icon">🔒</div>
+        <h3>New Tools Coming Soon</h3>
+        <p>More premium and advanced tools will be added very soon. This section is currently locked for upcoming launches and platform expansion.</p>
+        <div class="tool-meta">
+          <span class="tool-tag">Locked</span>
+          <span class="tool-link">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section reveal">
+    <div class="cta-box">
+      <h2>Need More Powerful Online Tools?</h2>
+      <p>
+        LoveTool.in is constantly expanding with new interfaces, cleaner experiences, and smarter utilities. We are building a complete digital toolkit for users who want fast, practical, and professional online solutions in one place.
+      </p>
+      <a href="contact.html" class="primary-btn">Contact Us for Suggestions</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>LoveTool.in</h2>
+        <p>
+          LoveTool.in is a modern utility platform offering useful, responsive and user-friendly online tools for text editing, calculation, conversion, generation and smart digital productivity. Our mission is to provide practical tools with impressive design and simple navigation.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Tool Pages</h3>
+        <div class="footer-links">
+          <a href="all-tools.html">All Tools</a>
+          <a href="word-counter.html">Word Counter</a>
+          <a href="age-calculator.html">Age Calculator</a>
+          <a href="password-generator.html">Password Generator</a>
+          <a href="qr-generator.html">QR Generator</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Quick Contact</h3>
+        <form class="mini-form">
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Your Email" />
+          <textarea rows="4" placeholder="Your Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Follow Us</h3>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">YouTube</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 LoveTool.in | All Rights Reserved | Smart Tools for Better Online Utility Experience
+    </div>
+  </footer>
+
+  <script>
+    function openTool(page){
+      window.location.href = page;
+    }
+
+    const reveals = document.querySelectorAll('.reveal');
+    function revealOnScroll(){
+      for(let i = 0; i < reveals.length; i++){
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if(elementTop < windowHeight - elementVisible){
+          reveals[i].classList.add('active');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    document.querySelector('.mini-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thank you! Your message has been received.');
+    });
+  </script>
+</body>
+</html>

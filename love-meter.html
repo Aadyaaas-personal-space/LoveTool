@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Love Meter - Check Compatibility, Relationship Fun Tools & Match Calculator | LoveTool</title>
+  <meta name="description" content="Explore Love Meter tools, compatibility checks, relationship fun tests, name match ideas, couple score insights, and engaging love-themed utilities on LoveTool." />
+  <meta name="keywords" content="love meter, love calculator, compatibility checker, relationship tools, couple calculator, name match tool, fun relationship test, love score" />
+  <meta name="author" content="LoveTool" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lovetool.in/love-meter.html" />
+
+  <meta property="og:title" content="Love Meter - Compatibility & Relationship Fun Tools" />
+  <meta property="og:description" content="Discover engaging love meter tools, compatibility ideas, couple score content, and relationship fun resources in one responsive page." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lovetool.in/love-meter.html" />
+  <meta property="og:image" content="https://lovetool.in/images/love-meter-cover.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Love Meter - Compatibility & Relationship Fun Tools" />
+  <meta name="twitter:description" content="Browse love meter and relationship fun tools with a modern, SEO-friendly UI." />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f8fb;
+      color: #222;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1200px, 92%);
+      margin: auto;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 78px;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #111;
+      letter-spacing: 0.4px;
+    }
+
+    .logo span {
+      color: #e91e63;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #333;
+      font-weight: 600;
+      transition: 0.3s;
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover {
+      color: #e91e63;
+    }
+
+    .nav-btn {
+      background: #111;
+      color: #fff !important;
+      padding: 10px 18px;
+      border-radius: 999px;
+    }
+
+    .nav-btn:hover {
+      background: #e91e63;
+      color: #fff !important;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      padding: 18px 0 0;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .breadcrumb a {
+      color: #e91e63;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 55px 0 40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      color: #111;
+    }
+
+    .hero-text p {
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .badge {
+      padding: 10px 16px;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #444;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ff4d8d, #e91e63);
+      color: #fff;
+      box-shadow: 0 14px 35px rgba(233,30,99,0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: #111;
+      border: 1px solid #e5e5e5;
+    }
+
+    .btn-secondary:hover {
+      border-color: #e91e63;
+      color: #e91e63;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, #fff, #fff6fa);
+      border: 1px solid #f2dbe6;
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.07);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before,
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(233, 30, 99, 0.08);
+    }
+
+    .hero-card::before {
+      width: 180px;
+      height: 180px;
+      top: -50px;
+      right: -50px;
+    }
+
+    .hero-card::after {
+      width: 130px;
+      height: 130px;
+      bottom: -30px;
+      left: -30px;
+    }
+
+    .score-preview {
+      position: relative;
+      z-index: 2;
+    }
+
+    .mini-label {
+      display: inline-block;
+      padding: 8px 12px;
+      font-size: 0.84rem;
+      background: #ffe2ed;
+      color: #c2185b;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .score-box {
+      background: #fff;
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+      margin-top: 16px;
+    }
+
+    .score-box h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .love-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .love-form input {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid #ead3dc;
+      outline: none;
+      font-size: 0.96rem;
+      background: #fffafb;
+      transition: 0.3s;
+    }
+
+    .love-form input:focus {
+      border-color: #e91e63;
+      box-shadow: 0 0 0 4px rgba(233,30,99,0.08);
+    }
+
+    .love-btn {
+      width: 100%;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #ff4d8d, #e91e63);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.98rem;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 14px 30px rgba(233,30,99,0.18);
+    }
+
+    .love-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .score-circle {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      margin: 24px auto 14px;
+      background: radial-gradient(circle at center, #fff6fa 0%, #ffd6e7 45%, #ff9fc3 100%);
+      box-shadow:
+        0 0 12px rgba(255, 105, 180, 0.35),
+        0 0 24px rgba(255, 105, 180, 0.30),
+        0 0 40px rgba(255, 105, 180, 0.25),
+        inset 0 0 18px rgba(255,255,255,0.9);
+      display: grid;
+      place-items: center;
+      padding: 12px;
+      border: 6px solid rgba(255,255,255,0.85);
+      transition: 0.4s ease;
+    }
+
+    .score-circle span {
+      width: 160px;
+      height: 160px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #c2185b;
+      box-shadow: inset 0 0 20px rgba(255,182,193,0.45);
+    }
+
+    .result-text {
+      text-align: center;
+      margin-top: 10px;
+      color: #666;
+      font-size: 0.97rem;
+      min-height: 28px;
+      font-weight: 600;
+    }
+
+    .score-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .score-tags span {
+      background: #fff5f8;
+      color: #c2185b;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 1px solid #ffd4e2;
+    }
+
+    /* Section common */
+    section {
+      padding: 34px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      width: min(820px, 100%);
+      margin: auto;
+      color: #666;
+      font-size: 1rem;
+    }
+
+    /* Intro content */
+    .content-box {
+      background: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+    }
+
+    .content-box p {
+      margin-bottom: 14px;
+      color: #555;
+    }
+
+    /* Tool cards */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 26px;
+    }
+
+    .tool-card {
+      background: #fff;
+      border: 1px solid #ececec;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+      transition: 0.35s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-7px);
+      border-color: #f3bfd2;
+      box-shadow: 0 18px 40px rgba(233,30,99,0.10);
+    }
+
+    .tool-icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #ffe3ee, #fff1f7);
+    }
+
+    .tool-card h3 {
+      font-size: 1.22rem;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .tool-card p {
+      color: #666;
+      font-size: 0.97rem;
+      margin-bottom: 18px;
+    }
+
+    .tool-card a {
+      color: #e91e63;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    /* Feature strip */
+    .feature-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .feature-item {
+      background: linear-gradient(180deg, #fff, #fff7fa);
+      padding: 22px;
+      border-radius: 20px;
+      border: 1px solid #f3dce5;
+      text-align: center;
+    }
+
+    .feature-item h3 {
+      font-size: 1.55rem;
+      color: #e91e63;
+      margin-bottom: 8px;
+    }
+
+    .feature-item p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    /* Article cards */
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .article-card {
+      background: #fff;
+      padding: 26px;
+      border-radius: 22px;
+      border: 1px solid #ececec;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.04);
+    }
+
+    .article-card h3 {
+      color: #111;
+      margin-bottom: 10px;
+      font-size: 1.22rem;
+    }
+
+    .article-card p {
+      color: #666;
+      font-size: 0.97rem;
+      margin-bottom: 12px;
+    }
+
+    /* Categories */
+    .category-banner {
+      background: linear-gradient(135deg, #111, #232323);
+      color: #fff;
+      border-radius: 26px;
+      padding: 34px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .category-banner::before {
+      content: "";
+      position: absolute;
+      right: -60px;
+      top: -60px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .category-links {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .category-links a {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      padding: 16px;
+      border-radius: 16px;
+      text-align: center;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .category-links a:hover {
+      background: #e91e63;
+      border-color: #e91e63;
+    }
+
+    /* FAQ */
+    .faq-wrap {
+      max-width: 900px;
+      margin: 28px auto 0;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid #ececec;
+      border-radius: 18px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 18px 20px;
+      background: #fff;
+      border: none;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: #111;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 18px;
+      color: #666;
+      font-size: 0.96rem;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* CTA */
+    .cta-box {
+      background: linear-gradient(135deg, #ffe7f0, #fff);
+      border: 1px solid #f6cadb;
+      border-radius: 28px;
+      padding: 34px;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(233,30,99,0.08);
+    }
+
+    .cta-box h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: #111;
+    }
+
+    .cta-box p {
+      color: #666;
+      max-width: 780px;
+      margin: 0 auto 18px;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f0f10;
+      color: #d7d7d7;
+      margin-top: 50px;
+      padding-top: 55px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .footer-brand h2 {
+      color: #fff;
+      margin-bottom: 14px;
+      font-size: 1.8rem;
+    }
+
+    .footer-brand h2 span {
+      color: #e91e63;
+    }
+
+    .footer-brand p {
+      color: #bfbfbf;
+      font-size: 0.96rem;
+      margin-bottom: 18px;
+    }
+
+    .footer-col h3 {
+      color: #fff;
+      margin-bottom: 14px;
+      font-size: 1.08rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cfcfcf;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    .footer-col a:hover {
+      color: #ff6aa0;
+      padding-left: 4px;
+    }
+
+    .newsletter {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .newsletter input {
+      padding: 14px 14px;
+      border-radius: 12px;
+      border: 1px solid #2a2a2a;
+      background: #181818;
+      color: #fff;
+      outline: none;
+    }
+
+    .newsletter button {
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      background: #e91e63;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .newsletter button:hover {
+      background: #ff4d8d;
+    }
+
+    .footer-bottom {
+      margin-top: 34px;
+      border-top: 1px solid #232323;
+      padding: 20px 0;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.94rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .footer-grid,
+      .feature-strip,
+      .category-links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .hero-grid,
+      .grid-3,
+      .feature-strip,
+      .article-grid,
+      .category-links,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+
+      .nav-wrap {
+        flex-direction: column;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .score-circle {
+        width: 180px;
+        height: 180px;
+      }
+
+      .score-circle span {
+        width: 130px;
+        height: 130px;
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Love Meter - Compatibility & Relationship Fun Tools",
+    "url":"https://lovetool.in/love-meter.html",
+    "description":"A detailed category page for love meter tools, compatibility tests, relationship fun resources, and couple score utilities.",
+    "publisher":{
+      "@type":"Organization",
+      "name":"LoveTool"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is a love meter tool?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"A love meter tool is a fun compatibility-style utility that gives users an entertaining score or matching result based on names or playful inputs."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Is the love meter result scientifically accurate?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Most love meter tools are designed for entertainment and engagement. They are useful for fun interaction, lighthearted sharing, and user activity on the website."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Why should a category page have detailed content?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"A detailed category page improves SEO, adds value for readers, increases time on site, supports internal linking, and creates a stronger quality impression for visitors and ad review systems."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <div class="logo">Love<span>Tool</span></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="all-tools.html">All Tools</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="love-meter.html" class="nav-btn">Love Meter</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container breadcrumb">
+    <a href="index.html">Home</a> / <a href="all-tools.html">Categories</a> / <span>Love Meter</span>
+  </div>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Love Meter Tools, Compatibility Ideas & Relationship Fun in One Beautiful Category Page</h1>
+        <p>
+          Welcome to the Love Meter section of LoveTool, where playful compatibility experiences meet
+          modern design, strong content structure, and engaging user interaction. This page is created to
+          help visitors discover fun couple score tools, love percentage ideas, name-based matching
+          experiences, and relationship-themed utilities in a clean and responsive layout.
+        </p>
+        <p>
+          Instead of showing only a single tool card, this page builds a complete category experience.
+          That means better user engagement, improved search visibility, stronger internal linking, and a
+          richer content presentation that supports quality-focused website growth.
+        </p>
+
+        <div class="hero-badges">
+          <div class="badge">Responsive Design</div>
+          <div class="badge">SEO-Rich Content</div>
+          <div class="badge">Category Navigation</div>
+          <div class="badge">Ad-Friendly Layout</div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#explore-tools" class="btn btn-primary">Explore Love Tools</a>
+          <a href="#faq" class="btn btn-secondary">Read FAQ</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="score-preview">
+          <span class="mini-label">Featured Preview</span>
+          <div class="score-box">
+            <h3>Calculate Love Percentage</h3>
+            <p style="text-align:center; color:#666;">Enter your name and your partner's name to generate a fun love score.</p>
+
+            <div class="love-form">
+              <input type="text" id="yourName" placeholder="Enter your name" />
+              <input type="text" id="partnerName" placeholder="Enter your partner name" />
+              <button class="love-btn" onclick="calculateLove()">Calculate Love %</button>
+            </div>
+
+            <div class="score-circle" id="loveCircle">
+              <span id="lovePercent">0%</span>
+            </div>
+
+            <div class="result-text" id="loveMessage">Your result will appear here.</div>
+
+            <div class="score-tags">
+              <span>Fun Result</span>
+              <span>Modern UI</span>
+              <span>Shareable Feel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Why This Love Meter Page Matters</h2>
+        <p>
+          A powerful category page should do more than list links. It should explain, organize, guide,
+          and encourage deeper browsing across your website.
+        </p>
+      </div>
+
+      <div class="content-box">
+        <p>
+          The Love Meter category page is designed as a full landing page instead of a thin-content
+          utility screen. This helps your website feel more complete, more trustworthy, and more
+          user-focused. Visitors can understand what the category offers, why the tools are useful for
+          fun engagement, and where to go next across related sections of the site.
+        </p>
+        <p>
+          For content-driven websites, category pages like this also play a major role in search engine
+          discovery. Proper heading structure, relevant descriptions, FAQ content, featured tool blocks,
+          and internal category navigation all work together to improve crawlability and content depth.
+        </p>
+        <p>
+          From a user experience point of view, this page gives the feeling of a real digital platform
+          rather than a random collection of pages. That stronger experience can improve time-on-site,
+          click-through rate to tools, and overall brand trust.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="explore-tools">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Love Meter Experiences</h2>
+        <p>
+          These cards represent the style of tools and content users can explore inside this category.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="tool-card">
+          <div class="tool-icon">❤</div>
+          <h3>Name Love Match Checker</h3>
+          <p>
+            A fun compatibility-style utility where users enter two names to get a playful love score,
+            match percentage, and a lighthearted result message.
+          </p>
+          <a href="#">Open Tool →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">💞</div>
+          <h3>Couple Compatibility Meter</h3>
+          <p>
+            A more premium-looking relationship fun tool that can include score animation, result badges,
+            and stylish sharing sections for better engagement.
+          </p>
+          <a href="#">Open Tool →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">🌹</div>
+          <h3>Relationship Fun Quiz</h3>
+          <p>
+            A category-friendly experience that adds entertainment value to the site by combining
+            interaction, short questions, and fun result statements.
+          </p>
+          <a href="#">Open Tool →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">✨</div>
+          <h3>Crush Percentage Tool</h3>
+          <p>
+            A light and playful utility designed for social sharing and quick entertainment, especially
+            useful for younger audiences browsing creative or fun web tools.
+          </p>
+          <a href="#">Open Tool →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">💌</div>
+          <h3>Couple Nickname Ideas</h3>
+          <p>
+            A support-style content card that expands the category beyond one calculator and helps build
+            a richer content ecosystem around relationships and fun interactions.
+          </p>
+          <a href="#">Open Tool →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">😍</div>
+          <h3>Love Result Generator</h3>
+          <p>
+            This style of tool can generate unique result lines, romantic fun text, and short messages
+            that make the category page feel more dynamic and complete.
+          </p>
+          <a href="#">Open Tool →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Category Performance Highlights</h2>
+        <p>
+          Strong category pages should blend design quality, navigation depth, and content signals.
+        </p>
+      </div>
+
+      <div class="feature-strip">
+        <div class="feature-item">
+          <h3>6+</h3>
+          <p>Love-themed featured tool ideas placed in a clear browsing structure.</p>
+        </div>
+        <div class="feature-item">
+          <h3>100%</h3>
+          <p>Responsive layout built for desktop, tablet, and mobile screens.</p>
+        </div>
+        <div class="feature-item">
+          <h3>SEO</h3>
+          <p>Meta tags, headings, internal links, and content sections included.</p>
+        </div>
+        <div class="feature-item">
+          <h3>UX+</h3>
+          <p>Improved readability, trust feel, and modern visual presentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Helpful Content for Users and Search Visibility</h2>
+        <p>
+          Detailed text blocks make this category more valuable than a simple tool directory.
+        </p>
+      </div>
+
+      <div class="article-grid">
+        <div class="article-card">
+          <h3>How Users Benefit from Love Meter Pages</h3>
+          <p>
+            Visitors enjoy pages like this because they are easy to understand and visually attractive.
+            Instead of being pushed directly into one tiny tool box, they are introduced to the category,
+            the available formats, and the playful purpose of the tools.
+          </p>
+          <p>
+            This increases comfort, improves navigation, and makes the overall platform feel more
+            trustworthy and polished.
+          </p>
+        </div>
+
+        <div class="article-card">
+          <h3>Why Rich Category Content Helps Website Quality</h3>
+          <p>
+            Search engines and quality reviews often respond better to pages that offer context,
+            structure, and useful supporting content. A page with descriptions, FAQs, internal links,
+            tool previews, and clean hierarchy tends to feel more complete than a thin single-block page.
+          </p>
+          <p>
+            That is why this Love Meter page includes both design and content depth.
+          </p>
+        </div>
+
+        <div class="article-card">
+          <h3>Design Strategy Behind This Layout</h3>
+          <p>
+            The UI uses strong section spacing, soft card shadows, readable contrast, large headings,
+            modern rounded corners, and clear action paths. These elements make the page look premium
+            while still remaining lightweight and practical for a multi-page HTML website.
+          </p>
+        </div>
+
+        <div class="article-card">
+          <h3>Internal Linking for Better Exploration</h3>
+          <p>
+            A good category page should not isolate itself. It should guide users to related categories
+            such as calculators, caption generators, relationship guidance, student tools, and daily
+            utility tools. That builds a stronger site structure and better browsing flow.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="category-banner">
+        <h2 style="font-size:2rem; margin-bottom:12px;">Explore More Tool Categories</h2>
+        <p style="max-width:900px; color:#dddddd;">
+          Help users move naturally across your website with category-to-category navigation. This is
+          useful for both engagement and site structure.
+        </p>
+
+        <div class="category-links">
+          <a href="calculator.html">Calculator</a>
+          <a href="games.html">Games</a>
+          <a href="relationship-guidance.html">Relationship Guidance</a>
+          <a href="ai-writing-tools.html">AI Writing Tools</a>
+          <a href="caption-generator.html">Caption Generator</a>
+          <a href="text-utility-tools.html">Text Utility Tools</a>
+          <a href="seo-tools.html">SEO Tools</a>
+          <a href="student-tools.html">Student Tools</a>
+          <a href="daily-utility-tools.html">Daily Utility Tools</a>
+          <a href="all-tools.html">All Tools</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          FAQ content adds clarity for users and helps strengthen the informational value of the page.
+        </p>
+      </div>
+
+      <div class="faq-wrap">
+        <div class="faq-item active">
+          <button class="faq-question">What is a love meter category page?</button>
+          <div class="faq-answer">
+            A love meter category page is a dedicated section that groups together compatibility-style
+            tools, relationship fun utilities, and supportive content so users can easily explore
+            multiple related experiences from one place.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Is this page only for one love calculator?</button>
+          <div class="faq-answer">
+            No. This page is structured as a broader category hub, which means it can support multiple
+            tools, supporting articles, related content, and internal links to other parts of your site.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Why is this better than a simple empty tool page?</button>
+          <div class="faq-answer">
+            A detailed category page improves the user experience, gives search engines more context,
+            reduces thin content issues, and helps your website appear more polished and valuable.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can this design be reused for other categories?</button>
+          <div class="faq-answer">
+            Yes. The same design structure can be reused for calculator pages, games pages, caption
+            generator pages, SEO tools pages, student tools pages, and daily utility category pages while
+            keeping the same theme and footer.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-box">
+        <h2>Build a Stronger Category Experience for Visitors</h2>
+        <p>
+          This layout is designed to feel rich, modern, responsive, and trustworthy. It gives your Love
+          Meter category much more presence than a basic page and creates a stronger foundation for your
+          overall website structure.
+        </p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="all-tools.html" class="btn btn-primary">Browse All Categories</a>
+          <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h2>Love<span>Tool</span></h2>
+        <p>
+          LoveTool is a modern multi-category utility platform designed to offer fun tools, helpful
+          digital experiences, and user-friendly pages with clean responsive design and strong content
+          presentation.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Main Pages</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="all-tools.html">All Tools</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Policies</h3>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <div class="newsletter">
+          <input type="email" placeholder="Enter your email" />
+          <button type="button">Subscribe Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      © 2026 LoveTool.in - All Rights Reserved. Designed for a modern, content-rich, responsive web experience.
+    </div>
+  </footer>
+
+  <script>
+    function calculateLove() {
+      const yourName = document.getElementById("yourName").value.trim();
+      const partnerName = document.getElementById("partnerName").value.trim();
+      const lovePercent = document.getElementById("lovePercent");
+      const loveMessage = document.getElementById("loveMessage");
+      const loveCircle = document.getElementById("loveCircle");
+
+      if (yourName === "" || partnerName === "") {
+        lovePercent.innerText = "0%";
+        loveMessage.innerText = "Please enter both names.";
+        return;
+      }
+
+      let combined = (yourName + partnerName).toLowerCase();
+      let total = 0;
+
+      for (let i = 0; i < combined.length; i++) {
+        total += combined.charCodeAt(i);
+      }
+
+      let percentage = (total % 51) + 50;
+
+      lovePercent.innerText = percentage + "%";
+
+      if (percentage >= 90) {
+        loveMessage.innerText = "Amazing bond! A beautiful and strong match.";
+      } else if (percentage >= 75) {
+        loveMessage.innerText = "Great connection! Your compatibility looks wonderful.";
+      } else if (percentage >= 60) {
+        loveMessage.innerText = "Nice match! There is a sweet connection here.";
+      } else {
+        loveMessage.innerText = "Cute pair! Every relationship grows with care and understanding.";
+      }
+
+      loveCircle.style.transform = "scale(1.06)";
+      setTimeout(() => {
+        loveCircle.style.transform = "scale(1)";
+      }, 250);
+    }
+
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      const btn = item.querySelector(".faq-question");
+      btn.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>

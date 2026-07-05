@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Prompt Generator - Create Better Prompts for Writing, Images, SEO & Business</title>
+  <meta name="description" content="Use our AI Prompt Generator to create powerful prompts for ChatGPT, image generation, blogging, marketing, SEO, study, coding, and business tasks. Responsive, detailed, and user-friendly tool page." />
+  <meta name="keywords" content="AI Prompt Generator, ChatGPT prompt generator, image prompt maker, SEO prompt generator, business prompt ideas, writing prompts, marketing prompts, prompt engineering tool" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="LoveTool" />
+  <link rel="canonical" href="https://lovetool.in/ai-promt-generator.html" />
+
+  <meta property="og:title" content="AI Prompt Generator - Smart Prompt Creator Tool" />
+  <meta property="og:description" content="Generate better prompts for writing, images, SEO, marketing, study, coding, and more using our AI Prompt Generator." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lovetool.in/ai-promt-generator.html" />
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg,#f2f8ff 0%, #ffffff 42%, #f8fbff 100%);
+      color:#10233f;
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%}
+    .container{width:min(1200px,92%);margin:auto}
+
+    /* Header */
+    .topbar{
+      background:#07111f;
+      color:#d8e5ff;
+      font-size:13px;
+      padding:10px 0;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    .topbar .container{
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:999;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid #e6eefb;
+      box-shadow:0 8px 22px rgba(10,40,90,0.05);
+    }
+    .navbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:16px 0;
+      gap:18px;
+    }
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:1.45rem;
+      font-weight:800;
+      color:#0c234a;
+    }
+    .logo-badge{
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#71b7ff,#1b6dff);
+      color:#fff;
+      display:grid;
+      place-items:center;
+      box-shadow:0 12px 25px rgba(27,109,255,0.25);
+      font-weight:900;
+    }
+    nav ul{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    nav ul li a{
+      font-weight:700;
+      color:#16345f;
+      position:relative;
+      padding-bottom:4px;
+    }
+    nav ul li a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0%;
+      height:2px;
+      background:#1b6dff;
+      transition:0.3s;
+    }
+    nav ul li a:hover::after,
+    nav ul li a.active::after{width:100%}
+    .nav-btn{
+      background:linear-gradient(135deg,#1b6dff,#64a6ff);
+      color:#fff;
+      padding:12px 18px;
+      border-radius:30px;
+      font-weight:800;
+      box-shadow:0 12px 22px rgba(27,109,255,0.22);
+    }
+
+    /* Hero */
+    .hero{
+      padding:68px 0 36px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::before,
+    .hero::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      filter:blur(50px);
+      opacity:0.45;
+      z-index:0;
+    }
+    .hero::before{
+      width:240px;height:240px;
+      background:#99c3ff;
+      top:20px;left:-60px;
+    }
+    .hero::after{
+      width:280px;height:280px;
+      background:#c8deff;
+      right:-90px;bottom:10px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:32px;
+      align-items:center;
+      position:relative;
+      z-index:1;
+    }
+    .eyebrow{
+      display:inline-block;
+      padding:9px 14px;
+      border-radius:30px;
+      background:#e9f2ff;
+      color:#1559ca;
+      font-weight:800;
+      font-size:13px;
+      margin-bottom:16px;
+      border:1px solid #d7e7ff;
+    }
+    .hero h1{
+      font-size:clamp(2rem,4vw,3.8rem);
+      line-height:1.08;
+      margin-bottom:16px;
+      color:#0e2144;
+    }
+    .hero p{
+      font-size:1.05rem;
+      color:#476284;
+      margin-bottom:24px;
+      max-width:760px;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:22px;
+    }
+    .btn-primary,.btn-secondary{
+      padding:14px 22px;
+      border-radius:30px;
+      font-weight:800;
+      display:inline-block;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,#1b6dff,#64a6ff);
+      color:#fff;
+      box-shadow:0 12px 24px rgba(27,109,255,0.22);
+    }
+    .btn-secondary{
+      background:#fff;
+      color:#1e4f9b;
+      border:1px solid #d5e4ff;
+    }
+    .hero-card{
+      background:linear-gradient(180deg,#ffffff,#f6faff);
+      border:1px solid #dce9fb;
+      border-radius:26px;
+      padding:24px;
+      box-shadow:0 18px 45px rgba(20,70,150,0.08);
+    }
+    .mini-stats{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+      margin-top:18px;
+    }
+    .stat{
+      background:#fff;
+      padding:18px;
+      border-radius:18px;
+      border:1px solid #e4efff;
+      box-shadow:0 10px 20px rgba(35,80,140,0.05);
+    }
+    .stat h3{
+      font-size:1.4rem;
+      color:#0f2e61;
+    }
+    .stat p{color:#5f7695;font-size:0.95rem}
+
+    /* Sections */
+    section{padding:34px 0}
+    .section-title{
+      text-align:center;
+      margin-bottom:24px;
+    }
+    .section-title h2{
+      font-size:clamp(1.7rem,3vw,2.6rem);
+      color:#0d244b;
+      margin-bottom:10px;
+    }
+    .section-title p{
+      color:#58718f;
+      max-width:850px;
+      margin:auto;
+    }
+
+    .tool-panel{
+      background:#fff;
+      border-radius:28px;
+      padding:28px;
+      border:1px solid #dce8f8;
+      box-shadow:0 20px 50px rgba(21,69,145,0.07);
+    }
+    .tool-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      align-items:start;
+    }
+    .field{
+      margin-bottom:16px;
+    }
+    .field label{
+      display:block;
+      font-weight:800;
+      color:#173867;
+      margin-bottom:8px;
+    }
+    .field input,.field select,.field textarea{
+      width:100%;
+      padding:14px 15px;
+      border-radius:16px;
+      border:1px solid #cfe0f6;
+      outline:none;
+      font-size:0.98rem;
+      background:#fbfdff;
+    }
+    .field textarea{
+      min-height:160px;
+      resize:vertical;
+    }
+    .generate-btn{
+      width:100%;
+      border:none;
+      padding:15px;
+      border-radius:16px;
+      background:linear-gradient(135deg,#1b6dff,#64a6ff);
+      color:white;
+      font-size:1rem;
+      font-weight:800;
+      cursor:pointer;
+      box-shadow:0 14px 24px rgba(27,109,255,0.20);
+    }
+    .output-box{
+      background:linear-gradient(180deg,#fbfdff,#f2f8ff);
+      border:1px solid #d8e7fb;
+      border-radius:22px;
+      padding:20px;
+      min-height:100%;
+    }
+    .output-box h3{
+      color:#12386b;
+      margin-bottom:12px;
+    }
+    .output-content{
+      min-height:280px;
+      white-space:pre-wrap;
+      color:#35557d;
+      font-size:0.98rem;
+    }
+    .tool-actions{
+      display:flex;
+      gap:10px;
+      margin-top:15px;
+      flex-wrap:wrap;
+    }
+    .small-btn{
+      border:none;
+      background:#eaf3ff;
+      color:#1155c5;
+      padding:11px 16px;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+    .card{
+      background:#fff;
+      padding:24px;
+      border-radius:22px;
+      border:1px solid #dfebfb;
+      box-shadow:0 16px 35px rgba(20,70,145,0.06);
+      transition:0.3s;
+    }
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 22px 40px rgba(20,70,145,0.10);
+    }
+    .icon{
+      width:56px;height:56px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      font-size:1.3rem;
+      font-weight:900;
+      color:#fff;
+      background:linear-gradient(135deg,#2d7bff,#8cc0ff);
+      margin-bottom:16px;
+    }
+    .card h3{margin-bottom:10px;color:#102950}
+    .card p{color:#607996;font-size:0.97rem}
+
+    .content-block{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:center;
+    }
+    .content-box{
+      background:#fff;
+      border-radius:24px;
+      padding:26px;
+      border:1px solid #dfebfb;
+      box-shadow:0 18px 40px rgba(20,70,145,0.06);
+    }
+    .list{
+      list-style:none;
+      display:grid;
+      gap:12px;
+      margin-top:16px;
+    }
+    .list li{
+      padding:13px 15px;
+      border-radius:14px;
+      background:#f6faff;
+      border:1px solid #e3eefb;
+      color:#36567f;
+      font-weight:600;
+    }
+
+    .faq{
+      display:grid;
+      gap:14px;
+    }
+    .faq-item{
+      background:#fff;
+      border:1px solid #deebfb;
+      border-radius:18px;
+      padding:18px 20px;
+      box-shadow:0 12px 28px rgba(24,76,151,0.05);
+    }
+    .faq-item h3{
+      color:#12345f;
+      margin-bottom:8px;
+      font-size:1.06rem;
+    }
+    .faq-item p{color:#617a97}
+
+    .cta{
+      background:linear-gradient(135deg,#0e2d5f,#1f5ec0,#72b3ff);
+      color:#fff;
+      border-radius:30px;
+      padding:36px 30px;
+      box-shadow:0 25px 50px rgba(20,65,140,0.18);
+    }
+    .cta-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    .cta h2{font-size:2rem;margin-bottom:8px}
+    .cta p{max-width:720px;color:#e7f1ff}
+    .cta .btn-secondary{
+      background:#fff;
+      color:#114eb2;
+      border:none;
+    }
+
+    footer{
+      background:#050c18;
+      color:#c8d3e6;
+      margin-top:40px;
+      padding:60px 0 20px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1fr 1fr;
+      gap:30px;
+    }
+    .footer-brand h3{
+      color:#fff;
+      font-size:1.7rem;
+      margin-bottom:12px;
+    }
+    .footer-brand p{
+      color:#aab8cf;
+      margin-bottom:16px;
+    }
+    .footer-title{
+      color:#fff;
+      margin-bottom:16px;
+      font-size:1.1rem;
+    }
+    .footer-links{
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .footer-links a{
+      color:#b8c8df;
+      transition:0.3s;
+    }
+    .footer-links a:hover{color:#fff}
+    .mini-form input{
+      width:100%;
+      padding:12px 14px;
+      border-radius:12px;
+      border:none;
+      margin-bottom:10px;
+      outline:none;
+    }
+    .mini-form button{
+      width:100%;
+      border:none;
+      padding:12px 14px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#2c7cff,#78b4ff);
+      color:#fff;
+      font-weight:800;
+      cursor:pointer;
+    }
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,0.08);
+      margin-top:28px;
+      padding-top:18px;
+      text-align:center;
+      color:#93a7c4;
+      font-size:0.95rem;
+    }
+
+    @media (max-width: 1024px){
+      .hero-grid,.tool-grid,.cards,.content-block,.footer-grid{
+        grid-template-columns:1fr;
+      }
+    }
+    @media (max-width: 768px){
+      .navbar{flex-direction:column;align-items:flex-start}
+      nav ul{gap:14px}
+      .hero{padding-top:40px}
+      .mini-stats{grid-template-columns:1fr}
+      .cta-inner{align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div>Smart AI Tools for Creativity, Productivity, SEO and Daily Utility</div>
+      <div>Fast • Responsive • SEO Friendly • User Focused</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">L</span>
+        <span>LoveTool</span>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="all-tools.html">All Tools</a></li>
+          <li><a href="ai-writing-tools.html" class="active">AI Writing Tools</a></li>
+          <li><a href="caption-generator.html">Caption Tools</a></li>
+          <li><a href="seo-tools.html">SEO Tools</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="nav-btn" href="all-tools.html">Explore More Tools</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">AI Prompt Engineering Tool</span>
+          <h1>AI Prompt Generator for Better Writing, Images, SEO, Study, Marketing and Business</h1>
+          <p>
+            Our AI Prompt Generator helps users create clear, detailed, and high-performing prompts for modern AI tools.
+            Whether you want prompts for content writing, blog creation, social media, image generation, business strategy,
+            customer service, coding, or educational work, this page gives you a professional tool experience with rich
+            content, strong trust signals, and a clean SEO-focused layout.
+          </p>
+          <div class="hero-actions">
+            <a href="#tool" class="btn-primary">Generate Prompt Now</a>
+            <a href="#benefits" class="btn-secondary">Learn Benefits</a>
+          </div>
+
+          <div class="mini-stats">
+            <div class="stat">
+              <h3>10+</h3>
+              <p>Prompt categories designed for multiple AI use cases</p>
+            </div>
+            <div class="stat">
+              <h3>100%</h3>
+              <p>Responsive interface built for desktop, tablet, and mobile devices</p>
+            </div>
+            <div class="stat">
+              <h3>SEO</h3>
+              <p>Structured content blocks for visibility, readability and ad-friendly layout</p>
+            </div>
+            <div class="stat">
+              <h3>Fast</h3>
+              <p>Simple instant generation using lightweight frontend logic</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3 style="font-size:1.5rem;color:#12396c;margin-bottom:12px;">Why This Tool Matters</h3>
+          <p style="color:#5c7492;margin-bottom:12px;">
+            Many users know what they want from AI, but they struggle to explain it well. A stronger prompt improves the
+            final output quality, saves time, and reduces repeated editing.
+          </p>
+          <ul class="list">
+            <li>Generate prompts for blog posts, articles, social captions, and long-form writing</li>
+            <li>Create image prompts for AI art, logo ideas, posters, ads, and design inspiration</li>
+            <li>Build prompts for coding, study notes, presentations, interviews, and homework help</li>
+            <li>Make marketing prompts for product descriptions, customer support, sales copy, and SEO</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="tool">
+      <div class="container">
+        <div class="section-title">
+          <h2>Generate a Smarter AI Prompt in Seconds</h2>
+          <p>
+            Select your purpose, describe your goal, define your tone, audience, and output style,
+            and instantly get a refined AI prompt ready to use with your favorite tool.
+          </p>
+        </div>
+
+        <div class="tool-panel">
+          <div class="tool-grid">
+            <div>
+              <div class="field">
+                <label for="promptType">Prompt Type</label>
+                <select id="promptType">
+                  <option>Blog Writing</option>
+                  <option>SEO Article</option>
+                  <option>Social Media Caption</option>
+                  <option>Image Generation</option>
+                  <option>Business & Marketing</option>
+                  <option>Coding Assistance</option>
+                  <option>Study & Education</option>
+                  <option>Email Writing</option>
+                  <option>Product Description</option>
+                  <option>Custom Prompt</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="topic">Main Topic / Idea</label>
+                <input type="text" id="topic" placeholder="Example: write a blog about healthy morning habits" />
+              </div>
+
+              <div class="field">
+                <label for="audience">Target Audience</label>
+                <input type="text" id="audience" placeholder="Example: students, parents, professionals, beginners" />
+              </div>
+
+              <div class="field">
+                <label for="tone">Tone / Style</label>
+                <input type="text" id="tone" placeholder="Example: professional, friendly, creative, persuasive" />
+              </div>
+
+              <div class="field">
+                <label for="goal">Extra Requirements</label>
+                <textarea id="goal" placeholder="Mention length, format, keywords, language simplicity, CTA, bullet points, examples, etc."></textarea>
+              </div>
+
+              <button class="generate-btn" onclick="generatePrompt()">Generate AI Prompt</button>
+            </div>
+
+            <div class="output-box">
+              <h3>Your Generated Prompt</h3>
+              <div id="output" class="output-content">
+Your AI prompt will appear here. Fill the fields and click on the generate button to get a professional prompt structure.
+              </div>
+              <div class="tool-actions">
+                <button class="small-btn" onclick="copyPrompt()">Copy Prompt</button>
+                <button class="small-btn" onclick="clearPromptTool()">Clear All</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <div class="container">
+        <div class="section-title">
+          <h2>Benefits of Using an AI Prompt Generator</h2>
+          <p>
+            A well-structured prompt improves output quality, increases relevance, reduces unnecessary retries,
+            and helps both beginners and professionals use AI more effectively.
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <div class="icon">01</div>
+            <h3>More Accurate Outputs</h3>
+            <p>
+              Clear prompts help AI understand your exact goal, preferred tone, audience, and result type,
+              which leads to better and more usable responses.
+            </p>
+          </div>
+          <div class="card">
+            <div class="icon">02</div>
+            <h3>Faster Workflow</h3>
+            <p>
+              Instead of rewriting instructions again and again, users can build one strong prompt and save valuable time
+              for content creation, business work, and study tasks.
+            </p>
+          </div>
+          <div class="card">
+            <div class="icon">03</div>
+            <h3>Useful for Many Niches</h3>
+            <p>
+              From writers and students to marketers, freelancers, bloggers, and designers,
+              prompt generation supports many modern digital workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container content-block">
+        <div class="content-box">
+          <h2 style="color:#12325e;margin-bottom:12px;">Who Can Use This Tool?</h2>
+          <p style="color:#5e7693;">
+            This AI Prompt Generator is designed for a wide range of users who want better results from AI tools without
+            needing expert-level prompt engineering knowledge.
+          </p>
+          <ul class="list">
+            <li>Students creating summaries, assignments, presentations, and study notes</li>
+            <li>Bloggers and content creators writing articles, scripts, and engaging captions</li>
+            <li>Business users preparing product descriptions, emails, sales copy, and support replies</li>
+            <li>SEO professionals generating article outlines, keyword-focused prompts, and meta content</li>
+            <li>Designers and artists making creative prompts for AI image generation platforms</li>
+          </ul>
+        </div>
+
+        <div class="content-box">
+          <h2 style="color:#12325e;margin-bottom:12px;">Why This Page Is AdSense Friendly</h2>
+          <p style="color:#5e7693;">
+            This page includes detailed educational content, a functional user tool, supportive sections, FAQ content,
+            and trust-oriented explanations. It is designed to provide actual user value instead of thin or low-quality content.
+          </p>
+          <ul class="list">
+            <li>Original explanatory content with useful on-page information</li>
+            <li>Clear user intent with a practical interactive tool experience</li>
+            <li>Responsive design with clean readability and organized sections</li>
+            <li>Balanced content depth to support both users and search visibility</li>
+            <li>Professional layout suitable for a growing utility-based website</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Helpful answers for users who want to understand how this AI Prompt Generator works and how it can be used effectively.</p>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item">
+            <h3>What is an AI prompt generator?</h3>
+            <p>
+              An AI prompt generator is a tool that helps users create better instructions for AI systems. It structures your idea
+              into a clearer request so that the final AI output becomes more accurate and useful.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I use this prompt for ChatGPT and image generators?</h3>
+            <p>
+              Yes. You can adapt the generated prompt for text-based AI tools, creative writing systems, coding assistants,
+              and many image-generation platforms by adjusting your prompt type and requirements.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Is this tool good for SEO writers and marketers?</h3>
+            <p>
+              Yes. SEO writers, bloggers, marketers, and product teams can use it to create prompts for keyword-focused articles,
+              content plans, titles, descriptions, ad copy, email campaigns, and more.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Do I need technical knowledge to use it?</h3>
+            <p>
+              No. The interface is built for simplicity. Beginners can fill in the fields and instantly receive a strong prompt format.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta">
+          <div class="cta-inner">
+            <div>
+              <h2>Create Stronger AI Prompts Today</h2>
+              <p>
+                Improve your content, creativity, productivity, and workflow with a better prompt structure.
+                Use this page as a daily utility tool for writing, marketing, SEO, study, and idea generation.
+              </p>
+            </div>
+            <a href="#tool" class="btn-secondary">Use This Tool Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>LoveTool</h3>
+          <p>
+            LoveTool is a growing utility platform offering creative, AI, daily, SEO, student, and relationship-based tools.
+            Our goal is to create useful, responsive, and high-value web experiences for modern users.
+          </p>
+          <p>Designed for quality content, smooth usability, and long-term website growth.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Popular Tools</h4>
+          <ul class="footer-links">
+            <li><a href="love-meter.html">Love Meter</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="word-counter.html">Word Counter</a></li>
+            <li><a href="password-generator.html">Password Generator</a></li>
+            <li><a href="ai-promt-generator.html">AI Prompt Generator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Useful Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="all-tools.html">All Tools</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+            <li><a href="contact.html">Contact Page</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Connect</h4>
+          <form class="mini-form">
+            <input type="email" placeholder="Enter your email" />
+            <input type="text" placeholder="Your message or feedback" />
+            <button type="button">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 LoveTool.in - All Rights Reserved | Smart Utility Tools for Everyday Digital Needs
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"AI Prompt Generator",
+    "url":"https://lovetool.in/ai-promt-generator.html",
+    "description":"Generate smart prompts for writing, images, SEO, business, study and more.",
+    "publisher":{
+      "@type":"Organization",
+      "name":"LoveTool"
+    }
+  }
+  </script>
+
+  <script>
+    function generatePrompt(){
+      const type = document.getElementById('promptType').value;
+      const topic = document.getElementById('topic').value.trim();
+      const audience = document.getElementById('audience').value.trim();
+      const tone = document.getElementById('tone').value.trim();
+      const goal = document.getElementById('goal').value.trim();
+
+      if(!topic){
+        document.getElementById('output').innerText = "Please enter the main topic or idea to generate a useful AI prompt.";
+        return;
+      }
+
+      const prompt = `Act as an expert ${type.toLowerCase()} assistant.
+
+Create a high-quality output based on the following details:
+
+Main Topic:
+${topic}
+
+Target Audience:
+${audience || 'General audience'}
+
+Preferred Tone / Style:
+${tone || 'Clear, engaging, and professional'}
+
+Additional Requirements:
+${goal || 'Make the output detailed, easy to understand, well-structured, and useful.'}
+
+Instructions:
+- Keep the content relevant to the topic
+- Make the response practical and high quality
+- Use a clear structure with strong readability
+- Add examples or actionable insights where useful
+- Ensure the final result matches the audience and purpose well`;
+
+      document.getElementById('output').innerText = prompt;
+    }
+
+    function copyPrompt(){
+      const text = document.getElementById('output').innerText;
+      navigator.clipboard.writeText(text).then(()=>{
+        alert("Prompt copied successfully!");
+      });
+    }
+
+    function clearPromptTool(){
+      document.getElementById('promptType').selectedIndex = 0;
+      document.getElementById('topic').value = "";
+      document.getElementById('audience').value = "";
+      document.getElementById('tone').value = "";
+      document.getElementById('goal').value = "";
+      document.getElementById('output').innerText = "Your AI prompt will appear here. Fill the fields and click on the generate button to get a professional prompt structure.";
+    }
+  </script>
+</body>
+</html>

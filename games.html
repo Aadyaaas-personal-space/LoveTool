@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Games - Play Simple Online Games Like Snake, Ludo, Chess, Carrom & More | LoveTool</title>
+  <meta name="description" content="Play simple online games like Snake, Ludo, Chess mini battle, Carrom shot game and Rock Paper Scissors on LoveTool. Responsive, fun and easy browser games." />
+  <meta name="keywords" content="online games, snake game, ludo game, chess game, carrom game, browser games, mini games, simple games, play with computer" />
+  <meta name="author" content="LoveTool" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lovetool.in/games.html" />
+
+  <meta property="og:title" content="Games - Play Simple Online Games on LoveTool" />
+  <meta property="og:description" content="Enjoy simple online browser games like Snake, Carrom, Ludo, Chess and Rock Paper Scissors in a light blue premium UI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lovetool.in/games.html" />
+  <meta property="og:image" content="https://lovetool.in/images/games-cover.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Games - Simple Browser Games" />
+  <meta name="twitter:description" content="Play fun and simple online games with computer in a beautiful responsive interface." />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f9ff;
+      color: #222;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1200px, 92%);
+      margin: auto;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 78px;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #111;
+      letter-spacing: 0.4px;
+    }
+
+    .logo span {
+      color: #0f7ae5;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #333;
+      font-weight: 600;
+      transition: 0.3s;
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover {
+      color: #0f7ae5;
+    }
+
+    .nav-btn {
+      background: #111;
+      color: #fff !important;
+      padding: 10px 18px;
+      border-radius: 999px;
+    }
+
+    .nav-btn:hover {
+      background: #0f7ae5;
+      color: #fff !important;
+    }
+
+    .breadcrumb {
+      padding: 18px 0 0;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .breadcrumb a {
+      color: #0f7ae5;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 55px 0 40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      color: #111;
+    }
+
+    .hero-text p {
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .badge {
+      padding: 10px 16px;
+      background: #fff;
+      border: 1px solid #e4eef8;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #35506e;
+      box-shadow: 0 8px 20px rgba(15,122,229,0.05);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #3ea1ff, #0f7ae5);
+      color: #fff;
+      box-shadow: 0 14px 35px rgba(15,122,229,0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: #111;
+      border: 1px solid #dfeaf7;
+    }
+
+    .btn-secondary:hover {
+      border-color: #0f7ae5;
+      color: #0f7ae5;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, #ffffff, #f5fbff);
+      border: 1px solid #dcecfb;
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 24px 60px rgba(15,122,229,0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before,
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(15, 122, 229, 0.08);
+    }
+
+    .hero-card::before {
+      width: 180px;
+      height: 180px;
+      top: -50px;
+      right: -50px;
+    }
+
+    .hero-card::after {
+      width: 130px;
+      height: 130px;
+      bottom: -30px;
+      left: -30px;
+    }
+
+    .preview-box {
+      position: relative;
+      z-index: 2;
+    }
+
+    .mini-label {
+      display: inline-block;
+      padding: 8px 12px;
+      font-size: 0.84rem;
+      background: #e6f2ff;
+      color: #0f66bf;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .game-tabs {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .tab-btn {
+      border: 1px solid #d8e8f9;
+      background: #fff;
+      color: #24507a;
+      padding: 12px 10px;
+      border-radius: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s;
+      font-size: 0.9rem;
+    }
+
+    .tab-btn.active,
+    .tab-btn:hover {
+      background: linear-gradient(135deg, #3ea1ff, #0f7ae5);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .game-panel {
+      background: #fff;
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 12px 35px rgba(15,122,229,0.07);
+      display: none;
+    }
+
+    .game-panel.active {
+      display: block;
+    }
+
+    .game-panel h3 {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+      color: #111;
+      text-align: center;
+    }
+
+    .game-panel p {
+      color: #5d6a77;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .game-choice-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .game-btn {
+      border: none;
+      padding: 14px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #eef7ff, #dfefff);
+      color: #0f66bf;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s;
+      border: 1px solid #d6e8fb;
+    }
+
+    .game-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(15,122,229,0.12);
+    }
+
+    .game-result {
+      background: #f6fbff;
+      border: 1px solid #dcecff;
+      border-radius: 18px;
+      padding: 16px;
+      margin-top: 12px;
+      color: #21415f;
+      font-weight: 700;
+      min-height: 70px;
+      text-align: center;
+    }
+
+    .snake-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    canvas {
+      background: #0c1f33;
+      border-radius: 18px;
+      border: 4px solid #d9ecff;
+      max-width: 100%;
+    }
+
+    .control-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .ludo-track {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 6px;
+      margin: 18px 0;
+    }
+
+    .ludo-cell {
+      aspect-ratio: 1;
+      border-radius: 10px;
+      background: #eaf4ff;
+      border: 1px solid #d5e8fb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #35628b;
+    }
+
+    .ludo-player {
+      background: linear-gradient(135deg, #4caf50, #2e8b57);
+      color: #fff;
+    }
+
+    .ludo-computer {
+      background: linear-gradient(135deg, #ff8a65, #ef5350);
+      color: #fff;
+    }
+
+    .ludo-finish {
+      background: linear-gradient(135deg, #0f7ae5, #3ea1ff);
+      color: #fff;
+    }
+
+    .chess-board {
+      width: 320px;
+      max-width: 100%;
+      margin: 18px auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+
+    .chess-cell {
+      aspect-ratio: 1;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+      border: 1px solid #d7e9fb;
+    }
+
+    .chess-light {
+      background: #f7fbff;
+    }
+
+    .chess-dark {
+      background: #dcecff;
+    }
+
+    .selected-cell {
+      outline: 3px solid #0f7ae5;
+    }
+
+    .carrom-board {
+      width: 330px;
+      height: 330px;
+      max-width: 100%;
+      margin: 18px auto;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #f1d5a5, #dfb97d);
+      border: 10px solid #8a5a2b;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 0 16px rgba(0,0,0,0.18);
+    }
+
+    .pocket {
+      width: 24px;
+      height: 24px;
+      background: #1b1b1b;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .pocket.tl { top: 8px; left: 8px; }
+    .pocket.tr { top: 8px; right: 8px; }
+    .pocket.bl { bottom: 8px; left: 8px; }
+    .pocket.br { bottom: 8px; right: 8px; }
+
+    .coin {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      position: absolute;
+      left: 152px;
+      top: 120px;
+      transition: 0.5s ease;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    .coin.white { background: #f8f8f8; border: 2px solid #ddd; top: 115px; left: 150px; }
+    .coin.black { background: #2a2a2a; border: 2px solid #444; top: 155px; left: 152px; }
+    .coin.red { background: #d92525; border: 2px solid #b91313; top: 135px; left: 185px; }
+    .striker {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      position: absolute;
+      left: 148px;
+      bottom: 28px;
+      background: linear-gradient(135deg, #eaf6ff, #ffffff);
+      border: 3px solid #68a9e8;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      width: min(820px, 100%);
+      margin: auto;
+      color: #666;
+      font-size: 1rem;
+    }
+
+    .content-box {
+      background: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 12px 35px rgba(15,122,229,0.05);
+      border: 1px solid #e2eef9;
+    }
+
+    .content-box p {
+      margin-bottom: 14px;
+      color: #555;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 26px;
+    }
+
+    .tool-card {
+      background: #fff;
+      border: 1px solid #e3edf8;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(15,122,229,0.05);
+      transition: 0.35s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-7px);
+      border-color: #bddcff;
+      box-shadow: 0 18px 40px rgba(15,122,229,0.10);
+    }
+
+    .tool-icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #eaf5ff, #f5fbff);
+    }
+
+    .tool-card h3 {
+      font-size: 1.22rem;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .tool-card p {
+      color: #666;
+      font-size: 0.97rem;
+      margin-bottom: 18px;
+    }
+
+    .tool-card a {
+      color: #0f7ae5;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .feature-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .feature-item {
+      background: linear-gradient(180deg, #fff, #f6fbff);
+      padding: 22px;
+      border-radius: 20px;
+      border: 1px solid #dfeaf7;
+      text-align: center;
+    }
+
+    .feature-item h3 {
+      font-size: 1.55rem;
+      color: #0f7ae5;
+      margin-bottom: 8px;
+    }
+
+    .feature-item p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .article-card {
+      background: #fff;
+      padding: 26px;
+      border-radius: 22px;
+      border: 1px solid #e3edf8;
+      box-shadow: 0 10px 28px rgba(15,122,229,0.04);
+    }
+
+    .article-card h3 {
+      color: #111;
+      margin-bottom: 10px;
+      font-size: 1.22rem;
+    }
+
+    .article-card p {
+      color: #666;
+      font-size: 0.97rem;
+      margin-bottom: 12px;
+    }
+
+    .category-banner {
+      background: linear-gradient(135deg, #111, #243342);
+      color: #fff;
+      border-radius: 26px;
+      padding: 34px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .category-banner::before {
+      content: "";
+      position: absolute;
+      right: -60px;
+      top: -60px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .category-links {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .category-links a {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      padding: 16px;
+      border-radius: 16px;
+      text-align: center;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .category-links a:hover {
+      background: #0f7ae5;
+      border-color: #0f7ae5;
+    }
+
+    .faq-wrap {
+      max-width: 900px;
+      margin: 28px auto 0;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid #e3edf8;
+      border-radius: 18px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(15,122,229,0.04);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 18px 20px;
+      background: #fff;
+      border: none;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: #111;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 18px;
+      color: #666;
+      font-size: 0.96rem;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #eaf5ff, #ffffff);
+      border: 1px solid #d8eafb;
+      border-radius: 28px;
+      padding: 34px;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(15,122,229,0.08);
+    }
+
+    .cta-box h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: #111;
+    }
+
+    .cta-box p {
+      color: #666;
+      max-width: 780px;
+      margin: 0 auto 18px;
+    }
+
+    footer {
+      background: #0f0f10;
+      color: #d7d7d7;
+      margin-top: 50px;
+      padding-top: 55px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .footer-brand h2 {
+      color: #fff;
+      margin-bottom: 14px;
+      font-size: 1.8rem;
+    }
+
+    .footer-brand h2 span {
+      color: #0f7ae5;
+    }
+
+    .footer-brand p {
+      color: #bfbfbf;
+      font-size: 0.96rem;
+      margin-bottom: 18px;
+    }
+
+    .footer-col h3 {
+      color: #fff;
+      margin-bottom: 14px;
+      font-size: 1.08rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cfcfcf;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    .footer-col a:hover {
+      color: #6eb8ff;
+      padding-left: 4px;
+    }
+
+    .newsletter {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .newsletter input {
+      padding: 14px 14px;
+      border-radius: 12px;
+      border: 1px solid #2a2a2a;
+      background: #181818;
+      color: #fff;
+      outline: none;
+    }
+
+    .newsletter button {
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      background: #0f7ae5;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .newsletter button:hover {
+      background: #2d94fb;
+    }
+
+    .footer-bottom {
+      margin-top: 34px;
+      border-top: 1px solid #232323;
+      padding: 20px 0;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .footer-grid,
+      .feature-strip,
+      .category-links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .game-tabs {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .hero-grid,
+      .grid-3,
+      .feature-strip,
+      .article-grid,
+      .category-links,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+
+      .nav-wrap {
+        flex-direction: column;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .game-choice-box,
+      .game-tabs {
+        grid-template-columns: 1fr;
+      }
+
+      .ludo-track {
+        gap: 4px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Games - Play Simple Online Games",
+    "url":"https://lovetool.in/games.html",
+    "description":"A detailed games page with simple browser games like Snake, Ludo, Chess, Carrom and Rock Paper Scissors.",
+    "publisher":{
+      "@type":"Organization",
+      "name":"LoveTool"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <div class="logo">Love<span>Tool</span></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="all-tools.html">All Tools</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="games.html" class="nav-btn">Games</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container breadcrumb">
+    <a href="index.html">Home</a> / <a href="all-tools.html">Categories</a> / <span>Games</span>
+  </div>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Simple Playable Games with Computer in One Fun and Responsive Page</h1>
+        <p>
+          This upgraded games page is designed for users who want simple browser-based fun without any complex setup.
+          It includes mini versions of popular game ideas like Snake, Ludo, Chess, Carrom, and Rock Paper Scissors.
+        </p>
+        <p>
+          The aim is to keep each game lightweight, easy to understand, mobile-friendly, and directly playable against
+          the computer or system logic. This helps your games page feel interactive, engaging, and much stronger than a basic static category page.
+        </p>
+
+        <div class="hero-badges">
+          <div class="badge">Playable Games</div>
+          <div class="badge">Light Blue Theme</div>
+          <div class="badge">Simple vs Computer</div>
+          <div class="badge">Responsive Game Hub</div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#explore-tools" class="btn btn-primary">Explore Game Types</a>
+          <a href="#faq" class="btn btn-secondary">Read FAQ</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="preview-box">
+          <span class="mini-label">Game Center</span>
+
+          <div class="game-tabs">
+            <button class="tab-btn active" onclick="showGameTab('rps', this)">RPS</button>
+            <button class="tab-btn" onclick="showGameTab('snake', this)">Snake</button>
+            <button class="tab-btn" onclick="showGameTab('ludo', this)">Ludo</button>
+            <button class="tab-btn" onclick="showGameTab('chess', this)">Chess</button>
+            <button class="tab-btn" onclick="showGameTab('carrom', this)">Carrom</button>
+          </div>
+
+          <div class="game-panel active" id="rps">
+            <h3>Rock Paper Scissors</h3>
+            <p>Choose one option and play instantly against the computer.</p>
+            <div class="game-choice-box">
+              <button class="game-btn" onclick="playRPS('Rock')">🪨 Rock</button>
+              <button class="game-btn" onclick="playRPS('Paper')">📄 Paper</button>
+              <button class="game-btn" onclick="playRPS('Scissors')">✂️ Scissors</button>
+            </div>
+            <div class="game-result" id="rpsResult">Your result will appear here.</div>
+          </div>
+
+          <div class="game-panel" id="snake">
+            <h3>Snake Game</h3>
+            <p>Use arrow keys to move the snake. Eat food and avoid hitting walls or yourself.</p>
+            <div class="snake-wrap">
+              <canvas id="snakeCanvas" width="320" height="320"></canvas>
+              <div class="control-row">
+                <button class="game-btn" onclick="startSnake()">Start Snake</button>
+                <button class="game-btn" onclick="resetSnake()">Reset</button>
+              </div>
+              <div class="game-result" id="snakeScore">Score: 0</div>
+            </div>
+          </div>
+
+          <div class="game-panel" id="ludo">
+            <h3>Ludo Race</h3>
+            <p>Roll and race against computer. First to reach the finish wins.</p>
+            <div class="control-row">
+              <button class="game-btn" onclick="rollLudo()">Roll Dice</button>
+            </div>
+            <div class="ludo-track" id="ludoTrack"></div>
+            <div class="game-result" id="ludoResult">Click roll dice to begin.</div>
+          </div>
+
+          <div class="game-panel" id="chess">
+            <h3>Chess Mini Battle</h3>
+            <p>Control your king. Capture the computer king in this simple 4x4 mini chess challenge.</p>
+            <div class="chess-board" id="chessBoard"></div>
+            <div class="game-result" id="chessResult">Your king is ♔. Computer king is ♚.</div>
+          </div>
+
+          <div class="game-panel" id="carrom">
+            <h3>Carrom Shot</h3>
+            <p>Hit the striker and try to pocket more coins than the computer.</p>
+            <div class="carrom-board" id="carromBoard">
+              <div class="pocket tl"></div>
+              <div class="pocket tr"></div>
+              <div class="pocket bl"></div>
+              <div class="pocket br"></div>
+              <div class="coin white" id="coinWhite"></div>
+              <div class="coin black" id="coinBlack"></div>
+              <div class="coin red" id="coinRed"></div>
+              <div class="striker" id="striker"></div>
+            </div>
+            <div class="control-row">
+              <button class="game-btn" onclick="shootCarrom()">Shoot Striker</button>
+              <button class="game-btn" onclick="resetCarrom()">Reset Board</button>
+            </div>
+            <div class="game-result" id="carromResult">Player: 0 | Computer: 0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Why This Games Page Is More Powerful Now</h2>
+        <p>
+          A bigger interactive game hub improves engagement, adds replay value, and makes the category feel richer and more complete.
+        </p>
+      </div>
+
+      <div class="content-box">
+        <p>
+          This page is no longer just a single mini game preview. It now gives visitors multiple game experiences in one responsive section, which helps increase interaction and browsing time.
+        </p>
+        <p>
+          Simple games like Snake, Ludo race, mini Chess, and Carrom-style shot play are easy for users to understand, especially when they are playing directly against the computer or built-in game logic.
+        </p>
+        <p>
+          That combination of accessibility, replayability, and clean interface design makes the games page much more attractive for users exploring your platform.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="explore-tools">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Game Types in This Category</h2>
+        <p>
+          These cards show the variety of simple game experiences your visitors can explore.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="tool-card">
+          <div class="tool-icon">🐍</div>
+          <h3>Snake Game</h3>
+          <p>
+            A classic arcade-style game where the player controls movement, collects food, and tries to achieve a higher score without colliding.
+          </p>
+          <a href="#">Play Style Included →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">🎲</div>
+          <h3>Ludo Race</h3>
+          <p>
+            A simplified Ludo experience where the player races against a computer using random dice-based movement toward the finish line.
+          </p>
+          <a href="#">Play Style Included →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">♟</div>
+          <h3>Mini Chess</h3>
+          <p>
+            A very simple chess-inspired board battle that creates turn-based thinking and allows users to play directly against system movement.
+          </p>
+          <a href="#">Play Style Included →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">⚪</div>
+          <h3>Carrom Shot</h3>
+          <p>
+            A light and fun carrom-inspired experience where the player uses a striker shot and competes with the computer for pocketed coins.
+          </p>
+          <a href="#">Play Style Included →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">✂️</div>
+          <h3>Rock Paper Scissors</h3>
+          <p>
+            A quick decision-based game that is fast to play, instantly understandable, and perfect for users who want immediate entertainment.
+          </p>
+          <a href="#">Play Style Included →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">🎮</div>
+          <h3>Simple Browser Fun</h3>
+          <p>
+            Lightweight games like these work especially well on utility and entertainment websites because they require no installation and can be enjoyed instantly.
+          </p>
+          <a href="#">Playable Experience →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Games Category Highlights</h2>
+        <p>
+          Simple, replayable, and direct game experiences help users stay engaged longer.
+        </p>
+      </div>
+
+      <div class="feature-strip">
+        <div class="feature-item">
+          <h3>5 Games</h3>
+          <p>Multiple mini games are available directly inside the game hub.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Vs System</h3>
+          <p>Each game is made to feel like a player-versus-computer experience.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Responsive</h3>
+          <p>Layouts and controls adapt across desktop and mobile screens.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Fun UI</h3>
+          <p>Light blue design makes the page feel playful, modern, and clean.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Simple Playable Games Work So Well</h2>
+        <p>
+          Smaller browser games are easier to use, faster to load, and more suitable for casual website visitors.
+        </p>
+      </div>
+
+      <div class="article-grid">
+        <div class="article-card">
+          <h3>Fast Entry, Low Friction</h3>
+          <p>
+            Users do not need tutorials, downloads, or long loading times. They can start playing with one click, which makes the games much more accessible.
+          </p>
+        </div>
+
+        <div class="article-card">
+          <h3>Replay Value Improves Engagement</h3>
+          <p>
+            Simple games often invite users to try again for a better score, a faster win, or a different outcome against the computer.
+          </p>
+        </div>
+
+        <div class="article-card">
+          <h3>Good Fit for Multi-Tool Websites</h3>
+          <p>
+            Casual games can exist nicely alongside tools, generators, AI pages, and fun social pages, helping your website feel broader and more interactive.
+          </p>
+        </div>
+
+        <div class="article-card">
+          <h3>Clean UI Makes It Better</h3>
+          <p>
+            A polished, airy, light blue interface keeps the experience modern and enjoyable without making the page feel crowded or hard to understand.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="category-banner">
+        <h2 style="font-size:2rem; margin-bottom:12px;">Explore More Tool Categories</h2>
+        <p style="max-width:900px; color:#dddddd;">
+          Users can enjoy games and then continue browsing other useful and entertaining sections across your site.
+        </p>
+
+        <div class="category-links">
+          <a href="love-meter.html">Love Meter</a>
+          <a href="calculator.html">Calculator</a>
+          <a href="relationship-guidance.html">Relationship Guidance</a>
+          <a href="ai-writing-tools.html">AI Writing Tools</a>
+          <a href="caption-generator.html">Caption Generator</a>
+          <a href="text-utility-tools.html">Text Utility Tools</a>
+          <a href="seo-tools.html">SEO Tools</a>
+          <a href="student-tools.html">Student Tools</a>
+          <a href="daily-utility-tools.html">Daily Utility Tools</a>
+          <a href="all-tools.html">All Tools</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Helpful answers make this page more informative and more useful for visitors.
+        </p>
+      </div>
+
+      <div class="faq-wrap">
+        <div class="faq-item active">
+          <button class="faq-question">What games can users play on this page?</button>
+          <div class="faq-answer">
+            Users can play simple versions of Rock Paper Scissors, Snake, Ludo race, Mini Chess, and Carrom shot directly in the browser.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Are these games difficult to understand?</button>
+          <div class="faq-answer">
+            No. These games are designed to be very simple, lightweight, and easy to play even for first-time users.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can users play against the computer?</button>
+          <div class="faq-answer">
+            Yes. The games are designed around simple computer or system-based logic so that users can play solo against the website.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Does the blue theme also work for AI pages?</button>
+          <div class="faq-answer">
+            Yes. This lightest blue style works especially well for games and AI-related pages while keeping a clean and modern visual identity.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-box">
+        <h2>Turn Your Games Page Into a Real Interactive Experience</h2>
+        <p>
+          With multiple simple games, a cleaner blue theme, and more playable content, this page becomes far more engaging for visitors.
+        </p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="all-tools.html" class="btn btn-primary">Browse All Categories</a>
+          <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h2>Love<span>Tool</span></h2>
+        <p>
+          LoveTool is a modern multi-category utility platform designed to offer fun tools, smart digital experiences, and user-friendly pages with strong responsive design and rich content structure.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Main Pages</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="all-tools.html">All Tools</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Policies</h3>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <div class="newsletter">
+          <input type="email" placeholder="Enter your email" />
+          <button type="button">Subscribe Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      © 2026 LoveTool.in - All Rights Reserved. Designed for a modern, content-rich, responsive web experience.
+    </div>
+  </footer>
+
+  <script>
+    function showGameTab(id, btn) {
+      document.querySelectorAll('.game-panel').forEach(panel => panel.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function playRPS(userChoice) {
+      const choices = ["Rock", "Paper", "Scissors"];
+      const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+      let result = "";
+
+      if (userChoice === computerChoice) {
+        result = "It's a Draw! You both selected " + userChoice + ".";
+      } else if (
+        (userChoice === "Rock" && computerChoice === "Scissors") ||
+        (userChoice === "Paper" && computerChoice === "Rock") ||
+        (userChoice === "Scissors" && computerChoice === "Paper")
+      ) {
+        result = "You Win! You chose " + userChoice + " and computer chose " + computerChoice + ".";
+      } else {
+        result = "You Lose! You chose " + userChoice + " and computer chose " + computerChoice + ".";
+      }
+
+      document.getElementById("rpsResult").innerText = result;
+    }
+
+    let snakeCanvas = document.getElementById("snakeCanvas");
+    let snakeCtx = snakeCanvas.getContext("2d");
+    let snake = [{x: 160, y: 160}];
+    let food = {x: 80, y: 80};
+    let dx = 20, dy = 0;
+    let snakeScore = 0;
+    let snakeInterval = null;
+
+    function drawSnakeGame() {
+      snakeCtx.clearRect(0, 0, 320, 320);
+      snakeCtx.fillStyle = "#ff6f61";
+      snakeCtx.fillRect(food.x, food.y, 20, 20);
+
+      snake.forEach((part, index) => {
+        snakeCtx.fillStyle = index === 0 ? "#4caf50" : "#8bc34a";
+        snakeCtx.fillRect(part.x, part.y, 20, 20);
+      });
+
+      let head = {x: snake[0].x + dx, y: snake[0].y + dy};
+
+      if (head.x < 0 || head.y < 0 || head.x >= 320 || head.y >= 320 ||
+          snake.some(part => part.x === head.x && part.y === head.y)) {
+        clearInterval(snakeInterval);
+        snakeInterval = null;
+        document.getElementById("snakeScore").innerText = "Game Over! Score: " + snakeScore;
+        return;
+      }
+
+      snake.unshift(head);
+
+      if (head.x === food.x && head.y === food.y) {
+        snakeScore++;
+        document.getElementById("snakeScore").innerText = "Score: " + snakeScore;
+        food = {
+          x: Math.floor(Math.random() * 16) * 20,
+          y: Math.floor(Math.random() * 16) * 20
+        };
+      } else {
+        snake.pop();
+      }
+    }
+
+    function startSnake() {
+      if (snakeInterval) return;
+      snakeInterval = setInterval(drawSnakeGame, 140);
+    }
+
+    function resetSnake() {
+      clearInterval(snakeInterval);
+      snakeInterval = null;
+      snake = [{x: 160, y: 160}];
+      food = {x: 80, y: 80};
+      dx = 20; dy = 0;
+      snakeScore = 0;
+      document.getElementById("snakeScore").innerText = "Score: 0";
+      snakeCtx.clearRect(0, 0, 320, 320);
+      snake.forEach((part, index) => {
+        snakeCtx.fillStyle = index === 0 ? "#4caf50" : "#8bc34a";
+        snakeCtx.fillRect(part.x, part.y, 20, 20);
+      });
+      snakeCtx.fillStyle = "#ff6f61";
+      snakeCtx.fillRect(food.x, food.y, 20, 20);
+    }
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "ArrowUp" && dy === 0) { dx = 0; dy = -20; }
+      else if (e.key === "ArrowDown" && dy === 0) { dx = 0; dy = 20; }
+      else if (e.key === "ArrowLeft" && dx === 0) { dx = -20; dy = 0; }
+      else if (e.key === "ArrowRight" && dx === 0) { dx = 20; dy = 0; }
+    });
+
+    resetSnake();
+
+    let ludoPlayerPos = 0;
+    let ludoComputerPos = 0;
+
+    function renderLudo() {
+      const track = document.getElementById("ludoTrack");
+      track.innerHTML = "";
+      for (let i = 1; i <= 20; i++) {
+        const cell = document.createElement("div");
+        cell.className = "ludo-cell";
+        cell.textContent = i;
+
+        if (i === 20) cell.classList.add("ludo-finish");
+        if (i === ludoPlayerPos) {
+          cell.classList.add("ludo-player");
+          cell.textContent = "P";
+        }
+        if (i === ludoComputerPos) {
+          cell.classList.add("ludo-computer");
+          cell.textContent = ludoPlayerPos === i ? "P/C" : "C";
+        }
+        track.appendChild(cell);
+      }
+    }
+
+    function rollLudo() {
+      if (ludoPlayerPos >= 20 || ludoComputerPos >= 20) return;
+
+      const playerRoll = Math.floor(Math.random() * 6) + 1;
+      const compRoll = Math.floor(Math.random() * 6) + 1;
+
+      ludoPlayerPos = Math.min(20, ludoPlayerPos + playerRoll);
+      ludoComputerPos = Math.min(20, ludoComputerPos + compRoll);
+
+      let text = "You rolled " + playerRoll + ". Computer rolled " + compRoll + ". ";
+
+      if (ludoPlayerPos >= 20 && ludoComputerPos >= 20) {
+        text += "It's a draw!";
+      } else if (ludoPlayerPos >= 20) {
+        text += "You win the race!";
+      } else if (ludoComputerPos >= 20) {
+        text += "Computer wins the race!";
+      } else {
+        text += "Keep rolling.";
+      }
+
+      renderLudo();
+      document.getElementById("ludoResult").innerText = text;
+    }
+
+    renderLudo();
+
+    const chessBoard = document.getElementById("chessBoard");
+    let selectedCell = null;
+    let playerPos = 12;
+    let compPos = 3;
+
+    function renderChess() {
+      chessBoard.innerHTML = "";
+      for (let i = 0; i < 16; i++) {
+        const cell = document.createElement("div");
+        cell.className = "chess-cell " + (((Math.floor(i / 4) + i) % 2 === 0) ? "chess-light" : "chess-dark");
+        if (i === playerPos) cell.textContent = "♔";
+        if (i === compPos) cell.textContent = "♚";
+        if (selectedCell === i) cell.classList.add("selected-cell");
+        cell.onclick = () => moveChess(i);
+        chessBoard.appendChild(cell);
+      }
+    }
+
+    function validMove(from, to) {
+      const fromRow = Math.floor(from / 4), fromCol = from % 4;
+      const toRow = Math.floor(to / 4), toCol = to % 4;
+      return Math.abs(fromRow - toRow) <= 1 && Math.abs(fromCol - toCol) <= 1 && !(from === to);
+    }
+
+    function moveChess(i) {
+      if (selectedCell === null) {
+        if (i === playerPos) {
+          selectedCell = i;
+          renderChess();
+        }
+      } else {
+        if (validMove(playerPos, i)) {
+          playerPos = i;
+          selectedCell = null;
+
+          if (playerPos === compPos) {
+            renderChess();
+            document.getElementById("chessResult").innerText = "You captured the computer king. You win!";
+            return;
+          }
+
+          computerChessMove();
+        } else {
+          selectedCell = null;
+        }
+        renderChess();
+      }
+    }
+
+    function computerChessMove() {
+      const possible = [];
+      for (let i = 0; i < 16; i++) {
+        if (validMove(compPos, i)) possible.push(i);
+      }
+      compPos = possible[Math.floor(Math.random() * possible.length)];
+
+      if (compPos === playerPos) {
+        document.getElementById("chessResult").innerText = "Computer captured your king. Computer wins!";
+      } else {
+        document.getElementById("chessResult").innerText = "Your king is ♔. Computer king is ♚.";
+      }
+    }
+
+    renderChess();
+
+    let carromPlayer = 0;
+    let carromComputer = 0;
+
+    function shootCarrom() {
+      const coins = [
+        document.getElementById("coinWhite"),
+        document.getElementById("coinBlack"),
+        document.getElementById("coinRed")
+      ];
+
+      const randomCoin = coins[Math.floor(Math.random() * coins.length)];
+      const pocketed = Math.random() > 0.45;
+
+      if (pocketed && randomCoin.style.display !== "none") {
+        randomCoin.style.transform = "translate(-120px, -120px) scale(0.2)";
+        setTimeout(() => {
+          randomCoin.style.display = "none";
+        }, 450);
+        carromPlayer++;
+      }
+
+      if (Math.random() > 0.5) {
+        carromComputer++;
+      }
+
+      document.getElementById("carromResult").innerText = "Player: " + carromPlayer + " | Computer: " + carromComputer;
+
+      if ([...coins].every(c => c.style.display === "none")) {
+        let msg = "Game Over! ";
+        if (carromPlayer > carromComputer) msg += "You win!";
+        else if (carromPlayer < carromComputer) msg += "Computer wins!";
+        else msg += "It's a draw!";
+        document.getElementById("carromResult").innerText += " — " + msg;
+      }
+    }
+
+    function resetCarrom() {
+      carromPlayer = 0;
+      carromComputer = 0;
+      const white = document.getElementById("coinWhite");
+      const black = document.getElementById("coinBlack");
+      const red = document.getElementById("coinRed");
+
+      white.style.display = "block";
+      black.style.display = "block";
+      red.style.display = "block";
+
+      white.style.transform = "translate(0,0) scale(1)";
+      black.style.transform = "translate(0,0) scale(1)";
+      red.style.transform = "translate(0,0) scale(1)";
+
+      white.style.top = "115px"; white.style.left = "150px";
+      black.style.top = "155px"; black.style.left = "152px";
+      red.style.top = "135px"; red.style.left = "185px";
+
+      document.getElementById("carromResult").innerText = "Player: 0 | Computer: 0";
+    }
+
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach(item => {
+      const btn = item.querySelector(".faq-question");
+      btn.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>

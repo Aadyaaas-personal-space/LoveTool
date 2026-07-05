@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Caption Generator - Free AI Caption Ideas for Posts, Reels & Selfies</title>
+  <meta name="description" content="Use our free Instagram Caption Generator to create catchy, stylish, funny, romantic, aesthetic, and viral captions for selfies, reels, travel posts, food photos, friends, love posts, and more." />
+  <meta name="keywords" content="instagram caption generator, caption generator for instagram, insta captions, selfie captions, reels caption generator, aesthetic captions, funny instagram captions, romantic captions, free caption tool" />
+  <meta name="author" content="LoveTool" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Instagram Caption Generator - Free Stylish Captions for Instagram" />
+  <meta property="og:description" content="Generate creative Instagram captions for selfies, travel, friends, love, food, fashion, reels and more with our free online tool." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lovetool.in/instagram-caption-generator.html" />
+  <meta property="og:image" content="https://lovetool.in/images/instagram-caption-generator-preview.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #f6fbff 0%, #eef8ff 50%, #fdfcff 100%);
+      color:#18202a;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:min(1180px, 92%);
+      margin:auto;
+    }
+
+    /* NAVBAR */
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:999;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid rgba(0,0,0,0.06);
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 0;
+      gap:20px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      font-size:1.35rem;
+      color:#111827;
+    }
+
+    .logo-badge{
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#ff5fa2,#8e5bff,#4cc9f0);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:1.1rem;
+      box-shadow:0 10px 30px rgba(142,91,255,0.28);
+    }
+
+    .nav-links{
+      display:flex;
+      gap:22px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
+      color:#374151;
+      font-size:0.96rem;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#7c3aed;
+    }
+
+    .nav-btn{
+      padding:11px 18px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#7c3aed,#ec4899);
+      color:#fff !important;
+      box-shadow:0 10px 25px rgba(124,58,237,0.22);
+    }
+
+    /* HERO */
+    .hero{
+      padding:70px 0 35px;
+    }
+
+    .hero-wrap{
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:clamp(2rem,4vw,3.5rem);
+      line-height:1.15;
+      margin-bottom:18px;
+      color:#0f172a;
+    }
+
+    .hero-text h1 span{
+      background:linear-gradient(90deg,#7c3aed,#ec4899,#0ea5e9);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .hero-text p{
+      font-size:1.05rem;
+      color:#475569;
+      margin-bottom:24px;
+      max-width:760px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:26px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:700;
+      transition:0.3s;
+      border:none;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,#7c3aed,#ec4899);
+      color:#fff;
+      box-shadow:0 12px 30px rgba(124,58,237,0.26);
+    }
+
+    .btn-secondary{
+      background:#fff;
+      color:#1e293b;
+      border:1px solid rgba(0,0,0,0.08);
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .mini-card{
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 10px 28px rgba(2,6,23,0.05);
+    }
+
+    .mini-card strong{
+      display:block;
+      font-size:1.15rem;
+      color:#111827;
+      margin-bottom:5px;
+    }
+
+    .mini-card span{
+      color:#64748b;
+      font-size:0.93rem;
+    }
+
+    .hero-side{
+      background:linear-gradient(180deg,#ffffff,#f7f0ff);
+      border:1px solid rgba(124,58,237,0.12);
+      border-radius:28px;
+      padding:28px;
+      box-shadow:0 18px 50px rgba(80,40,140,0.12);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-side::before{
+      content:"";
+      position:absolute;
+      width:180px;
+      height:180px;
+      background:radial-gradient(circle, rgba(236,72,153,0.20), transparent 70%);
+      top:-35px;
+      right:-30px;
+      border-radius:50%;
+    }
+
+    .hero-side h3{
+      font-size:1.5rem;
+      margin-bottom:10px;
+      color:#111827;
+      position:relative;
+      z-index:1;
+    }
+
+    .hero-side p{
+      color:#64748b;
+      margin-bottom:16px;
+      position:relative;
+      z-index:1;
+    }
+
+    .tag-cloud{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      position:relative;
+      z-index:1;
+    }
+
+    .tag-cloud span{
+      padding:9px 14px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.08);
+      font-size:0.9rem;
+      color:#334155;
+      box-shadow:0 8px 18px rgba(2,6,23,0.04);
+    }
+
+    /* TOOL */
+    .tool-section{
+      padding:30px 0 65px;
+    }
+
+    .tool-wrap{
+      background:#ffffff;
+      border-radius:30px;
+      padding:28px;
+      box-shadow:0 20px 60px rgba(15,23,42,0.08);
+      border:1px solid rgba(0,0,0,0.05);
+    }
+
+    .section-heading{
+      text-align:center;
+      margin-bottom:24px;
+    }
+
+    .section-heading h2{
+      font-size:2rem;
+      margin-bottom:10px;
+      color:#111827;
+    }
+
+    .section-heading p{
+      color:#64748b;
+      max-width:850px;
+      margin:auto;
+    }
+
+    .generator-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      margin-top:25px;
+    }
+
+    .form-panel, .result-panel{
+      background:linear-gradient(180deg,#fcfdff,#f7fbff);
+      border:1px solid rgba(0,0,0,0.06);
+      border-radius:24px;
+      padding:22px;
+    }
+
+    .panel-title{
+      font-size:1.25rem;
+      font-weight:800;
+      color:#0f172a;
+      margin-bottom:16px;
+    }
+
+    .field{
+      margin-bottom:16px;
+    }
+
+    .field label{
+      display:block;
+      font-weight:700;
+      font-size:0.95rem;
+      margin-bottom:8px;
+      color:#1f2937;
+    }
+
+    .field input, .field select, .field textarea{
+      width:100%;
+      padding:14px 15px;
+      border-radius:16px;
+      border:1px solid rgba(0,0,0,0.10);
+      background:#fff;
+      outline:none;
+      font-size:0.97rem;
+      transition:0.3s;
+    }
+
+    .field input:focus, .field select:focus, .field textarea:focus{
+      border-color:#8b5cf6;
+      box-shadow:0 0 0 4px rgba(139,92,246,0.10);
+    }
+
+    .field textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .options-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .action-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+
+    .output-box{
+      min-height:300px;
+      background:#fff;
+      border-radius:22px;
+      padding:20px;
+      border:1px solid rgba(0,0,0,0.08);
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .caption-card{
+      background:linear-gradient(135deg,#faf5ff,#fff1f7);
+      border:1px solid rgba(124,58,237,0.12);
+      border-radius:18px;
+      padding:16px;
+      position:relative;
+    }
+
+    .caption-card h4{
+      font-size:0.9rem;
+      color:#7c3aed;
+      margin-bottom:8px;
+      text-transform:uppercase;
+      letter-spacing:0.6px;
+    }
+
+    .caption-card p{
+      color:#1f2937;
+      font-size:1rem;
+      margin-bottom:10px;
+    }
+
+    .copy-btn{
+      border:none;
+      background:#111827;
+      color:#fff;
+      padding:9px 14px;
+      border-radius:999px;
+      cursor:pointer;
+      font-size:0.88rem;
+      font-weight:700;
+    }
+
+    .empty-state{
+      color:#64748b;
+      font-size:1rem;
+      text-align:center;
+      padding:55px 15px;
+    }
+
+    /* CONTENT BLOCKS */
+    .content-section{
+      padding:30px 0 20px;
+    }
+
+    .info-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+      margin-top:20px;
+    }
+
+    .info-card{
+      background:#fff;
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 14px 40px rgba(15,23,42,0.06);
+      border:1px solid rgba(0,0,0,0.05);
+    }
+
+    .info-card h3{
+      margin-bottom:10px;
+      font-size:1.15rem;
+      color:#111827;
+    }
+
+    .info-card p{
+      color:#64748b;
+      font-size:0.96rem;
+    }
+
+    .seo-block{
+      background:linear-gradient(135deg,#111827,#1f2937);
+      color:#f8fafc;
+      padding:35px;
+      border-radius:30px;
+      margin-top:30px;
+      box-shadow:0 18px 50px rgba(15,23,42,0.20);
+    }
+
+    .seo-block h2{
+      margin-bottom:12px;
+      font-size:2rem;
+    }
+
+    .seo-block p{
+      color:#dbe4ee;
+      margin-bottom:12px;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:25px;
+      margin-top:24px;
+    }
+
+    .list-box{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      padding:22px;
+    }
+
+    .list-box h3{
+      margin-bottom:12px;
+      font-size:1.2rem;
+    }
+
+    .list-box ul{
+      padding-left:18px;
+    }
+
+    .list-box li{
+      margin-bottom:10px;
+      color:#e5eef7;
+    }
+
+    /* FAQ */
+    .faq-section{
+      padding:55px 0 30px;
+    }
+
+    .faq-list{
+      display:grid;
+      gap:16px;
+      margin-top:24px;
+    }
+
+    .faq-item{
+      background:#fff;
+      border-radius:22px;
+      padding:22px;
+      border:1px solid rgba(0,0,0,0.05);
+      box-shadow:0 12px 36px rgba(15,23,42,0.05);
+    }
+
+    .faq-item h3{
+      font-size:1.05rem;
+      color:#111827;
+      margin-bottom:8px;
+    }
+
+    .faq-item p{
+      color:#64748b;
+    }
+
+    /* CTA */
+    .cta{
+      padding:35px 0 70px;
+    }
+
+    .cta-box{
+      background:linear-gradient(135deg,#7c3aed,#ec4899,#0ea5e9);
+      border-radius:30px;
+      padding:36px;
+      text-align:center;
+      color:#fff;
+      box-shadow:0 20px 60px rgba(124,58,237,0.22);
+    }
+
+    .cta-box h2{
+      font-size:2rem;
+      margin-bottom:12px;
+    }
+
+    .cta-box p{
+      max-width:780px;
+      margin:0 auto 20px;
+      color:#fef3ff;
+    }
+
+    .cta-box .btn-secondary{
+      border:none;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#05070b;
+      color:#dbe4ee;
+      padding:65px 0 20px;
+      margin-top:20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1fr 1fr;
+      gap:30px;
+      margin-bottom:28px;
+    }
+
+    .footer-brand h3{
+      font-size:1.6rem;
+      color:#fff;
+      margin-bottom:12px;
+    }
+
+    .footer-brand p{
+      color:#9fb1c5;
+      margin-bottom:15px;
+    }
+
+    .footer-col h4{
+      color:#fff;
+      margin-bottom:14px;
+      font-size:1.05rem;
+    }
+
+    .footer-col a{
+      display:block;
+      color:#9fb1c5;
+      margin-bottom:10px;
+      transition:0.3s;
+      font-size:0.95rem;
+    }
+
+    .footer-col a:hover{
+      color:#fff;
+    }
+
+    .newsletter{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .newsletter input{
+      padding:13px 14px;
+      border:none;
+      outline:none;
+      border-radius:14px;
+    }
+
+    .newsletter button{
+      padding:13px 14px;
+      border:none;
+      border-radius:14px;
+      background:linear-gradient(135deg,#7c3aed,#ec4899);
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,0.08);
+      padding-top:16px;
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      color:#8ea3ba;
+      font-size:0.92rem;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:992px){
+      .hero-wrap,
+      .generator-grid,
+      .two-col,
+      .footer-grid,
+      .info-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-points{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:768px){
+      .navbar{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        width:100%;
+        gap:14px;
+      }
+
+      .options-row{
+        grid-template-columns:1fr;
+      }
+
+      .tool-wrap,
+      .seo-block,
+      .cta-box{
+        padding:22px;
+      }
+
+      .hero{
+        padding-top:40px;
+      }
+
+      .hero-text h1{
+        font-size:2.1rem;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"Instagram Caption Generator",
+    "applicationCategory":"UtilityApplication",
+    "operatingSystem":"All",
+    "description":"A free online Instagram caption generator that helps users create catchy captions for selfies, travel photos, reels, fashion posts, romantic moments, food pictures, and friend group images."
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is an Instagram Caption Generator?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"An Instagram Caption Generator is an online tool that creates stylish, catchy, funny, romantic, or aesthetic captions for Instagram posts, reels, stories, selfies, and travel pictures."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Can I use these captions for reels and selfies?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes, the generated captions can be used for reels, selfies, travel pictures, food photos, couple posts, friend posts, and many other social media content types."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Is this Instagram caption tool free to use?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes, this Instagram Caption Generator is completely free to use and works instantly in your browser."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container navbar">
+      <div class="logo">
+        <div class="logo-badge">IG</div>
+        <span>LoveTool</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="all-tools.html">All Tools</a>
+        <a href="ai-writing-tools.html">AI Writing Tools</a>
+        <a href="caption-generator.html">Caption Tools</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="#generator" class="nav-btn">Use Tool</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div class="hero-text">
+        <h1>Create <span>Instagram Captions</span> That Match Your Style, Mood & Vibe</h1>
+        <p>
+          Welcome to our advanced Instagram Caption Generator, a free and responsive online tool designed to help creators, students, influencers, brands, and casual users write better captions for Instagram posts. Whether you are posting a selfie, a romantic moment, a travel photo, a fashion shoot, a food story, or a reels update, this tool helps you generate fresh, relevant, stylish, and scroll-stopping caption ideas in seconds.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#generator" class="btn btn-primary">Generate Captions</a>
+          <a href="#about-tool" class="btn btn-secondary">Learn More</a>
+        </div>
+
+        <div class="hero-points">
+          <div class="mini-card">
+            <strong>100% Free</strong>
+            <span>Unlimited caption ideas without signup</span>
+          </div>
+          <div class="mini-card">
+            <strong>Multiple Styles</strong>
+            <span>Funny, romantic, classy, bold, aesthetic and more</span>
+          </div>
+          <div class="mini-card">
+            <strong>SEO-Friendly Page</strong>
+            <span>Detailed content with useful information for users</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <h3>Popular Caption Types</h3>
+        <p>Generate ready-to-use Instagram captions for trending categories and daily posting needs.</p>
+        <div class="tag-cloud">
+          <span>Selfie Captions</span>
+          <span>Travel Captions</span>
+          <span>Romantic Captions</span>
+          <span>Food Captions</span>
+          <span>Fashion Captions</span>
+          <span>Friends Captions</span>
+          <span>Attitude Captions</span>
+          <span>Aesthetic Captions</span>
+          <span>Reels Captions</span>
+          <span>Motivation Captions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-section" id="generator">
+    <div class="container">
+      <div class="tool-wrap">
+        <div class="section-heading">
+          <h2>Instagram Caption Generator Tool</h2>
+          <p>
+            Fill in your post topic, select your caption category, choose a tone, and instantly generate multiple Instagram caption ideas. The tool is useful for personal posts, creators, pages, businesses, and anyone who wants better engagement and cleaner presentation on social media.
+          </p>
+        </div>
+
+        <div class="generator-grid">
+          <div class="form-panel">
+            <div class="panel-title">Enter Your Post Details</div>
+
+            <div class="field">
+              <label for="topic">What is your post about?</label>
+              <textarea id="topic" placeholder="Example: sunset at the beach, birthday with best friends, coffee date, mirror selfie, gym progress, traditional look, travel memories..."></textarea>
+            </div>
+
+            <div class="options-row">
+              <div class="field">
+                <label for="category">Caption Category</label>
+                <select id="category">
+                  <option value="selfie">Selfie</option>
+                  <option value="travel">Travel</option>
+                  <option value="love">Love / Romantic</option>
+                  <option value="friends">Friends</option>
+                  <option value="fashion">Fashion / Style</option>
+                  <option value="food">Food</option>
+                  <option value="motivation">Motivation</option>
+                  <option value="reel">Reels / Trendy</option>
+                  <option value="attitude">Attitude</option>
+                  <option value="aesthetic">Aesthetic</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="tone">Tone</label>
+                <select id="tone">
+                  <option value="cute">Cute</option>
+                  <option value="funny">Funny</option>
+                  <option value="classy">Classy</option>
+                  <option value="romantic">Romantic</option>
+                  <option value="bold">Bold</option>
+                  <option value="minimal">Minimal</option>
+                  <option value="inspiring">Inspiring</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="options-row">
+              <div class="field">
+                <label for="length">Caption Length</label>
+                <select id="length">
+                  <option value="short">Short</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="long">Long</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="emoji">Emoji Style</label>
+                <select id="emoji">
+                  <option value="yes">With Emojis</option>
+                  <option value="no">Without Emojis</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="action-row">
+              <button class="btn btn-primary" onclick="generateCaptions()">Generate Now</button>
+              <button class="btn btn-secondary" onclick="clearTool()">Clear</button>
+            </div>
+          </div>
+
+          <div class="result-panel">
+            <div class="panel-title">Generated Captions</div>
+            <div class="output-box" id="results">
+              <div class="empty-state">
+                Your generated Instagram captions will appear here. Enter your topic and click on <strong>Generate Now</strong>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="about-tool">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Why Use This Instagram Caption Generator?</h2>
+        <p>
+          Writing a strong caption is more than just adding a few words under a photo. A great caption can improve your post’s mood, increase relatability, strengthen branding, and help your content feel complete. Our tool is built to save time while also giving you creative ideas that fit today’s social style.
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Fast Content Creation</h3>
+          <p>
+            Instead of spending several minutes thinking of a good line for every post, you can generate multiple fresh ideas instantly. This makes posting easier for regular Instagram users, influencers, students, and creators.
+          </p>
+        </div>
+        <div class="info-card">
+          <h3>Works for Many Post Types</h3>
+          <p>
+            From mirror selfies and romantic date photos to travel reels, food shots, fashion posts, and friend group pictures, this generator is designed to support a wide variety of Instagram content needs.
+          </p>
+        </div>
+        <div class="info-card">
+          <h3>Stylish and User-Friendly</h3>
+          <p>
+            The page layout is responsive, modern, and easy to use on desktop and mobile devices. Users can quickly select a caption tone, category, and style without confusion.
+          </p>
+        </div>
+      </div>
+
+      <div class="seo-block">
+        <h2>Best Instagram Caption Ideas for Every Mood</h2>
+        <p>
+          Instagram captions help express personality, emotion, confidence, humor, and storytelling. A photo may attract attention first, but the caption often keeps people engaged longer. Many creators use captions to set a mood, describe a memory, share a thought, or simply improve the overall presentation of their feed.
+        </p>
+        <p>
+          If you frequently post on Instagram, reels, or story highlights, having a reliable caption generator can help maintain consistency. It also reduces creative blocks when you know what you want to post but are unsure how to phrase it in an attractive way.
+        </p>
+
+        <div class="two-col">
+          <div class="list-box">
+            <h3>Popular Uses of Caption Generator</h3>
+            <ul>
+              <li>Creating selfie captions with confidence and style</li>
+              <li>Writing romantic captions for couple posts</li>
+              <li>Generating classy one-liners for fashion posts</li>
+              <li>Making short captions for reels and trending videos</li>
+              <li>Creating cute, funny, and aesthetic social media text</li>
+              <li>Improving consistency for content creators and pages</li>
+            </ul>
+          </div>
+
+          <div class="list-box">
+            <h3>Who Can Use This Tool?</h3>
+            <ul>
+              <li>Instagram creators and social media influencers</li>
+              <li>Students posting memories, events, and celebrations</li>
+              <li>Fashion, food, and lifestyle pages</li>
+              <li>Couples sharing love posts and anniversary pictures</li>
+              <li>Friends posting party, trip, and group photos</li>
+              <li>Anyone who wants better captions without wasting time</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Here are some of the most common questions users ask before using an Instagram caption generator online.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>What does an Instagram Caption Generator do?</h3>
+          <p>
+            It helps you create ready-made caption ideas for your Instagram posts based on topic, style, category, and mood. This saves time and improves content presentation.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I use this tool for reels and stories?</h3>
+          <p>
+            Yes. The generated text can be used for reels, story updates, photo posts, carousel posts, couple uploads, fashion content, and many more content formats.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is this caption generator free?</h3>
+          <p>
+            Yes, this tool is free to use. You can generate multiple captions instantly without signup or payment.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I generate captions for romantic or funny posts?</h3>
+          <p>
+            Absolutely. You can choose from multiple categories and tones including funny, romantic, classy, cute, bold, minimal, and inspiring.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Does this page work on mobile devices?</h3>
+          <p>
+            Yes. The layout is responsive and designed to work smoothly on desktop, tablet, and mobile screens.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Start Writing Better Instagram Captions Today</h2>
+        <p>
+          Use our free Instagram Caption Generator to create stylish, attractive, and ready-to-post captions for every kind of Instagram content. From personal selfies to creator reels and brand storytelling, this tool helps you post with more confidence and creativity.
+        </p>
+        <a href="#generator" class="btn btn-secondary">Try the Generator Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>LoveTool</h3>
+          <p>
+            LoveTool is a growing collection of free online tools designed for creativity, captions, relationships, daily utilities, calculators, AI writing support, and user-friendly content generation. Our mission is to make useful tools accessible in a clean, responsive, and engaging format.
+          </p>
+          <p>
+            We focus on simple usability, detailed content sections, and SEO-rich utility pages that create value for both visitors and website growth.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Tools</h4>
+          <a href="love-letter-generator.html">Love Letter Generator</a>
+          <a href="instagram-caption-generator.html">Instagram Caption Generator</a>
+          <a href="birthday-wishes.html">Birthday Wishes Generator</a>
+          <a href="relationship-guidance.html">Relationship Guidance</a>
+          <a href="love-meter.html">Love Meter</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Useful Pages</h4>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms & Conditions</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <div class="newsletter">
+            <input type="email" placeholder="Enter your email" />
+            <button type="button">Subscribe</button>
+          </div>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+          <a href="#">Facebook</a>
+          <a href="#">Pinterest</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 LoveTool. All rights reserved.</span>
+        <span>Designed for responsive experience, detailed utility content, and strong user engagement.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function emojiSet(useEmoji, type){
+      if(useEmoji === "no") return "";
+
+      const map = {
+        selfie: " ✨📸💫",
+        travel: " 🌍✈️🌅",
+        love: " ❤️🥰💌",
+        friends: " 🫶😄🎉",
+        fashion: " 👗🔥💎",
+        food: " 🍕☕😍",
+        motivation: " 🚀💯🌟",
+        reel: " 🎬🔥📱",
+        attitude: " 😎⚡👑",
+        aesthetic: " 🌙🕊️✨"
+      };
+      return map[type] || " ✨";
+    }
+
+    function generateCaptions(){
+      const topic = document.getElementById("topic").value.trim();
+      const category = document.getElementById("category").value;
+      const tone = document.getElementById("tone").value;
+      const length = document.getElementById("length").value;
+      const emoji = document.getElementById("emoji").value;
+      const results = document.getElementById("results");
+
+      const baseTopic = topic || "this special moment";
+      const emo = emojiSet(emoji, category);
+
+      const captionBank = {
+        selfie: [
+          `Just me, my vibe, and ${baseTopic}.${emo}`,
+          `Confidence looks better when it feels natural — just like ${baseTopic}.${emo}`,
+          `Serving a little glow, a little mood, and a lot of ${baseTopic}.${emo}`,
+          `Not perfect, just real — and that is the beauty of ${baseTopic}.${emo}`
+        ],
+        travel: [
+          `Collecting memories, chasing views, and living through ${baseTopic}.${emo}`,
+          `A little escape, a lot of peace, and a heart full of ${baseTopic}.${emo}`,
+          `Some places stay in your camera, others stay in your soul — like ${baseTopic}.${emo}`,
+          `Wander often, feel deeply, and never stop exploring ${baseTopic}.${emo}`
+        ],
+        love: [
+          `Every little moment feels softer and sweeter with ${baseTopic}.${emo}`,
+          `Love lives in the details, and today it looked like ${baseTopic}.${emo}`,
+          `Some feelings are too beautiful for words, but ${baseTopic} comes close.${emo}`,
+          `Holding onto moments like ${baseTopic}, because love is made of these.${emo}`
+        ],
+        friends: [
+          `Best memories are never planned, they just happen like ${baseTopic}.${emo}`,
+          `Laughing louder, smiling bigger, and making room for ${baseTopic}.${emo}`,
+          `Good times + great people = unforgettable ${baseTopic}.${emo}`,
+          `Friendship is the real flex, especially in moments like ${baseTopic}.${emo}`
+        ],
+        fashion: [
+          `Styled with confidence and finished with ${baseTopic}.${emo}`,
+          `Not just wearing an outfit, wearing a whole mood called ${baseTopic}.${emo}`,
+          `Elegance, edge, and a touch of ${baseTopic}.${emo}`,
+          `Fashion fades, but a look built around ${baseTopic} stays remembered.${emo}`
+        ],
+        food: [
+          `Happiness tastes a lot like ${baseTopic}.${emo}`,
+          `Serving cravings, comfort, and a plate full of ${baseTopic}.${emo}`,
+          `Good food, better mood, and today that means ${baseTopic}.${emo}`,
+          `Some love stories start with a bite, especially when it is ${baseTopic}.${emo}`
+        ],
+        motivation: [
+          `Small steps, strong mindset, and the energy of ${baseTopic}.${emo}`,
+          `Growth is quiet, powerful, and often looks like ${baseTopic}.${emo}`,
+          `Be proud of your pace, your path, and your ${baseTopic}.${emo}`,
+          `Discipline, dreams, and a little fire called ${baseTopic}.${emo}`
+        ],
+        reel: [
+          `Main character energy, trending sound, and ${baseTopic}.${emo}`,
+          `This reel had one job: deliver the vibe of ${baseTopic}.${emo}`,
+          `Caught in motion, built on mood, powered by ${baseTopic}.${emo}`,
+          `Scroll if you want, but ${baseTopic} deserves a replay.${emo}`
+        ],
+        attitude: [
+          `Silent moves, bold energy, and a mindset full of ${baseTopic}.${emo}`,
+          `I do not chase attention, I carry ${baseTopic}.${emo}`,
+          `Built differently, moving differently, posting ${baseTopic}.${emo}`,
+          `Leveling up with no noise, just results and ${baseTopic}.${emo}`
+        ],
+        aesthetic: [
+          `Soft light, calm thoughts, and a little piece of ${baseTopic}.${emo}`,
+          `A moment that felt like poetry — that is ${baseTopic}.${emo}`,
+          `Some moods do not need explanation, only ${baseTopic}.${emo}`,
+          `Dreamy details, quiet beauty, and the feeling of ${baseTopic}.${emo}`
+        ]
+      };
+
+      let selected = captionBank[category] || captionBank.selfie;
+
+      // tone adjustments
+      if(tone === "funny"){
+        selected = selected.map(c => c.replace(".", " ...and yes, I posted it anyway."));
+      } else if(tone === "classy"){
+        selected = selected.map(c => "Elegance in every detail. " + c);
+      } else if(tone === "romantic"){
+        selected = selected.map(c => "A little heart, a little magic. " + c);
+      } else if(tone === "bold"){
+        selected = selected.map(c => "No overthinking. Just presence. " + c);
+      } else if(tone === "minimal"){
+        selected = selected.map(c => c.split("—")[0].split(",")[0] + "." + emo);
+      } else if(tone === "inspiring"){
+        selected = selected.map(c => "Keep shining. " + c);
+      } else if(tone === "cute"){
+        selected = selected.map(c => "Little happy moment. " + c);
+      }
+
+      // length adjustments
+      if(length === "short"){
+        selected = selected.map(c => {
+          const pieces = c.split(/[,.]/);
+          return pieces[0] + "." + emo;
+        });
+      } else if(length === "long"){
+        selected = selected.map(c => c + " Sometimes the best captions are the ones that capture a real feeling, and this one is all about that.");
+      }
+
+      results.innerHTML = "";
+
+      selected.slice(0,4).forEach((caption, index) => {
+        const card = document.createElement("div");
+        card.className = "caption-card";
+        card.innerHTML = `
+          <h4>Caption ${index + 1}</h4>
+          <p id="caption-${index}">${caption}</p>
+          <button class="copy-btn" onclick="copyCaption('caption-${index}')">Copy Caption</button>
+        `;
+        results.appendChild(card);
+      });
+    }
+
+    function copyCaption(id){
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Caption copied successfully!");
+      });
+    }
+
+    function clearTool(){
+      document.getElementById("topic").value = "";
+      document.getElementById("category").value = "selfie";
+      document.getElementById("tone").value = "cute";
+      document.getElementById("length").value = "medium";
+      document.getElementById("emoji").value = "yes";
+      document.getElementById("results").innerHTML = `
+        <div class="empty-state">
+          Your generated Instagram captions will appear here. Enter your topic and click on <strong>Generate Now</strong>.
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>

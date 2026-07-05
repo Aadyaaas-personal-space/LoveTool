@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Text Generator | LoveTool.in</title>
+  <meta name="description" content="Use the AI Text Generator on LoveTool.in to create structured content, intros, ideas, and writing drafts with a modern responsive interface." />
+  <meta name="keywords" content="AI text generator, content writer, free text generator, SEO writing tool" />
+  <meta name="author" content="LoveTool.in" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Poppins',sans-serif;background:#0f172a;color:#fff;line-height:1.6}
+    a{text-decoration:none}
+    .container{width:90%;max-width:1250px;margin:auto}
+
+    .main-header{
+      position:sticky;top:0;z-index:999;
+      background:rgba(15,23,42,.95);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.08)
+    }
+    .nav-container{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:18px 0;position:relative
+    }
+    .logo{font-size:28px;font-weight:800}
+    .logo span{color:#60a5fa}
+    .navbar{display:flex;gap:24px;align-items:center}
+    .navbar a{color:#cbd5e1;font-size:15px;font-weight:500;transition:.3s}
+    .navbar a:hover,.navbar a.active{color:#60a5fa}
+    .menu-toggle{display:none;font-size:28px;cursor:pointer;color:#fff}
+
+    .page-hero{
+      padding:70px 0 40px;
+      background:
+        radial-gradient(circle at top left, rgba(59,130,246,.20), transparent 30%),
+        radial-gradient(circle at top right, rgba(168,85,247,.18), transparent 28%);
+    }
+    .tagline{
+      display:inline-block;
+      background:rgba(255,255,255,.08);
+      color:#cbd5e1;
+      padding:8px 15px;
+      border-radius:30px;
+      font-size:13px;
+      margin-bottom:20px;
+      letter-spacing:.5px;
+    }
+    .page-hero h1{font-size:48px;font-weight:800;line-height:1.2;margin-bottom:18px}
+    .hero-text{color:#cbd5e1;font-size:17px;max-width:760px}
+
+    .tool-interface-section,.content-section,.seo-section,.faq-section{padding:70px 0}
+    .tool-layout,.seo-grid,.info-grid,.faq-grid,.footer-grid{
+      display:grid;
+      gap:24px;
+    }
+    .tool-layout{grid-template-columns:1fr 1fr}
+    .seo-grid{grid-template-columns:1fr 1fr}
+    .info-grid{grid-template-columns:repeat(3,1fr)}
+    .faq-grid{grid-template-columns:repeat(2,1fr)}
+    .footer-grid{grid-template-columns:1.2fr 1fr 1fr}
+
+    .tool-panel,.output-panel,.info-box,.seo-box,.faq-card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:0 10px 30px rgba(0,0,0,.18);
+    }
+    .tool-panel h2,.output-panel h2,.info-box h3,.seo-box h2,.faq-card h3{margin-bottom:14px}
+    .tool-panel p,.info-box p,.seo-box p,.faq-card p{color:#cbd5e1}
+
+    .tool-panel label{
+      display:block;
+      margin-bottom:10px;
+      font-weight:600;
+      margin-top:18px;
+    }
+    .tool-panel textarea{
+      width:100%;
+      min-height:180px;
+      padding:18px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.05);
+      color:#fff;
+      outline:none;
+      resize:vertical;
+      margin-bottom:18px;
+      font-family:'Poppins',sans-serif;
+    }
+
+    .tool-buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-block;
+      padding:14px 24px;
+      border-radius:14px;
+      font-weight:600;
+      font-size:15px;
+      border:none;
+      cursor:pointer;
+      transition:.3s;
+    }
+    .primary-btn{background:#fff;color:#0f172a}
+    .primary-btn:hover{background:#dbeafe}
+    .secondary-btn{
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .secondary-btn:hover{background:rgba(255,255,255,.14)}
+
+    .output-box{
+      min-height:260px;
+      border-radius:18px;
+      padding:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      color:#e2e8f0;
+      white-space:pre-wrap;
+    }
+
+    .section-heading{text-align:center;margin-bottom:40px}
+    .section-heading h2{font-size:38px;margin-bottom:12px}
+    .section-heading p{color:#cbd5e1;max-width:850px;margin:auto}
+
+    .main-footer{
+      background:#020617;
+      border-top:1px solid rgba(255,255,255,.08);
+      margin-top:40px;
+    }
+    .footer-grid{padding:45px 0}
+    .footer-grid h3,.footer-grid h4{margin-bottom:14px}
+    .footer-grid p,.footer-grid a{
+      color:#94a3b8;
+      display:block;
+      margin-bottom:10px;
+    }
+    .footer-grid a:hover{color:#60a5fa}
+    .footer-bottom{
+      text-align:center;
+      padding:18px 10px;
+      border-top:1px solid rgba(255,255,255,.06);
+      color:#94a3b8;
+      font-size:14px;
+    }
+
+    @media (max-width:992px){
+      .tool-layout,.seo-grid,.info-grid,.faq-grid,.footer-grid{grid-template-columns:1fr}
+      .page-hero h1{font-size:38px}
+    }
+
+    @media (max-width:768px){
+      .navbar{
+        display:none;
+        position:absolute;
+        top:75px;
+        right:5%;
+        width:260px;
+        flex-direction:column;
+        background:#0f172a;
+        border:1px solid rgba(255,255,255,.08);
+        border-radius:16px;
+        padding:18px;
+        gap:14px;
+      }
+      .navbar.show{display:flex}
+      .menu-toggle{display:block}
+      .page-hero h1{font-size:32px}
+      .section-heading h2{font-size:28px}
+      .btn{width:100%;text-align:center}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container nav-container">
+      <div class="logo">LoveTool<span>.in</span></div>
+      <nav class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="ai-text-generator.html" class="active">AI Text Generator</a>
+        <a href="ai-chat-assistant.html">AI Chat Assistant</a>
+      </nav>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="tagline">AI WRITING TOOL • RESPONSIVE • SEO-READY</p>
+      <h1>AI Text Generator</h1>
+      <p class="hero-text">
+        Generate writing ideas, intros, marketing copy, descriptions, and simple text drafts
+        using a clean and premium interface. This page is intentionally content-rich to improve
+        user trust and search visibility.
+      </p>
+    </div>
+  </section>
+
+  <section class="tool-interface-section">
+    <div class="container tool-layout">
+      <div class="tool-panel">
+        <h2>Generate Your Content</h2>
+        <p>
+          Enter your topic, keyword, or prompt below and use this demo interface to preview the structure
+          of your AI text generation page.
+        </p>
+
+        <label for="textPrompt">Enter Topic / Prompt</label>
+        <textarea id="textPrompt" placeholder="Example: Write an introduction for a blog about digital marketing for students"></textarea>
+
+        <div class="tool-buttons">
+          <button class="btn primary-btn" onclick="generateText()">Generate</button>
+          <button class="btn secondary-btn" onclick="clearTextGenerator()">Clear</button>
+        </div>
+      </div>
+
+      <div class="output-panel">
+        <h2>Generated Output</h2>
+        <div id="textOutput" class="output-box">
+          Your generated content will appear here.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>What is an AI Text Generator?</h2>
+        <p>
+          An AI Text Generator is a productivity tool that helps users create content faster by turning prompts,
+          topics, or keywords into readable text. It is useful for creators, students, marketers, and business owners
+          who want to save time while building content ideas or first drafts.
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>For Blogging</h3>
+          <p>
+            Generate introductory paragraphs, blog ideas, headline drafts, and content directions for articles
+            that need a stronger structure.
+          </p>
+        </div>
+        <div class="info-box">
+          <h3>For Business Copy</h3>
+          <p>
+            Create product descriptions, service intros, promotional lines, and marketing text for websites and campaigns.
+          </p>
+        </div>
+        <div class="info-box">
+          <h3>For Daily Writing</h3>
+          <p>
+            Use it for drafts, summaries, short descriptions, social media ideas, and other writing tasks
+            that require speed and clarity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-section">
+    <div class="container seo-grid">
+      <div class="seo-box">
+        <h2>Why This Page is Detailed</h2>
+        <p>
+          A good tool page should not stop at a textarea and one button. It should also explain the use of the tool,
+          its benefits, common use cases, and supporting content that helps the user understand the page better.
+          This creates a more premium experience and improves content quality.
+        </p>
+      </div>
+
+      <div class="seo-box">
+        <h2>SEO Value of Tool Pages</h2>
+        <p>
+          Search engines usually prefer pages with meaningful content. Adding helpful sections, FAQ blocks,
+          and natural keyword placement makes the page more informative and more discoverable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>FAQs About AI Text Generator</h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h3>Who can use this tool?</h3>
+          <p>Students, bloggers, marketers, freelancers, creators, and professionals can all use it.</p>
+        </div>
+        <div class="faq-card">
+          <h3>Can it help with SEO writing?</h3>
+          <p>Yes, it can help generate first drafts, ideas, and descriptions that can later be optimized further.</p>
+        </div>
+        <div class="faq-card">
+          <h3>Is this page responsive?</h3>
+          <p>Yes, the full layout is built to work smoothly across all screen sizes.</p>
+        </div>
+        <div class="faq-card">
+          <h3>Can I connect real AI later?</h3>
+          <p>Yes, this interface can later be connected with backend APIs or your own AI system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>LoveTool.in</h3>
+        <p>Premium AI tools with clean design, practical value, and better page depth.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="ai-text-generator.html">AI Text Generator</a>
+        <a href="ai-chat-assistant.html">AI Chat Assistant</a>
+      </div>
+      <div>
+        <h4>About this Tool</h4>
+        <p>This page is built to feel useful, modern, and expandable for future backend AI integration.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LoveTool.in | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navbar = document.getElementById("navbar");
+
+    if (menuToggle && navbar) {
+      menuToggle.addEventListener("click", () => {
+        navbar.classList.toggle("show");
+      });
+    }
+
+    function generateText() {
+      const prompt = document.getElementById("textPrompt").value.trim();
+      const output = document.getElementById("textOutput");
+
+      if (!prompt) {
+        output.innerText = "Please enter a topic or prompt first.";
+        return;
+      }
+
+      output.innerText =
+        "Generated Content Preview:\\n\\n" +
+        "Here is a sample AI-style draft for your topic:\\n\\n" +
+        '"' + prompt + '"\\n\\n' +
+        "This is a demo front-end output for LoveTool.in. In the real version, this section can be connected to an AI API or backend service to generate dynamic content for users. The page structure is intentionally detailed and professional so it looks impressive, useful, and SEO-friendly.";
+    }
+
+    function clearTextGenerator() {
+      document.getElementById("textPrompt").value = "";
+      document.getElementById("textOutput").innerText = "Your generated content will appear here.";
+    }
+  </script>
+</body>
+</html>

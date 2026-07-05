@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy | LoveTool.in</title>
+  <meta name="description" content="Read the official Privacy Policy of LoveTool.in. Learn how we collect, use, protect, and manage visitor information across our website, AI tools, contact forms, analytics, and services." />
+  <meta name="keywords" content="Privacy Policy LoveTool.in, website privacy policy, AI tools privacy, user data policy, SEO privacy page, AdSense approved website pages" />
+  <meta name="author" content="LoveTool.in" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fbff;
+      color:#111827;
+      line-height:1.7;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      width:100%;
+      background:rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid rgba(0,0,0,0.08);
+    }
+
+    .nav-container{
+      width:90%;
+      max-width:1300px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+    }
+
+    .logo{
+      font-size:1.8rem;
+      font-weight:800;
+      color:#111827;
+      letter-spacing:0.4px;
+    }
+
+    .logo span{
+      color:#2563eb;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:28px;
+    }
+
+    .nav-links a{
+      color:#374151;
+      font-weight:600;
+      transition:0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active{
+      color:#2563eb;
+    }
+
+    .nav-btn{
+      background:linear-gradient(135deg,#2563eb,#1d4ed8);
+      color:#fff !important;
+      padding:12px 22px;
+      border-radius:999px;
+      font-weight:700;
+      box-shadow:0 10px 24px rgba(37,99,235,0.24);
+    }
+
+    .menu-toggle{
+      display:none;
+      font-size:1.8rem;
+      cursor:pointer;
+      color:#111827;
+    }
+
+    /* HERO */
+    .hero{
+      background:
+        radial-gradient(circle at top left, rgba(37,99,235,0.10), transparent 30%),
+        radial-gradient(circle at top right, rgba(14,165,233,0.10), transparent 35%),
+        linear-gradient(135deg,#eef6ff,#ffffff,#f8fbff);
+      padding:90px 5% 70px;
+    }
+
+    .hero-wrap{
+      width:100%;
+      max-width:1300px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.25fr 0.75fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .badge{
+      display:inline-block;
+      background:#dbeafe;
+      color:#1d4ed8;
+      padding:10px 18px;
+      border-radius:999px;
+      font-size:0.92rem;
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    .hero h1{
+      font-size:3.2rem;
+      line-height:1.15;
+      margin-bottom:18px;
+      color:#0f172a;
+    }
+
+    .hero p{
+      color:#475569;
+      font-size:1.06rem;
+      margin-bottom:24px;
+      max-width:760px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:28px;
+    }
+
+    .primary-btn{
+      display:inline-block;
+      background:linear-gradient(135deg,#2563eb,#1d4ed8);
+      color:#fff;
+      padding:14px 24px;
+      border-radius:999px;
+      font-weight:700;
+      box-shadow:0 12px 28px rgba(37,99,235,0.24);
+    }
+
+    .secondary-btn{
+      display:inline-block;
+      background:#fff;
+      color:#111827;
+      padding:14px 24px;
+      border-radius:999px;
+      font-weight:700;
+      border:1px solid #d1d5db;
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .stat{
+      background:rgba(255,255,255,0.9);
+      border:1px solid rgba(0,0,0,0.05);
+      border-radius:20px;
+      padding:22px 18px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.05);
+      text-align:center;
+    }
+
+    .stat h3{
+      color:#2563eb;
+      font-size:1.5rem;
+      margin-bottom:6px;
+    }
+
+    .stat p{
+      margin:0;
+      font-size:0.94rem;
+      color:#64748b;
+    }
+
+    .hero-card{
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      border-radius:28px;
+      padding:30px;
+      box-shadow:0 22px 50px rgba(0,0,0,0.08);
+    }
+
+    .hero-card h3{
+      font-size:1.55rem;
+      color:#0f172a;
+      margin-bottom:16px;
+    }
+
+    .hero-card .info-box{
+      padding:16px;
+      border-radius:18px;
+      background:#f8fbff;
+      border:1px solid #e5e7eb;
+      margin-bottom:14px;
+    }
+
+    .hero-card .info-box strong{
+      display:block;
+      margin-bottom:6px;
+      color:#111827;
+    }
+
+    /* MAIN */
+    .section{
+      width:90%;
+      max-width:1300px;
+      margin:75px auto;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.35rem;
+      color:#0f172a;
+      margin-bottom:14px;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      max-width:860px;
+      margin:0 auto 42px;
+      color:#64748b;
+      font-size:1rem;
+    }
+
+    .top-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:22px;
+      margin-bottom:45px;
+    }
+
+    .top-card{
+      background:#fff;
+      border-radius:22px;
+      padding:24px 22px;
+      border:1px solid #e5e7eb;
+      box-shadow:0 12px 30px rgba(0,0,0,0.04);
+      transition:0.3s ease;
+    }
+
+    .top-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.07);
+    }
+
+    .top-card h3{
+      font-size:1.15rem;
+      margin-bottom:10px;
+      color:#111827;
+    }
+
+    .top-card p{
+      color:#64748b;
+      font-size:0.96rem;
+    }
+
+    .policy-layout{
+      display:grid;
+      grid-template-columns:0.8fr 2.2fr;
+      gap:30px;
+      align-items:start;
+    }
+
+    .policy-sidebar{
+      position:sticky;
+      top:95px;
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 16px 40px rgba(0,0,0,0.05);
+    }
+
+    .policy-sidebar h3{
+      font-size:1.2rem;
+      margin-bottom:16px;
+      color:#111827;
+    }
+
+    .policy-sidebar a{
+      display:block;
+      padding:11px 12px;
+      border-radius:12px;
+      color:#475569;
+      font-weight:600;
+      margin-bottom:8px;
+      transition:0.3s ease;
+    }
+
+    .policy-sidebar a:hover{
+      background:#eff6ff;
+      color:#2563eb;
+    }
+
+    .policy-content{
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+    }
+
+    .policy-block{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:24px;
+      padding:34px 30px;
+      box-shadow:0 12px 35px rgba(0,0,0,0.04);
+    }
+
+    .policy-block h2{
+      font-size:1.65rem;
+      margin-bottom:14px;
+      color:#0f172a;
+    }
+
+    .policy-block p{
+      color:#4b5563;
+      margin-bottom:14px;
+      font-size:1rem;
+    }
+
+    .policy-block ul li{
+      margin-bottom:10px;
+      color:#4b5563;
+    }
+
+    .highlight-box{
+      margin-top:15px;
+      background:linear-gradient(135deg,#eff6ff,#f8fbff);
+      border:1px solid #bfdbfe;
+      border-radius:18px;
+      padding:18px;
+      color:#1e3a8a;
+      font-weight:600;
+    }
+
+    .contact-strip{
+      background:linear-gradient(135deg,#0f172a,#1e293b);
+      color:#fff;
+      border-radius:30px;
+      padding:42px;
+      display:grid;
+      grid-template-columns:1.3fr 0.7fr;
+      gap:22px;
+      align-items:center;
+      margin-top:20px;
+    }
+
+    .contact-strip h3{
+      font-size:2rem;
+      margin-bottom:10px;
+    }
+
+    .contact-strip p{
+      color:#cbd5e1;
+      max-width:720px;
+    }
+
+    .contact-strip a{
+      justify-self:end;
+      background:#fff;
+      color:#111827;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:700;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#000;
+      color:#fff;
+      padding:75px 5% 25px;
+      margin-top:85px;
+    }
+
+    .footer-wrap{
+      width:100%;
+      max-width:1300px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr 0.8fr 1fr;
+      gap:30px;
+      margin-bottom:35px;
+    }
+
+    .footer-brand h2{
+      font-size:1.9rem;
+      margin-bottom:14px;
+    }
+
+    .footer-brand h2 span{
+      color:#60a5fa;
+    }
+
+    .footer-brand p{
+      color:#cbd5e1;
+      max-width:360px;
+      line-height:1.8;
+      font-size:0.96rem;
+    }
+
+    .footer-links h4,
+    .footer-tools h4,
+    .footer-news h4{
+      margin-bottom:18px;
+      font-size:1.12rem;
+    }
+
+    .footer-links a,
+    .footer-tools a{
+      display:block;
+      color:#cbd5e1;
+      margin-bottom:12px;
+      transition:0.3s ease;
+    }
+
+    .footer-links a:hover,
+    .footer-tools a:hover{
+      color:#60a5fa;
+      padding-left:4px;
+    }
+
+    .footer-news p{
+      color:#cbd5e1;
+      font-size:0.95rem;
+      margin-bottom:14px;
+    }
+
+    .footer-news input{
+      width:100%;
+      padding:14px;
+      border:none;
+      outline:none;
+      border-radius:12px;
+      margin-bottom:12px;
+    }
+
+    .footer-news button{
+      width:100%;
+      padding:14px;
+      border:none;
+      border-radius:12px;
+      background:linear-gradient(135deg,#2563eb,#1d4ed8);
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .footer-bottom{
+      width:100%;
+      max-width:1300px;
+      margin:auto;
+      border-top:1px solid rgba(255,255,255,0.12);
+      padding-top:22px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+      color:#cbd5e1;
+      font-size:0.95rem;
+    }
+
+    .socials{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .socials a{
+      background:rgba(255,255,255,0.08);
+      padding:10px 14px;
+      border-radius:999px;
+      transition:0.3s ease;
+    }
+
+    .socials a:hover{
+      background:#2563eb;
+    }
+
+    /* REVEAL */
+    .reveal{
+      opacity:0;
+      transform:translateY(40px);
+      transition:all 0.8s ease;
+    }
+
+    .reveal.active{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:1150px){
+      .hero-wrap,
+      .policy-layout,
+      .contact-strip,
+      .footer-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .policy-sidebar{
+        position:relative;
+        top:0;
+      }
+
+      .contact-strip a{
+        justify-self:start;
+      }
+
+      .top-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:860px){
+      .menu-toggle{
+        display:block;
+      }
+
+      .nav-links{
+        position:absolute;
+        top:76px;
+        right:5%;
+        width:260px;
+        background:#fff;
+        border-radius:18px;
+        border:1px solid #e5e7eb;
+        box-shadow:0 18px 40px rgba(0,0,0,0.1);
+        padding:22px;
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+      }
+
+      .nav-links.show{
+        display:flex;
+      }
+
+      .hero h1{
+        font-size:2.5rem;
+      }
+
+      .hero-stats{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:640px){
+      .hero{
+        padding-top:75px;
+      }
+
+      .hero h1{
+        font-size:2rem;
+      }
+
+      .section-title{
+        font-size:1.8rem;
+      }
+
+      .top-grid{
+        grid-template-columns:1fr;
+      }
+
+      .policy-block{
+        padding:26px 20px;
+      }
+
+      .contact-strip{
+        padding:28px 22px;
+      }
+
+      .contact-strip h3{
+        font-size:1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Love<span>Tool</span></div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="all-tools.html">Tools</a>
+        <a href="contact.html">Contact</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="privacy-policy.html" class="active">Privacy Policy</a>
+        <a href="all-tools.html" class="nav-btn">Explore Tools</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-wrap">
+      <div class="reveal">
+        <div class="badge">Official Website Policy Page</div>
+        <h1>Privacy Policy for LoveTool.in</h1>
+        <p>
+          At LoveTool.in, user trust, transparency, and responsible website practices are important parts of how this platform is presented and maintained. This Privacy Policy explains what information may be collected, how it may be used, how website services may operate, and what users should understand while browsing or interacting with our pages, forms, tools, and digital services.
+        </p>
+        <p>
+          This page has been written in a professional, readable, and structured format so that users, search engines, and advertising review systems can clearly understand the website’s privacy standards, communication practices, and content transparency.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#policy-sections" class="primary-btn">Read Full Policy</a>
+          <a href="contact.html" class="secondary-btn">Contact Us</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>Clear</h3>
+            <p>Readable Policy Structure</p>
+          </div>
+          <div class="stat">
+            <h3>Secure</h3>
+            <p>Trust Focused Approach</p>
+          </div>
+          <div class="stat">
+            <h3>Responsive</h3>
+            <p>All Device Friendly</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card reveal">
+        <h3>Policy Highlights</h3>
+        <div class="info-box">
+          <strong>Transparency First</strong>
+          We aim to communicate our privacy approach clearly, without hiding basic website practices behind confusing legal language.
+        </div>
+        <div class="info-box">
+          <strong>User Awareness</strong>
+          Visitors should understand what information may be collected and how it may be used while browsing tools and content.
+        </div>
+        <div class="info-box">
+          <strong>Trust & Compliance</strong>
+          A strong privacy page improves professionalism, user confidence, SEO quality, and overall website credibility.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="section reveal">
+    <h2 class="section-title">Why This Privacy Policy Matters</h2>
+    <p class="section-subtitle">
+      A professionally written privacy policy is one of the most important trust pages on any serious website. It helps visitors understand how the platform works, explains the handling of user-related information, and supports credibility for search engines, advertisers, and long-term website growth.
+    </p>
+
+    <div class="top-grid">
+      <div class="top-card">
+        <h3>Transparency</h3>
+        <p>This page clearly explains how website interactions, user details, forms, and tools may function from a privacy perspective.</p>
+      </div>
+      <div class="top-card">
+        <h3>SEO Value</h3>
+        <p>Detailed legal and trust content helps search engines better understand the purpose, legitimacy, and completeness of the website.</p>
+      </div>
+      <div class="top-card">
+        <h3>User Confidence</h3>
+        <p>Visitors are more likely to trust and use a platform that openly explains its policies in a readable and genuine way.</p>
+      </div>
+      <div class="top-card">
+        <h3>Professional Presence</h3>
+        <p>A strong privacy page supports branding, advertising readiness, and the overall quality perception of the platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLICY CONTENT -->
+  <section class="section" id="policy-sections">
+    <div class="policy-layout">
+
+      <aside class="policy-sidebar reveal">
+        <h3>Quick Navigation</h3>
+        <a href="#section1">1. Introduction</a>
+        <a href="#section2">2. Information We May Collect</a>
+        <a href="#section3">3. How Information May Be Used</a>
+        <a href="#section4">4. Cookies and Analytics</a>
+        <a href="#section5">5. Third-Party Services</a>
+        <a href="#section6">6. Advertising and Google Services</a>
+        <a href="#section7">7. Data Security</a>
+        <a href="#section8">8. User Rights and Choices</a>
+        <a href="#section9">9. Children’s Privacy</a>
+        <a href="#section10">10. External Links</a>
+        <a href="#section11">11. Policy Updates</a>
+        <a href="#section12">12. Contact Information</a>
+      </aside>
+
+      <div class="policy-content">
+
+        <div class="policy-block reveal" id="section1">
+          <h2>1. Introduction</h2>
+          <p>
+            Welcome to LoveTool.in. This Privacy Policy explains how this website may collect, use, store, manage, and protect information when visitors browse pages, read content, use tools, send messages, or interact with any feature available on the platform.
+          </p>
+          <p>
+            Our goal is to maintain a transparent and user-respectful website experience. We believe visitors should understand how a website functions before using it, especially when forms, analytics, AI tools, or advertising-related technologies are involved.
+          </p>
+          <div class="highlight-box">
+            By continuing to use LoveTool.in, visitors acknowledge that they have read and understood the terms of this Privacy Policy.
+          </div>
+        </div>
+
+        <div class="policy-block reveal" id="section2">
+          <h2>2. Information We May Collect</h2>
+          <p>
+            Depending on how the website is used, we may collect limited categories of information in order to improve services, respond to inquiries, understand user interaction, and maintain proper website functionality.
+          </p>
+          <ul>
+            <li>Basic visitor information such as browser type, device type, screen size, language settings, and pages visited.</li>
+            <li>Technical usage data such as date and time of visit, referral source, session flow, and tool interaction behavior.</li>
+            <li>Information submitted by the user voluntarily, such as name, email address, or message content through a contact form or support form.</li>
+            <li>Analytical and performance-related information that helps us understand website traffic and improve page quality.</li>
+            <li>Cookie-related usage data where applicable for user experience, site performance, and analytics understanding.</li>
+          </ul>
+          <p>
+            We do not encourage visitors to submit highly sensitive personal information unless specifically required for a clearly communicated service and handled with proper responsibility.
+          </p>
+        </div>
+
+        <div class="policy-block reveal" id="section3">
+          <h2>3. How Information May Be Used</h2>
+          <p>
+            Information collected through the website may be used only for legitimate website-related purposes. These uses help improve quality, functionality, and communication while maintaining a better experience for users.
+          </p>
+          <ul>
+            <li>To operate, maintain, and improve the overall functionality of LoveTool.in.</li>
+            <li>To respond to user questions, support requests, or contact form submissions.</li>
+            <li>To improve tool quality, page layout, responsiveness, navigation flow, and user experience.</li>
+            <li>To analyze website traffic trends, popular sections, and usage behavior for performance improvement.</li>
+            <li>To maintain safety, detect misuse, reduce spam, and protect the website from harmful or unauthorized activity.</li>
+            <li>To support future updates, tool enhancements, and better content planning.</li>
+          </ul>
+        </div>
+
+        <div class="policy-block reveal" id="section4">
+          <h2>4. Cookies and Analytics</h2>
+          <p>
+            Like many professional websites, LoveTool.in may use cookies or similar technologies to improve browsing quality, understand user engagement, and measure site performance. Cookies are small data files stored in a visitor’s browser that help websites remember basic interaction behavior.
+          </p>
+          <p>
+            Cookies may be used for functions such as remembering user preferences, measuring traffic performance, analyzing page usage, and improving the responsiveness of tools or content layouts.
+          </p>
+          <p>
+            Visitors may choose to disable cookies through their browser settings. However, doing so may affect certain website features or reduce the smoothness of some interactive experiences.
+          </p>
+        </div>
+
+        <div class="policy-block reveal" id="section5">
+          <h2>5. Third-Party Services</h2>
+          <p>
+            The website may use selected third-party services for analytics, traffic measurement, advertising support, embedded content, fonts, performance tools, or communication features. These third-party services may collect data according to their own privacy practices.
+          </p>
+          <p>
+            Examples of third-party integrations may include analytics providers, advertising platforms, content delivery resources, or website performance utilities. We encourage visitors to review the policies of such services whenever relevant.
+          </p>
+          <p>
+            LoveTool.in does not directly control how independent third-party services process information beyond the scope of their published systems and policies.
+          </p>
+        </div>
+
+        <div class="policy-block reveal" id="section6">
+          <h2>6. Advertising and Google Services</h2>
+          <p>
+            LoveTool.in may display advertisements or use advertising-related services in the present or future. These advertising systems may use cookies, identifiers, or non-sensitive browsing signals to serve relevant ads, measure ad performance, and improve advertising quality.
+          </p>
+          <p>
+            If Google services such as Google AdSense or Google Analytics are used, those services may collect and process information according to their own terms, technologies, and privacy standards.
+          </p>
+          <ul>
+            <li>Ads may be shown based on website content, user browsing behavior, or general relevance signals.</li>
+            <li>Advertising partners may use cookies to deliver better ad experiences and performance reporting.</li>
+            <li>Visitors can manage ad personalization settings through their browser or relevant Google controls where applicable.</li>
+          </ul>
+          <div class="highlight-box">
+            We aim to maintain original, helpful, and trustworthy content so that both users and advertising systems can recognize LoveTool.in as a valuable and professional platform.
+          </div>
+        </div>
+
+        <div class="policy-block reveal" id="section7">
+          <h2>7. Data Security</h2>
+          <p>
+            We value responsible website operation and take reasonable efforts to protect website-related information from misuse, abuse, unauthorized access, or harmful disruption. However, no internet-based platform can guarantee absolute security in every situation.
+          </p>
+          <p>
+            We encourage users to browse responsibly, avoid sharing unnecessary personal information, and use secure internet practices while interacting with any online platform.
+          </p>
+          <p>
+            Our goal is to maintain a safe, stable, and professional website environment while continuously improving technical quality over time.
+          </p>
+        </div>
+
+        <div class="policy-block reveal" id="section8">
+          <h2>8. User Rights and Choices</h2>
+          <p>
+            Visitors have the right to make informed decisions about how they use the website. Depending on the nature of website interaction, users may choose whether or not to submit forms, enable cookies, interact with tools, or contact the platform.
+          </p>
+          <ul>
+            <li>Users may choose not to submit personal information through optional forms.</li>
+            <li>Users may disable cookies through browser settings.</li>
+            <li>Users may contact us if they have questions regarding the handling of submitted information.</li>
+            <li>Users may stop using the website at any time if they do not agree with the privacy practices described here.</li>
+          </ul>
+        </div>
+
+        <div class="policy-block reveal" id="section9">
+          <h2>9. Children’s Privacy</h2>
+          <p>
+            LoveTool.in is intended to be a general-use website. We do not knowingly collect personal information from children in a way that would violate reasonable privacy standards. If any parent or guardian believes that information has been submitted inappropriately, they may contact us for review.
+          </p>
+          <p>
+            Protecting users and maintaining responsible content standards are important parts of how we intend to operate the platform.
+          </p>
+        </div>
+
+        <div class="policy-block reveal" id="section10">
+          <h2>10. External Links</h2>
+          <p>
+            Some pages on LoveTool.in may contain links to third-party websites, partner resources, embedded tools, or external references. Once a visitor leaves our website and accesses another site, that site’s own terms and privacy policy will apply.
+          </p>
+          <p>
+            We are not responsible for the content, security, policies, or practices of external websites that operate independently from LoveTool.in.
+          </p>
+        </div>
+
+        <div class="policy-block reveal" id="section11">
+          <h2>11. Policy Updates</h2>
+          <p>
+            This Privacy Policy may be updated, improved, or expanded in the future as the website grows, new tools are added, legal expectations change, or additional services become available. Updates may be made to improve clarity, transparency, and policy completeness.
+          </p>
+          <p>
+            Visitors are encouraged to review this page periodically to stay informed about any important changes related to website practices or user-facing policies.
+          </p>
+        </div>
+
+        <div class="policy-block reveal" id="section12">
+          <h2>12. Contact Information</h2>
+          <p>
+            If you have any questions, concerns, feedback, or policy-related inquiries regarding this Privacy Policy or any website practice on LoveTool.in, you may contact us through the official contact page of the website.
+          </p>
+          <p>
+            We believe that a trustworthy platform should remain reachable, transparent, and open to genuine communication from its visitors and users.
+          </p>
+          <div class="highlight-box">
+            For official communication, please use the website’s contact form or the contact details published on the Contact page.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT STRIP -->
+  <section class="section reveal">
+    <div class="contact-strip">
+      <div>
+        <h3>Need help regarding this policy?</h3>
+        <p>
+          If you have any questions about this Privacy Policy, how the website works, or how user interactions are handled on LoveTool.in, please visit the contact page and send your message. Clear communication builds strong trust.
+        </p>
+      </div>
+      <a href="contact.html">Visit Contact Page</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <h2>Love<span>Tool</span></h2>
+        <p>
+          LoveTool.in is a growing digital platform focused on useful online tools, professional website experience, modern interfaces, and high-value content designed for users, search visibility, and long-term brand trust.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Important Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+
+      <div class="footer-tools">
+        <h4>Explore</h4>
+        <a href="all-tools.html">All Tools</a>
+        <a href="#">Popular Features</a>
+        <a href="#">Upcoming Tools</a>
+        <a href="#">Smart Utilities</a>
+        <a href="#">User Support</a>
+      </div>
+
+      <div class="footer-news">
+        <h4>Stay Updated</h4>
+        <p>Receive updates about new tools, improvements, website features, and platform announcements.</p>
+        <input type="email" placeholder="Enter your email address" />
+        <button>Subscribe Now</button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 LoveTool.in. All Rights Reserved.</p>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      reveals.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowHeight - 80) {
+          el.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+</body>
+</html>

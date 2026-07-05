@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relationship Guidance | Love Advice, Bond Tips, Trust, Communication & Growth</title>
+  <meta name="description" content="Get simple and meaningful relationship guidance with tips on trust, communication, emotional bonding, conflict resolution, healthy love, and long-term connection." />
+  <meta name="keywords" content="relationship guidance, love advice, relationship tips, trust in relationship, communication tips, healthy relationship, romantic advice" />
+  <meta name="author" content="LoveTool" />
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,#f6fbff 0%, #fdfcff 40%, #fffafc 100%);
+      color:#1f2937;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1240px;
+      margin:auto;
+    }
+
+    .navbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,0.06);
+    }
+
+    .nav-wrap{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 0;
+      gap:18px;
+    }
+
+    .logo{
+      font-size:1.85rem;
+      font-weight:800;
+      color:#7c5cff;
+    }
+
+    .logo span{
+      color:#ff4d8d;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
+      font-weight:600;
+      color:#374151;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#ff4d8d;
+    }
+
+    .nav-btn{
+      background:linear-gradient(135deg,#7c5cff,#ff4d8d);
+      color:#fff !important;
+      padding:11px 18px;
+      border-radius:999px;
+      box-shadow:0 12px 24px rgba(124,92,255,0.18);
+    }
+
+    .hero{
+      padding:72px 0 48px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before,
+    .hero::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      filter:blur(40px);
+      z-index:0;
+    }
+
+    .hero::before{
+      width:280px;
+      height:280px;
+      left:-80px;
+      top:-30px;
+      background:rgba(124,92,255,0.16);
+    }
+
+    .hero::after{
+      width:320px;
+      height:320px;
+      right:-110px;
+      top:30px;
+      background:rgba(255,77,141,0.14);
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.08fr 0.92fr;
+      gap:32px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:3rem;
+      line-height:1.14;
+      margin-bottom:18px;
+      color:#111827;
+    }
+
+    .hero-text h1 span{
+      color:#7c5cff;
+    }
+
+    .hero-text p{
+      color:#4b5563;
+      font-size:1.04rem;
+      line-height:1.9;
+      margin-bottom:25px;
+      max-width:670px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:26px;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+      padding:13px 22px;
+      border-radius:999px;
+      font-weight:700;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .primary-btn{
+      background:linear-gradient(135deg,#7c5cff,#ff4d8d);
+      color:#fff;
+      box-shadow:0 14px 28px rgba(124,92,255,0.18);
+    }
+
+    .secondary-btn{
+      background:#fff;
+      border:2px solid #e5e7eb;
+      color:#374151;
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover,
+    .advice-btn:hover,
+    .filter-tabs button:hover{
+      transform:translateY(-2px);
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .stat-box{
+      background:rgba(255,255,255,0.86);
+      border:1px solid rgba(0,0,0,0.05);
+      box-shadow:0 10px 28px rgba(0,0,0,0.05);
+      border-radius:18px;
+      padding:18px;
+      text-align:center;
+    }
+
+    .stat-box h3{
+      font-size:1.5rem;
+      margin-bottom:6px;
+      color:#111827;
+    }
+
+    .stat-box p{
+      color:#6b7280;
+      font-size:0.95rem;
+    }
+
+    .hero-card{
+      background:linear-gradient(160deg,#ffffff,#f8f5ff);
+      border:1px solid rgba(124,92,255,0.12);
+      border-radius:28px;
+      padding:28px;
+      box-shadow:0 20px 45px rgba(0,0,0,0.08);
+    }
+
+    .hero-card .tag{
+      display:inline-block;
+      background:#eee9ff;
+      color:#6147db;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:0.84rem;
+      font-weight:700;
+      margin-bottom:15px;
+    }
+
+    .hero-card h3{
+      font-size:1.48rem;
+      margin-bottom:14px;
+      color:#111827;
+    }
+
+    .mini-advice{
+      background:#fff;
+      border-left:5px solid #7c5cff;
+      border-radius:16px;
+      padding:18px;
+      color:#4b5563;
+      line-height:1.85;
+      box-shadow:inset 0 0 0 1px rgba(0,0,0,0.04);
+    }
+
+    .quote-strip{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+
+    .quote-strip span{
+      background:#fff0f6;
+      color:#d82f74;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:0.83rem;
+      font-weight:700;
+    }
+
+    section{
+      padding:40px 0 72px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.2rem;
+      color:#111827;
+      margin-bottom:14px;
+    }
+
+    .section-subtitle{
+      max-width:860px;
+      margin:0 auto 34px;
+      text-align:center;
+      color:#6b7280;
+      line-height:1.85;
+      font-size:1rem;
+    }
+
+    .advice-generator{
+      display:grid;
+      grid-template-columns:0.95fr 1.05fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .panel{
+      background:#fff;
+      border-radius:24px;
+      padding:28px;
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow:0 14px 35px rgba(0,0,0,0.06);
+    }
+
+    .panel h3{
+      font-size:1.42rem;
+      margin-bottom:20px;
+      color:#111827;
+    }
+
+    .input-group{
+      margin-bottom:18px;
+    }
+
+    .input-group label{
+      display:block;
+      margin-bottom:8px;
+      font-weight:700;
+      color:#374151;
+    }
+
+    .input-group select,
+    .input-group textarea,
+    .input-group input{
+      width:100%;
+      padding:14px 15px;
+      border-radius:14px;
+      border:1px solid #e5e7eb;
+      outline:none;
+      background:#fcfcff;
+      font-size:0.98rem;
+      transition:0.3s;
+    }
+
+    .input-group select:focus,
+    .input-group textarea:focus,
+    .input-group input:focus{
+      border-color:#7c5cff;
+      box-shadow:0 0 0 4px rgba(124,92,255,0.08);
+    }
+
+    .btn-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .advice-btn,
+    .reset-btn{
+      border:none;
+      cursor:pointer;
+      padding:13px 18px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:0.96rem;
+      transition:0.3s;
+    }
+
+    .advice-btn{
+      background:linear-gradient(135deg,#7c5cff,#ff4d8d);
+      color:#fff;
+      flex:1;
+    }
+
+    .reset-btn{
+      background:#f3f4f6;
+      color:#374151;
+    }
+
+    .output-box{
+      min-height:300px;
+      background:linear-gradient(180deg,#f9f7ff,#ffffff);
+      border:1px dashed #bfaeff;
+      border-radius:18px;
+      padding:22px;
+      line-height:1.95;
+      color:#4b5563;
+      font-size:1rem;
+      margin-bottom:18px;
+      white-space:pre-line;
+    }
+
+    .copy-btn{
+      border:none;
+      cursor:pointer;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:700;
+      background:#111827;
+      color:#fff;
+    }
+
+    .topic-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    .topic-card{
+      background:#fff;
+      border-radius:22px;
+      padding:24px;
+      box-shadow:0 14px 30px rgba(0,0,0,0.05);
+      border:1px solid rgba(0,0,0,0.06);
+      transition:0.3s;
+    }
+
+    .topic-card:hover,
+    .tips-card:hover,
+    .faq-card:hover,
+    .feature-box:hover{
+      transform:translateY(-6px);
+    }
+
+    .topic-icon{
+      width:58px;
+      height:58px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      margin-bottom:16px;
+      font-size:1.45rem;
+      background:linear-gradient(135deg,#eee8ff,#ffe8f1);
+    }
+
+    .topic-card h4{
+      font-size:1.15rem;
+      margin-bottom:10px;
+      color:#111827;
+    }
+
+    .topic-card p{
+      color:#6b7280;
+      line-height:1.74;
+      font-size:0.96rem;
+      margin-bottom:14px;
+    }
+
+    .topic-card button{
+      border:none;
+      background:#f5f2ff;
+      color:#654de2;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .tips-section{
+      background:linear-gradient(180deg,#ffffff,#f8fbff);
+      border-top:1px solid rgba(0,0,0,0.04);
+      border-bottom:1px solid rgba(0,0,0,0.04);
+    }
+
+    .filter-tabs{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:26px;
+    }
+
+    .filter-tabs button{
+      border:none;
+      padding:11px 18px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:700;
+      background:#eef2ff;
+      color:#5b53c8;
+      transition:0.3s;
+    }
+
+    .filter-tabs button.active{
+      background:linear-gradient(135deg,#7c5cff,#ff4d8d);
+      color:#fff;
+    }
+
+    .tips-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .tips-card{
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:0 14px 30px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .tips-card .small-tag{
+      display:inline-block;
+      padding:7px 12px;
+      border-radius:999px;
+      background:#fff1f7;
+      color:#d42c72;
+      font-size:0.8rem;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+
+    .tips-card h4{
+      font-size:1.08rem;
+      color:#111827;
+      margin-bottom:10px;
+    }
+
+    .tips-card p{
+      color:#6b7280;
+      line-height:1.8;
+      font-size:0.96rem;
+    }
+
+    .faq-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+    }
+
+    .faq-card{
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      border-radius:22px;
+      padding:24px;
+      box-shadow:0 14px 30px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .faq-card h4{
+      color:#111827;
+      margin-bottom:10px;
+      font-size:1.08rem;
+    }
+
+    .faq-card p{
+      color:#6b7280;
+      line-height:1.82;
+      font-size:0.96rem;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    .feature-box{
+      background:#fff;
+      border-radius:22px;
+      padding:24px;
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow:0 14px 30px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .feature-box h4{
+      font-size:1.08rem;
+      color:#111827;
+      margin-bottom:10px;
+    }
+
+    .feature-box p{
+      color:#6b7280;
+      line-height:1.76;
+      font-size:0.96rem;
+    }
+
+    footer{
+      background:#05060a;
+      color:#d1d5db;
+      padding:70px 0 24px;
+      margin-top:30px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.3fr 1fr 1fr 1fr;
+      gap:30px;
+      margin-bottom:34px;
+    }
+
+    .footer-brand h2{
+      color:#fff;
+      font-size:2rem;
+      margin-bottom:12px;
+    }
+
+    .footer-brand h2 span{
+      color:#ff4d8d;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .footer-news p{
+      color:#9ca3af;
+      line-height:1.8;
+      font-size:0.96rem;
+    }
+
+    .footer-links h4,
+    .footer-news h4,
+    .footer-social h4{
+      color:#fff;
+      margin-bottom:14px;
+      font-size:1.08rem;
+    }
+
+    .footer-links a{
+      display:block;
+      margin-bottom:10px;
+      transition:0.3s;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+      padding-left:5px;
+    }
+
+    .footer-news form{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .footer-news input{
+      padding:12px 14px;
+      border-radius:12px;
+      border:1px solid #1f2937;
+      background:#111827;
+      color:#fff;
+      outline:none;
+    }
+
+    .footer-news button{
+      padding:12px 14px;
+      border:none;
+      border-radius:999px;
+      background:linear-gradient(135deg,#7c5cff,#ff4d8d);
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .social-icons{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .social-icons a{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#111827;
+      color:#e5e7eb;
+      font-size:0.92rem;
+      transition:0.3s;
+    }
+
+    .social-icons a:hover{
+      background:#1f2937;
+      transform:translateY(-2px);
+    }
+
+    .footer-bottom{
+      border-top:1px solid #1f2937;
+      padding-top:18px;
+      text-align:center;
+      font-size:0.92rem;
+      color:#9ca3af;
+    }
+
+    @media (max-width:1100px){
+      .hero-grid,
+      .advice-generator,
+      .topic-grid,
+      .tips-grid,
+      .feature-grid,
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .faq-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-text h1{
+        font-size:2.45rem;
+      }
+    }
+
+    @media (max-width:768px){
+      .nav-wrap{
+        flex-direction:column;
+      }
+
+      .nav-links{
+        justify-content:center;
+      }
+
+      .hero-grid,
+      .advice-generator,
+      .topic-grid,
+      .tips-grid,
+      .faq-grid,
+      .feature-grid,
+      .footer-grid,
+      .hero-stats{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding-top:50px;
+      }
+
+      .hero-text h1{
+        font-size:2.05rem;
+      }
+
+      .section-title{
+        font-size:1.8rem;
+      }
+
+      .panel,
+      .hero-card{
+        padding:20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-wrap">
+      <div class="logo">Love<span>Tool</span></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="all-tools.html">All Tools</a>
+        <a href="love-meter.html">Love Meter</a>
+        <a href="romantic-msg-generate.html">Romantic Messages</a>
+        <a href="birthday-wishes.html">Birthday Wishes</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Smart & Simple <span>Relationship Guidance</span> for Better Love and Understanding</h1>
+        <p>
+          This page is designed to help users understand relationships in a practical, caring, and positive way. Whether someone is facing communication gaps, trust issues, emotional distance, confusion in love, or simply wants to build a stronger bond, this relationship guidance page offers useful advice, clear thoughts, and supportive tips in a beautiful responsive design.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#guidance-tool" class="primary-btn">Get Guidance</a>
+          <a href="#love-tips" class="secondary-btn">Explore Tips</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <h3>25+</h3>
+            <p>Love Guidance Topics</p>
+          </div>
+          <div class="stat-box">
+            <h3>100%</h3>
+            <p>Responsive Design</p>
+          </div>
+          <div class="stat-box">
+            <h3>Daily</h3>
+            <p>Helpful Insights</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <span class="tag">Healthy Relationship Reminder</span>
+        <h3>Small Efforts Create Strong Bonds</h3>
+        <div class="mini-advice">
+          A good relationship does not grow only through big promises. It grows through honesty, respect, daily care, better communication, emotional safety, and the willingness to understand each other even during difficult moments.
+        </div>
+        <div class="quote-strip">
+          <span>Trust Matters</span>
+          <span>Communication First</span>
+          <span>Mutual Respect</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guidance-tool">
+    <div class="container">
+      <h2 class="section-title">Relationship Advice Generator</h2>
+      <p class="section-subtitle">
+        Select the type of relationship challenge or growth area you want guidance on. This tool gives supportive, readable, and meaningful relationship suggestions that users can understand quickly.
+      </p>
+
+      <div class="advice-generator">
+        <div class="panel">
+          <h3>Choose Your Situation</h3>
+
+          <div class="input-group">
+            <label for="issueType">Relationship Topic</label>
+            <select id="issueType">
+              <option value="communication">Communication Problems</option>
+              <option value="trust">Trust Issues</option>
+              <option value="distance">Long Distance Relationship</option>
+              <option value="conflict">Frequent Arguments</option>
+              <option value="bond">Strengthening Bond</option>
+              <option value="breakup">After a Breakup</option>
+              <option value="romance">Keeping Romance Alive</option>
+              <option value="respect">Mutual Respect & Understanding</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="relationStage">Relationship Stage</label>
+            <select id="relationStage">
+              <option value="new">New Relationship</option>
+              <option value="growing">Growing Relationship</option>
+              <option value="serious">Serious Relationship</option>
+              <option value="complicated">Complicated Stage</option>
+              <option value="healing">Healing Phase</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="userConcern">Add Your Situation</label>
+            <textarea id="userConcern" rows="5" placeholder="Write a short situation, for example: We care for each other but we keep misunderstanding small things."></textarea>
+          </div>
+
+          <div class="btn-row">
+            <button class="advice-btn" onclick="generateAdvice()">Generate Guidance</button>
+            <button class="reset-btn" onclick="resetAdvice()">Reset</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Your Relationship Guidance</h3>
+          <div class="output-box" id="adviceOutput">
+            Your relationship guidance will appear here. Choose a topic, select the stage, and click on “Generate Guidance”.
+          </div>
+          <button class="copy-btn" onclick="copyAdvice()">Copy Guidance</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Popular Relationship Guidance Areas</h2>
+      <p class="section-subtitle">
+        Healthy relationships usually depend on a few key foundations like trust, emotional support, communication, appreciation, and consistency. Explore the most common areas where couples need support and improvement.
+      </p>
+
+      <div class="topic-grid">
+        <div class="topic-card">
+          <div class="topic-icon">💬</div>
+          <h4>Better Communication</h4>
+          <p>Learn how to speak openly, listen with patience, and reduce misunderstandings that slowly create emotional distance in a relationship.</p>
+          <button onclick="setIssue('communication')">Read This Topic</button>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-icon">🤝</div>
+          <h4>Rebuilding Trust</h4>
+          <p>Trust takes time to build and even more care to restore. Honest actions, consistency, and accountability are essential for healing.</p>
+          <button onclick="setIssue('trust')">Read This Topic</button>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-icon">💕</div>
+          <h4>Deepening Emotional Bond</h4>
+          <p>Understand how affection, appreciation, emotional safety, and quality time help relationships feel stronger and more meaningful.</p>
+          <button onclick="setIssue('bond')">Read This Topic</button>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-icon">🌍</div>
+          <h4>Long Distance Love</h4>
+          <p>Distance can be managed with trust, effort, regular calls, emotional reassurance, and future planning that keeps both partners connected.</p>
+          <button onclick="setIssue('distance')">Read This Topic</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tips-section" id="love-tips">
+    <div class="container">
+      <h2 class="section-title">Helpful Love & Relationship Tips</h2>
+      <p class="section-subtitle">
+        These practical relationship tips are written in a simple way so users can immediately understand how to improve emotional connection, solve common love problems, and maintain a respectful and joyful relationship.
+      </p>
+
+      <div class="filter-tabs">
+        <button class="active" onclick="filterTips('all', this)">All Tips</button>
+        <button onclick="filterTips('communication', this)">Communication</button>
+        <button onclick="filterTips('trust', this)">Trust</button>
+        <button onclick="filterTips('romance', this)">Romance</button>
+        <button onclick="filterTips('growth', this)">Growth</button>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tips-card" data-category="communication">
+          <span class="small-tag">Communication</span>
+          <h4>Listen to Understand, Not Just to Reply</h4>
+          <p>Many couples hear each other but do not truly understand each other. Healthy listening means pausing, noticing feelings, and responding with care instead of instant defense.</p>
+        </div>
+
+        <div class="tips-card" data-category="trust">
+          <span class="small-tag">Trust</span>
+          <h4>Consistency Builds Emotional Security</h4>
+          <p>Trust does not grow from words alone. It grows when both people stay reliable, honest, respectful, and emotionally available again and again over time.</p>
+        </div>
+
+        <div class="tips-card" data-category="romance">
+          <span class="small-tag">Romance</span>
+          <h4>Appreciation Keeps Love Alive</h4>
+          <p>Small compliments, thoughtful messages, surprise care, and sincere gratitude often do more for romance than big gestures done only once in a while.</p>
+        </div>
+
+        <div class="tips-card" data-category="growth">
+          <span class="small-tag">Growth</span>
+          <h4>Grow Together, Not Away from Each Other</h4>
+          <p>A healthy relationship supports individual dreams while also creating shared goals, shared values, and a strong feeling of partnership in life.</p>
+        </div>
+
+        <div class="tips-card" data-category="communication">
+          <span class="small-tag">Communication</span>
+          <h4>Speak Calmly During Hard Conversations</h4>
+          <p>Difficult topics should not become destructive fights. A calm tone, respectful language, and honest expression can turn conflict into clarity and connection.</p>
+        </div>
+
+        <div class="tips-card" data-category="trust">
+          <span class="small-tag">Trust</span>
+          <h4>Transparency Removes Unnecessary Doubts</h4>
+          <p>When both partners are open about intentions, priorities, and actions, the relationship feels safer and the mind becomes less filled with suspicion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Relationship Questions</h2>
+      <p class="section-subtitle">
+        Here are some of the most common questions users may have when looking for emotional support, relationship improvement, or healthy love advice.
+      </p>
+
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h4>How can I improve communication in my relationship?</h4>
+          <p>Start by listening with attention, speaking honestly without blame, and giving your partner space to express feelings fully. Regular calm conversations are better than only talking when problems become very big.</p>
+        </div>
+
+        <div class="faq-card">
+          <h4>Can trust be rebuilt after a mistake?</h4>
+          <p>Yes, but it takes time, patience, accountability, and visible effort. Trust returns slowly when actions repeatedly match words and both people stay sincere through the healing process.</p>
+        </div>
+
+        <div class="faq-card">
+          <h4>What keeps romance alive in a long relationship?</h4>
+          <p>Emotional presence, appreciation, affectionate communication, small surprises, and meaningful time together keep a relationship fresh and loving over a long period.</p>
+        </div>
+
+        <div class="faq-card">
+          <h4>What should I do if we argue all the time?</h4>
+          <p>Focus on the pattern, not just the latest fight. Many repeated arguments come from deeper unmet needs, unclear communication, stress, or unresolved emotional pain that needs patient discussion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Why This Page Is Helpful</h2>
+      <p class="section-subtitle">
+        This relationship guidance page is designed to offer a useful and comforting user experience while also keeping the layout modern, readable, mobile-friendly, and content-rich.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-box">
+          <h4>Simple Guidance Tool</h4>
+          <p>Users can select their issue and instantly receive supportive relationship guidance in a well-written format.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>Meaningful Content</h4>
+          <p>This page covers communication, trust, love, emotional bonding, distance, arguments, and relationship healing.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>Responsive UI Layout</h4>
+          <p>The complete structure is designed to look attractive on desktop, tablet, and mobile screens with smooth reading flow.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>SEO-Friendly Structure</h4>
+          <p>Detailed headings, useful content blocks, internal sections, and high-value text make the page stronger for search visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Love<span>Tool</span></h2>
+          <p>
+            LoveTool is a modern platform with beautifully designed utility and relationship-based tools including love calculators, wish generators, romantic content tools, daily-use pages, and SEO-friendly interactive interfaces.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Useful Links</h4>
+          <a href="index.html">Home</a>
+          <a href="all-tools.html">All Tools</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>Popular Pages</h4>
+          <a href="love-meter.html">Love Meter</a>
+          <a href="birthday-wishes.html">Birthday Wishes</a>
+          <a href="romantic-msg-generate.html">Romantic Messages</a>
+          <a href="caption-generator.html">Caption Generator</a>
+          <a href="relationship-guidance.html">Relationship Guidance</a>
+        </div>
+
+        <div class="footer-news footer-social">
+          <h4>Stay Connected</h4>
+          <p>Get smart ideas, new love tools, romantic message pages, and useful daily content updates.</p>
+          <form>
+            <input type="email" placeholder="Enter your email" />
+            <button type="button">Subscribe Now</button>
+          </form>
+          <div class="social-icons">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 LoveTool.in | Designed for meaningful guidance, beautiful experience, and responsive digital content.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function generateAdvice(){
+      const issue = document.getElementById('issueType').value;
+      const stage = document.getElementById('relationStage').value;
+      const concern = document.getElementById('userConcern').value.trim();
+      const output = document.getElementById('adviceOutput');
+
+      let advice = "";
+
+      if(issue === "communication"){
+        advice = "Healthy communication starts with calm listening and honest speaking. Avoid assuming what your partner means. Ask clearly, listen fully, and respond respectfully. Try to solve the issue as a team instead of trying to win the argument.";
+      } else if(issue === "trust"){
+        advice = "Trust grows through consistent actions, truthfulness, and emotional reassurance. If trust has been damaged, healing needs patience, accountability, and repeated proof that the relationship is safe again.";
+      } else if(issue === "distance"){
+        advice = "Long distance relationships work best when both partners stay emotionally present. Regular communication, clear expectations, future plans, and sincere reassurance help the connection feel real and secure.";
+      } else if(issue === "conflict"){
+        advice = "Frequent arguments often hide deeper needs like feeling unheard, unvalued, or emotionally tired. Focus on understanding the pattern behind the conflict. Speak gently, pause when emotions rise, and return to the conversation with care.";
+      } else if(issue === "bond"){
+        advice = "A stronger bond grows from quality time, appreciation, trust, emotional safety, and genuine effort. Even small acts of love and consistency can make a relationship feel deeply connected.";
+      } else if(issue === "breakup"){
+        advice = "After a breakup, healing takes time and self-kindness. Allow yourself to feel the loss without rushing your emotions. Focus on peace, self-respect, reflection, and slowly rebuilding your emotional strength.";
+      } else if(issue === "romance"){
+        advice = "Romance stays alive through attention, affection, thoughtful messages, appreciation, and creating meaningful moments together. Love often grows in daily effort more than in rare big gestures.";
+      } else if(issue === "respect"){
+        advice = "Mutual respect is a foundation of every healthy relationship. Speak kindly, respect boundaries, value differences, and make sure both people feel heard, safe, and important.";
+      }
+
+      let stageLine = "";
+      if(stage === "new"){
+        stageLine = "\n\nBecause this is a new relationship stage, it is important to build clarity, trust, and emotional comfort slowly instead of rushing expectations.";
+      } else if(stage === "growing"){
+        stageLine = "\n\nSince the relationship is growing, this is the right time to create stronger habits of communication, support, and mutual understanding.";
+      } else if(stage === "serious"){
+        stageLine = "\n\nIn a serious relationship, emotional consistency, long-term vision, and respectful problem-solving become even more important.";
+      } else if(stage === "complicated"){
+        stageLine = "\n\nAt a complicated stage, both partners need patience, honesty, and maturity to understand what is hurting the connection and what can heal it.";
+      } else if(stage === "healing"){
+        stageLine = "\n\nDuring a healing phase, gentle communication and emotional safety matter more than pressure or perfection.";
+      }
+
+      let concernLine = concern ? "\n\nYour situation note: " + concern + "\n\nSuggestion: Try discussing this issue in a calm moment, avoid blame-based words, and focus on how both of you can improve the relationship together." : "";
+
+      output.innerText = advice + stageLine + concernLine;
+    }
+
+    function resetAdvice(){
+      document.getElementById('issueType').value = "communication";
+      document.getElementById('relationStage').value = "new";
+      document.getElementById('userConcern').value = "";
+      document.getElementById('adviceOutput').innerText = 'Your relationship guidance will appear here. Choose a topic, select the stage, and click on “Generate Guidance”.';
+    }
+
+    function copyAdvice(){
+      const text = document.getElementById('adviceOutput').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Relationship guidance copied successfully!");
+      });
+    }
+
+    function setIssue(value){
+      document.getElementById('issueType').value = value;
+      document.getElementById('guidance-tool').scrollIntoView({behavior:'smooth'});
+    }
+
+    function filterTips(category, btn){
+      const cards = document.querySelectorAll('.tips-card');
+      const buttons = document.querySelectorAll('.filter-tabs button');
+
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      cards.forEach(card => {
+        if(category === 'all' || card.getAttribute('data-category') === category){
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

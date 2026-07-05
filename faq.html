@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - LoveTool.in | Frequently Asked Questions</title>
+  <meta name="description" content="Read frequently asked questions about LoveTool.in, our AI tools, privacy, access, usage, support, subscriptions, and upcoming features." />
+  <meta name="keywords" content="FAQ LoveTool, AI tools FAQ, LoveTool.in support, tool website questions, responsive FAQ page, SEO friendly FAQ page" />
+  <meta name="author" content="LoveTool.in" />
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    /* Navbar */
+    .navbar{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .nav-container{
+      width: 90%;
+      max-width: 1300px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
+
+    .logo{
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #111827;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span{
+      color: #2563eb;
+    }
+
+    .nav-links{
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a{
+      color: #374151;
+      font-weight: 600;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active{
+      color: #2563eb;
+    }
+
+    .nav-btn{
+      background: linear-gradient(135deg,#2563eb,#1d4ed8);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(37,99,235,0.25);
+      transition: 0.3s ease;
+    }
+
+    .nav-btn:hover{
+      transform: translateY(-2px);
+    }
+
+    .menu-toggle{
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #111827;
+    }
+
+    /* Hero */
+    .hero{
+      width: 100%;
+      padding: 90px 5% 60px;
+      background:
+        radial-gradient(circle at top right, rgba(37,99,235,0.10), transparent 30%),
+        radial-gradient(circle at top left, rgba(59,130,246,0.10), transparent 35%),
+        linear-gradient(135deg,#eff6ff,#ffffff,#f8fafc);
+    }
+
+    .hero-wrap{
+      max-width: 1300px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .badge{
+      display: inline-block;
+      padding: 10px 18px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1{
+      font-size: 3.2rem;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      color: #0f172a;
+    }
+
+    .hero p{
+      font-size: 1.08rem;
+      color: #475569;
+      margin-bottom: 26px;
+      max-width: 700px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      margin-bottom: 28px;
+    }
+
+    .primary-btn{
+      background: linear-gradient(135deg,#2563eb,#1e40af);
+      color:#fff;
+      padding:14px 24px;
+      border-radius:999px;
+      font-weight:700;
+      box-shadow:0 12px 30px rgba(37,99,235,0.25);
+    }
+
+    .secondary-btn{
+      background:#fff;
+      color:#111827;
+      padding:14px 24px;
+      border-radius:999px;
+      font-weight:700;
+      border:1px solid #d1d5db;
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      gap:18px;
+    }
+
+    .stat{
+      background: rgba(255,255,255,0.8);
+      border:1px solid rgba(0,0,0,0.05);
+      border-radius:20px;
+      padding:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+      text-align:center;
+    }
+
+    .stat h3{
+      font-size:1.5rem;
+      color:#1d4ed8;
+      margin-bottom:6px;
+    }
+
+    .stat p{
+      margin:0;
+      font-size:0.95rem;
+      color:#475569;
+    }
+
+    .hero-card{
+      background:#fff;
+      border-radius:28px;
+      padding:32px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+      border:1px solid rgba(0,0,0,0.05);
+    }
+
+    .hero-card h3{
+      font-size:1.6rem;
+      margin-bottom:16px;
+      color:#0f172a;
+    }
+
+    .hero-card .mini-box{
+      background:#f8fafc;
+      border:1px solid #e5e7eb;
+      padding:16px;
+      border-radius:16px;
+      margin-bottom:14px;
+    }
+
+    .hero-card .mini-box strong{
+      display:block;
+      margin-bottom:6px;
+      color:#111827;
+    }
+
+    /* Search section */
+    .search-section{
+      width:90%;
+      max-width:1100px;
+      margin: -20px auto 50px;
+      background:#fff;
+      border-radius:24px;
+      padding:22px;
+      box-shadow:0 16px 40px rgba(0,0,0,0.08);
+      border:1px solid #e5e7eb;
+    }
+
+    .search-box{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .search-box input{
+      flex:1;
+      min-width:260px;
+      padding:16px 18px;
+      border-radius:14px;
+      border:1px solid #d1d5db;
+      outline:none;
+      font-size:1rem;
+    }
+
+    .search-box button{
+      padding:16px 24px;
+      border:none;
+      border-radius:14px;
+      background:linear-gradient(135deg,#2563eb,#1d4ed8);
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    /* Sections */
+    .section{
+      width:90%;
+      max-width:1300px;
+      margin:70px auto;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:18px;
+      color:#0f172a;
+      font-size:2.4rem;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      color:#64748b;
+      max-width:850px;
+      margin:0 auto 45px;
+      font-size:1.02rem;
+    }
+
+    /* Categories */
+    .category-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:22px;
+      margin-bottom:45px;
+    }
+
+    .category-card{
+      background:#fff;
+      border-radius:22px;
+      padding:26px 22px;
+      box-shadow:0 12px 35px rgba(0,0,0,0.05);
+      border:1px solid #e5e7eb;
+      transition:0.3s ease;
+    }
+
+    .category-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 20px 45px rgba(0,0,0,0.08);
+    }
+
+    .category-card h3{
+      font-size:1.2rem;
+      margin-bottom:10px;
+      color:#111827;
+    }
+
+    .category-card p{
+      color:#64748b;
+      font-size:0.96rem;
+      margin-bottom:14px;
+    }
+
+    .category-card span{
+      color:#2563eb;
+      font-weight:700;
+      font-size:0.95rem;
+    }
+
+    /* FAQ accordions */
+    .faq-layout{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:28px;
+    }
+
+    .faq-column{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .faq-item{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.04);
+    }
+
+    .faq-question{
+      width:100%;
+      padding:20px 22px;
+      background:#fff;
+      border:none;
+      outline:none;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      text-align:left;
+      font-size:1.03rem;
+      font-weight:700;
+      cursor:pointer;
+      color:#111827;
+    }
+
+    .faq-question span{
+      font-size:1.5rem;
+      color:#2563eb;
+      transition:0.3s ease;
+      margin-left:20px;
+    }
+
+    .faq-answer{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.35s ease, padding 0.35s ease;
+      padding:0 22px;
+      color:#64748b;
+      font-size:0.97rem;
+      background:#fcfdff;
+    }
+
+    .faq-item.active .faq-answer{
+      max-height:260px;
+      padding:0 22px 20px;
+    }
+
+    .faq-item.active .faq-question span{
+      transform:rotate(45deg);
+    }
+
+    /* support strip */
+    .support-strip{
+      background:linear-gradient(135deg,#1e293b,#0f172a);
+      color:#fff;
+      border-radius:28px;
+      padding:40px;
+      display:grid;
+      grid-template-columns:1.3fr 0.7fr;
+      gap:24px;
+      align-items:center;
+    }
+
+    .support-strip h3{
+      font-size:2rem;
+      margin-bottom:12px;
+    }
+
+    .support-strip p{
+      color:#cbd5e1;
+      max-width:700px;
+    }
+
+    .support-strip a{
+      justify-self:end;
+      background:#fff;
+      color:#0f172a;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:700;
+    }
+
+    /* footer */
+    footer{
+      background:#000;
+      color:#fff;
+      margin-top:80px;
+      padding:70px 5% 25px;
+    }
+
+    .footer-wrap{
+      max-width:1300px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr 1fr 0.8fr;
+      gap:30px;
+      margin-bottom:35px;
+    }
+
+    .footer-brand h2{
+      font-size:1.9rem;
+      margin-bottom:14px;
+    }
+
+    .footer-brand h2 span{
+      color:#60a5fa;
+    }
+
+    .footer-brand p{
+      color:#cbd5e1;
+      font-size:0.96rem;
+      max-width:360px;
+      line-height:1.8;
+    }
+
+    .footer-links h4,
+    .footer-tools h4,
+    .footer-newsletter h4{
+      margin-bottom:18px;
+      font-size:1.15rem;
+      color:#fff;
+    }
+
+    .footer-links a,
+    .footer-tools a{
+      display:block;
+      color:#cbd5e1;
+      margin-bottom:12px;
+      transition:0.3s ease;
+    }
+
+    .footer-links a:hover,
+    .footer-tools a:hover{
+      color:#60a5fa;
+      padding-left:5px;
+    }
+
+    .footer-newsletter p{
+      color:#cbd5e1;
+      margin-bottom:14px;
+      font-size:0.95rem;
+    }
+
+    .footer-newsletter input{
+      width:100%;
+      padding:14px;
+      border:none;
+      border-radius:12px;
+      margin-bottom:12px;
+      outline:none;
+    }
+
+    .footer-newsletter button{
+      width:100%;
+      padding:14px;
+      border:none;
+      border-radius:12px;
+      background:linear-gradient(135deg,#2563eb,#1d4ed8);
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .footer-bottom{
+      max-width:1300px;
+      margin:auto;
+      border-top:1px solid rgba(255,255,255,0.12);
+      padding-top:22px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+      color:#cbd5e1;
+      font-size:0.95rem;
+    }
+
+    .socials{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .socials a{
+      color:#fff;
+      background:rgba(255,255,255,0.08);
+      padding:10px 14px;
+      border-radius:999px;
+      transition:0.3s ease;
+    }
+
+    .socials a:hover{
+      background:#2563eb;
+    }
+
+    /* animation */
+    .reveal{
+      opacity:0;
+      transform:translateY(40px);
+      transition:all 0.8s ease;
+    }
+
+    .reveal.active{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* responsive */
+    @media(max-width:1100px){
+      .hero-wrap,
+      .faq-layout,
+      .support-strip,
+      .footer-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .support-strip a{
+        justify-self:start;
+      }
+
+      .category-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .hero h1{
+        font-size:2.6rem;
+      }
+    }
+
+    @media(max-width:860px){
+      .nav-links{
+        position:absolute;
+        top:75px;
+        right:5%;
+        width:260px;
+        background:#fff;
+        border:1px solid #e5e7eb;
+        border-radius:18px;
+        box-shadow:0 18px 40px rgba(0,0,0,0.1);
+        flex-direction:column;
+        align-items:flex-start;
+        padding:22px;
+        display:none;
+      }
+
+      .nav-links.show{
+        display:flex;
+      }
+
+      .menu-toggle{
+        display:block;
+      }
+
+      .hero-stats{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:640px){
+      .hero{
+        padding-top:70px;
+      }
+
+      .hero h1{
+        font-size:2.1rem;
+      }
+
+      .section-title{
+        font-size:1.8rem;
+      }
+
+      .category-grid{
+        grid-template-columns:1fr;
+      }
+
+      .search-box{
+        flex-direction:column;
+      }
+
+      .search-box button{
+        width:100%;
+      }
+
+      .support-strip{
+        padding:28px 22px;
+      }
+
+      .support-strip h3{
+        font-size:1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Love<span>Tool</span></div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="all-tools.html">Tools</a>
+        <a href="contact.html">Contact</a>
+        <a href="FAQ.html" class="active">FAQ</a>
+        <a href="all-tools.html" class="nav-btn">Explore Tools</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-wrap">
+      <div class="reveal">
+        <div class="badge">Frequently Asked Questions</div>
+        <h1>Answers to the most common questions about LoveTool.in</h1>
+        <p>
+          This FAQ page is designed to help visitors, users, creators, businesses, and curious readers understand how LoveTool.in works. From tool access and privacy to future updates, support, and subscriptions, everything is explained in a simple and professional format.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#faq-section" class="primary-btn">Browse FAQs</a>
+          <a href="contact.html" class="secondary-btn">Contact Support</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>50+</h3>
+            <p>Questions Covered</p>
+          </div>
+          <div class="stat">
+            <h3>24/7</h3>
+            <p>Helpful Resource Access</p>
+          </div>
+          <div class="stat">
+            <h3>100%</h3>
+            <p>Responsive Layout</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card reveal">
+        <h3>Quick Help Overview</h3>
+        <div class="mini-box">
+          <strong>Tool Usage</strong>
+          Learn how different tools work, who can use them, and what features are currently available.
+        </div>
+        <div class="mini-box">
+          <strong>Privacy & Security</strong>
+          Understand what information is collected, how data may be used, and what users should know before using AI-powered tools.
+        </div>
+        <div class="mini-box">
+          <strong>Updates & Locked Tools</strong>
+          Get clarity about upcoming tools, locked cards, premium features, and future website enhancements.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search -->
+  <section class="search-section reveal">
+    <div class="search-box">
+      <input type="text" id="faqSearch" placeholder="Search your question here... for example: Are tools free?">
+      <button onclick="searchFAQ()">Search FAQ</button>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section reveal">
+    <h2 class="section-title">FAQ Categories</h2>
+    <p class="section-subtitle">
+      To make this page easy to use, questions are grouped into clear categories. Visitors can quickly understand website functionality, tools, support, account-related matters, privacy, and future updates.
+    </p>
+
+    <div class="category-grid">
+      <div class="category-card">
+        <h3>General Questions</h3>
+        <p>Basic information about LoveTool.in, its purpose, website goals, and who the platform is made for.</p>
+        <span>Beginner Friendly</span>
+      </div>
+      <div class="category-card">
+        <h3>Tools & Features</h3>
+        <p>Details about how tools work, what each card means, locked tools, usage flow, and upcoming updates.</p>
+        <span>Most Popular</span>
+      </div>
+      <div class="category-card">
+        <h3>Privacy & Safety</h3>
+        <p>Important answers regarding data handling, responsible tool use, and platform safety expectations.</p>
+        <span>Important Section</span>
+      </div>
+      <div class="category-card">
+        <h3>Support & Access</h3>
+        <p>Common questions related to contact, issue reporting, subscriptions, updates, and getting help.</p>
+        <span>User Support</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq-section">
+    <h2 class="section-title reveal">Frequently Asked Questions</h2>
+    <p class="section-subtitle reveal">
+      Below are some of the most useful and commonly searched questions. Each answer is written in a clean format to improve readability, user trust, and the overall professional quality of the website.
+    </p>
+
+    <div class="faq-layout">
+      <div class="faq-column">
+        <div class="faq-item reveal">
+          <button class="faq-question">What is LoveTool.in?<span>+</span></button>
+          <div class="faq-answer">
+            <p>LoveTool.in is a modern online platform designed to provide useful digital tools, AI-powered utilities, smart web features, and user-focused interfaces that help visitors solve practical tasks quickly and efficiently.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">Are all tools free to use?<span>+</span></button>
+          <div class="faq-answer">
+            <p>Some tools may be freely available, while some advanced or upcoming tools can be restricted, locked, or introduced later as premium features. The locked cards are usually shown in a darker style to indicate future availability.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">Why do some tool cards appear dark or locked?<span>+</span></button>
+          <div class="faq-answer">
+            <p>Dark or locked tool cards represent tools that are either under development, reserved for future release, or planned as premium features. This helps users clearly understand which sections are currently active and which are coming soon.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">Do I need an account to use the website?<span>+</span></button>
+          <div class="faq-answer">
+            <p>It depends on the tool. Some tools may work instantly without registration, while others may later require account access for saving activity, subscriptions, customization, or advanced features.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">Is the website mobile responsive?<span>+</span></button>
+          <div class="faq-answer">
+            <p>Yes. The UI is built to be fully responsive across desktop, tablet, and mobile devices. Layouts, cards, text blocks, navigation, and FAQ sections automatically adjust for better usability on smaller screens.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">How can I access a specific tool page?<span>+</span></button>
+          <div class="faq-answer">
+            <p>Users can simply click on an active tool card from the tools section or all-tools page. Once clicked, the website can redirect the user to the dedicated UI page for that particular tool.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-column">
+        <div class="faq-item reveal">
+          <button class="faq-question">Is my data safe while using the tools?<span>+</span></button>
+          <div class="faq-answer">
+            <p>The platform should always aim to keep user interactions secure and minimal. However, users should avoid submitting highly sensitive personal information unless the platform clearly explains secure storage and privacy handling.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">Will new tools be added regularly?<span>+</span></button>
+          <div class="faq-answer">
+            <p>Yes. The website is structured to support expansion, and new tool interfaces can be added over time. “Coming soon” or locked cards are a visual signal that more useful services are planned for future updates.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">Can I contact support for help or suggestions?<span>+</span></button>
+          <div class="faq-answer">
+            <p>Yes. Visitors can use the contact page or the support section of the website to send feedback, report issues, suggest new tool ideas, or ask for help regarding current functionality.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">Will there be premium plans in the future?<span>+</span></button>
+          <div class="faq-answer">
+            <p>That is possible. If the website expands with advanced AI tools, member features, or professional services, premium or subscription plans may be introduced to unlock extra benefits and exclusive functionality.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">Why is an FAQ page important for this website?<span>+</span></button>
+          <div class="faq-answer">
+            <p>An FAQ page improves trust, enhances user experience, supports SEO, answers common doubts quickly, and helps website visitors better understand the platform without needing to contact support for every basic question.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">What should I do if a tool is not opening properly?<span>+</span></button>
+          <div class="faq-answer">
+            <p>First, refresh the page and check your internet connection. If the issue continues, try opening the tool on another browser or device. You can also contact support and describe the problem for faster troubleshooting.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support strip -->
+  <section class="section reveal">
+    <div class="support-strip">
+      <div>
+        <h3>Still have a question?</h3>
+        <p>
+          If you could not find your answer on this FAQ page, visit the contact page and send your query directly. This layout is designed to support better engagement, improve trust, and give your website a more complete professional appearance.
+        </p>
+      </div>
+      <a href="contact.html">Go to Contact Page</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <h2>Love<span>Tool</span></h2>
+        <p>
+          LoveTool.in is built to deliver useful online tools, responsive interfaces, engaging user experiences, and a professional digital platform that feels modern, scalable, and ready for long-term growth.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+
+      <div class="footer-tools">
+        <h4>Popular Tools</h4>
+        <a href="all-tools.html">All Tools</a>
+        <a href="#">AI Writer</a>
+        <a href="#">Image Tool</a>
+        <a href="#">SEO Helper</a>
+        <a href="#">Coming Soon Tools</a>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>Stay Updated</h4>
+        <p>Get updates about new tools, feature launches, and website improvements.</p>
+        <input type="email" placeholder="Enter your email" />
+        <button>Subscribe Now</button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 LoveTool.in. All Rights Reserved.</p>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      const btn = item.querySelector(".faq-question");
+      btn.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+
+    function searchFAQ() {
+      const input = document.getElementById("faqSearch").value.toLowerCase();
+      const allFaqs = document.querySelectorAll(".faq-item");
+
+      allFaqs.forEach(faq => {
+        const question = faq.querySelector(".faq-question").innerText.toLowerCase();
+        const answer = faq.querySelector(".faq-answer").innerText.toLowerCase();
+
+        if (question.includes(input) || answer.includes(input)) {
+          faq.style.display = "block";
+          faq.classList.add("active");
+        } else {
+          faq.style.display = "none";
+        }
+      });
+
+      if(input.trim() === ""){
+        allFaqs.forEach(faq => {
+          faq.style.display = "block";
+          faq.classList.remove("active");
+        });
+      }
+    }
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll(){
+      const windowHeight = window.innerHeight;
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < windowHeight - 80){
+          el.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+
+</body>
+</html>

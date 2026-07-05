@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LoveTool.in - Smart Online Tools for Daily Use | AI Tools, Utility Tools & Productivity Tools</title>
+  <meta name="description" content="LoveTool.in offers smart online AI tools, utility calculators, text tools, image tools, productivity solutions, and daily use digital tools with responsive SEO-friendly experience." />
+  <meta name="keywords" content="AI tools, online tools, utility tools, productivity tools, calculator tools, text tools, image tools, LoveTool, lovetool.in" />
+  <meta name="author" content="LoveTool.in" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <meta property="og:title" content="LoveTool.in - Powerful Online AI & Utility Tools" />
+  <meta property="og:description" content="Explore highly useful online tools for productivity, AI assistance, text editing, image support, calculations and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lovetool.in/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f7f8fc;
+      color: #1b1b1b;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1350px;
+      margin: auto;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #111;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: #5b5ce2;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: #5b5ce2;
+    }
+
+    .nav-btn {
+      background: linear-gradient(135deg, #5b5ce2, #7b61ff);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(91, 92, 226, 0.25);
+      transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 70px 0 40px;
+      background: linear-gradient(180deg, #ffffff 0%, #f4f7ff 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 56px;
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .hero-content p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 30px;
+      max-width: 720px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #5b5ce2, #8b5cf6);
+      color: white;
+      padding: 14px 26px;
+      border-radius: 50px;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(91, 92, 226, 0.28);
+      transition: 0.3s;
+    }
+
+    .btn-secondary {
+      border: 1px solid #d9defa;
+      background: white;
+      color: #333;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover, .btn-secondary:hover {
+      transform: translateY(-3px);
+    }
+
+    .hero-points {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-points span {
+      background: white;
+      border: 1px solid #ecefff;
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-size: 14px;
+      color: #444;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .dashboard-card {
+      background: white;
+      border-radius: 30px;
+      padding: 28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      border: 1px solid #eef1ff;
+    }
+
+    .dashboard-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .dashboard-top h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .mini-badge {
+      background: #eef0ff;
+      color: #5b5ce2;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .dashboard-boxes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .d-box {
+      background: #f8f9ff;
+      border-radius: 20px;
+      padding: 20px;
+      border: 1px solid #edf0ff;
+    }
+
+    .d-box h4 {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .d-box p {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .floating-card {
+      position: absolute;
+      background: white;
+      padding: 16px 18px;
+      border-radius: 18px;
+      box-shadow: 0 16px 35px rgba(0,0,0,0.10);
+      font-size: 14px;
+      font-weight: 600;
+      color: #444;
+      border: 1px solid #f1f1f1;
+      animation: floaty 4s ease-in-out infinite;
+    }
+
+    .fc1 { top: -20px; right: -10px; }
+    .fc2 { bottom: 25px; left: -30px; animation-delay: 1.2s; }
+    .fc3 { bottom: -25px; right: 40px; animation-delay: 2s; }
+
+    @keyframes floaty {
+      0%,100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Sections */
+    section {
+      padding: 85px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 50px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+
+    .section-title p {
+      color: #5d6470;
+      line-height: 1.9;
+      font-size: 16px;
+    }
+
+    .card-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .card-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .feature-card, .tool-card, .info-card, .state-card {
+      background: white;
+      padding: 28px;
+      border-radius: 24px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.05);
+      border: 1px solid #edf1ff;
+      transition: 0.35s;
+      height: 100%;
+    }
+
+    .feature-card:hover, .tool-card:hover, .info-card:hover, .state-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .icon-circle {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #edf0ff, #f7f8ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+
+    .feature-card h3, .tool-card h3, .info-card h3, .state-card h3 {
+      font-size: 21px;
+      margin-bottom: 14px;
+      color: #111;
+    }
+
+    .feature-card p, .tool-card p, .info-card p, .state-card p {
+      font-size: 15px;
+      color: #5d6470;
+      line-height: 1.8;
+    }
+
+    .tool-card a {
+      display: inline-block;
+      margin-top: 16px;
+      color: #5b5ce2;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* Alternating blocks */
+    .split-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .split-img {
+      background: linear-gradient(135deg, #e8ecff, #f7f8ff);
+      padding: 30px;
+      border-radius: 28px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.05);
+      border: 1px solid #eaeefe;
+    }
+
+    .split-img .mockup {
+      background: white;
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: inset 0 0 0 1px #f0f0f0;
+    }
+
+    .mock-line {
+      height: 14px;
+      background: #eef1ff;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .mock-line.large { width: 90%; }
+    .mock-line.medium { width: 70%; }
+    .mock-line.small { width: 50%; }
+
+    .split-content h2 {
+      font-size: 40px;
+      margin-bottom: 18px;
+      line-height: 1.25;
+      color: #111827;
+    }
+
+    .split-content p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: #5d6470;
+      margin-bottom: 20px;
+    }
+
+    .bullet-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .bullet-list div {
+      background: white;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid #edf1ff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      color: #444;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    /* Popular tools */
+    .tool-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-tag {
+      display: inline-block;
+      background: #eff1ff;
+      color: #5b5ce2;
+      padding: 8px 12px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    /* Stats */
+    .stats-section {
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: white;
+      border-radius: 30px;
+      padding: 60px 35px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .stat-box h3 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .stat-box p {
+      color: #d0d5dd;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* States */
+    .states-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    /* Testimonials */
+    .testimonial-wrap {
+      overflow: hidden;
+      position: relative;
+      margin-top: 10px;
+    }
+
+    .testimonial-track {
+      display: flex;
+      width: max-content;
+      animation: scrollTestimonial 28s linear infinite;
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      width: 360px;
+      background: white;
+      border: 1px solid #edf1ff;
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      flex-shrink: 0;
+    }
+
+    .testimonial-card p {
+      color: #5d6470;
+      line-height: 1.9;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-user h4 {
+      font-size: 17px;
+      color: #111;
+    }
+
+    .testimonial-user span {
+      font-size: 13px;
+      color: #777;
+    }
+
+    @keyframes scrollTestimonial {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* CTA */
+    .cta-box {
+      text-align: center;
+      background: linear-gradient(135deg, #eef1ff, #ffffff);
+      padding: 60px 30px;
+      border-radius: 28px;
+      border: 1px solid #e9edff;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+    }
+
+    .cta-box h2 {
+      font-size: 38px;
+      margin-bottom: 16px;
+      color: #111827;
+    }
+
+    .cta-box p {
+      max-width: 800px;
+      margin: 0 auto 28px;
+      color: #5d6470;
+      line-height: 1.9;
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #e4e4e4;
+      padding: 70px 0 25px;
+      margin-top: 70px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .footer-logo {
+      font-size: 30px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo span {
+      color: #8b5cf6;
+    }
+
+    .footer-about p {
+      color: #b8b8b8;
+      line-height: 1.9;
+      font-size: 15px;
+      margin-bottom: 16px;
+      max-width: 420px;
+    }
+
+    .footer-box h3 {
+      color: white;
+      margin-bottom: 18px;
+      font-size: 19px;
+    }
+
+    .footer-box ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-box ul li a {
+      color: #b8b8b8;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .footer-box ul li a:hover {
+      color: #fff;
+      padding-left: 4px;
+    }
+
+    .mini-form input,
+    .mini-form textarea {
+      width: 100%;
+      background: #111;
+      border: 1px solid #222;
+      color: white;
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .mini-form button {
+      width: 100%;
+      border: none;
+      background: linear-gradient(135deg, #5b5ce2, #8b5cf6);
+      color: white;
+      padding: 13px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .social-links a {
+      background: #111;
+      border: 1px solid #222;
+      padding: 12px 15px;
+      border-radius: 12px;
+      color: #cfcfcf;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #191919;
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1b1b1b;
+      padding-top: 20px;
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+    }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .split-section,
+      .footer-grid,
+      .card-grid-4,
+      .card-grid-3,
+      .stats-grid,
+      .states-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-content h1 {
+        font-size: 44px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-wrap {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero-grid,
+      .split-section,
+      .footer-grid,
+      .card-grid-4,
+      .card-grid-3,
+      .stats-grid,
+      .states-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content h1 {
+        font-size: 35px;
+      }
+
+      .section-title h2,
+      .split-content h2,
+      .cta-box h2 {
+        font-size: 30px;
+      }
+
+      .testimonial-card {
+        width: 300px;
+      }
+    }
+
+    /* Mobile Navbar Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: #111;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(14px);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    display: none;
+    z-index: 9999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* Mobile Navbar Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: #111;
+  border-radius: 3px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .nav-wrap {
+    flex-direction: row;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"LoveTool.in",
+    "url":"https://lovetool.in",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://lovetool.in/search?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <div class="logo">Love<span>Tool</span></div>
+
+      <nav class="nav-links">
+        <a href="about.html">About Us</a>
+        <a href="all-tools.html">Features</a>
+        <a href="#tools">Popular Tools</a>
+        <a href="ai-chat-assistant.html">Generative Ai</a>
+        <a href="games.html">Games</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="#tools" class="nav-btn">Explore Tools</a>
+    </div>
+  </header>
+
+  <!-- Hero Section 1 -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <h1>Powerful Online Tools That Make Digital Work Faster, Smarter & Easier</h1>
+        <p>
+          Welcome to LoveTool.in, a responsive and SEO-friendly online platform designed to provide modern users
+          with reliable AI tools, productivity tools, utility calculators, writing helpers, image solutions,
+          and day-to-day digital assistance in one highly impressive experience. Our goal is to build a useful,
+          content-rich, AdSense-friendly website with strong user value and smooth interaction.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="all-tools.html" class="btn-primary">Start Using Tools</a>
+          <a href="about.html" class="btn-secondary">See Why We’re Different</a>
+        </div>
+
+        <div class="hero-points">
+          <span>SEO Friendly</span>
+          <span>Fast Loading UI</span>
+          <span>Responsive Design</span>
+          <span>AdSense Ready Structure</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="dashboard-card">
+          <div class="dashboard-top">
+            <h3>Smart Digital Dashboard</h3>
+            <span class="mini-badge">Live Experience</span>
+          </div>
+          <div class="dashboard-boxes">
+            <div class="d-box">
+              <h4>Active Tools</h4>
+              <p>25+</p>
+            </div>
+            <div class="d-box">
+              <h4>Monthly Users</h4>
+              <p>15K+</p>
+            </div>
+            <div class="d-box">
+              <h4>States Reached</h4>
+              <p>20+</p>
+            </div>
+            <div class="d-box">
+              <h4>User Rating</h4>
+              <p>4.9/5</p>
+            </div>
+          </div>
+        </div>
+        <div class="floating-card fc1">AI Powered Utility</div>
+        <div class="floating-card fc2">Smooth User Experience</div>
+        <div class="floating-card fc3">Daily Useful Tools</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="features">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Built With RIA Concept for a Rich and Impressive User Experience</h2>
+        <p>
+          The interface is crafted using a Rich Internet Application style approach so visitors feel the website
+          is smooth, interactive, premium, and modern. Every section is designed to feel visually strong,
+          informative, and highly engaging for both desktop and mobile users.
+        </p>
+      </div>
+
+      <div class="card-grid-4">
+        <div class="feature-card reveal">
+          <div class="icon-circle">⚡</div>
+          <h3>Fast Interaction</h3>
+          <p>Every section is optimized to respond quickly, helping users navigate tools, content, and helpful utilities without confusion or delay.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-circle">🎯</div>
+          <h3>Purpose Driven UI</h3>
+          <p>Each design block is created to support readability, trust, content value, and strong user intent, which is helpful for search visibility too.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-circle">📱</div>
+          <h3>Responsive Layout</h3>
+          <p>The layout automatically adapts to laptop, tablet, and mobile devices, making the site reliable across different screen sizes.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-circle">🔍</div>
+          <h3>SEO Structured</h3>
+          <p>Semantic sections, headings, metadata, internal navigation, and helpful content blocks improve SEO quality and professional site appearance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section>
+    <div class="container split-section">
+      <div class="split-content reveal">
+        <h2>Designed for Real Users Who Want Tools That Actually Help</h2>
+        <p>
+          LoveTool.in is not made like a plain static website. Instead, it is planned like a complete digital
+          service platform where every page can target a useful purpose such as text improvement, image support,
+          AI prompts, SEO utilities, calculation tools, productivity helpers, and practical daily resources.
+        </p>
+        <div class="bullet-list">
+          <div>Useful interface for students, creators, professionals and general users</div>
+          <div>Readable layout with trust-building sections and strong content depth</div>
+          <div>Modern feel that improves engagement and session duration</div>
+          <div>Expandable multi-page structure for future tool growth</div>
+        </div>
+      </div>
+
+      <div class="split-img reveal">
+        <div class="mockup">
+          <div class="mock-line large"></div>
+          <div class="mock-line medium"></div>
+          <div class="mock-line large"></div>
+          <div class="mock-line small"></div>
+          <div class="mock-line medium"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 Popular Tools -->
+  <section id="tools">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Our Popular Tools</h2>
+        <p>
+          This section highlights the most useful and attention-grabbing tool pages of your website.
+          These pages can later be created individually with detailed content, FAQs, internal links,
+          and optimized SEO structure for better approval chances and organic growth.
+        </p>
+      </div>
+
+      <div class="card-grid-3">
+        <div class="tool-card reveal">
+          <span class="tool-tag">Popular</span>
+          <h3>AI Text Rewriter Tool</h3>
+          <p>Improve sentences, rewrite paragraphs, and generate cleaner content for blogs, students, and professionals.</p>
+          <a href="text-tools.html">Open Tool →</a>
+        </div>
+
+        <div class="tool-card reveal">
+          <span class="tool-tag">Trending</span>
+          <h3>Word Counter & SEO Text Analyzer</h3>
+          <p>Count words, characters, paragraphs, and optimize writing for readability and content quality.</p>
+          <a href="word-counter.html">Open Tool →</a>
+        </div>
+
+        <div class="tool-card reveal">
+          <span class="tool-tag">Fast Utility</span>
+          <h3>Love Meter</h3>
+          <p>Reduce image file size for websites, online forms, sharing, and better performance without much quality loss.</p>
+          <a href="love-meter.html">Open Tool →</a>
+        </div>
+
+        <div class="tool-card reveal">
+          <span class="tool-tag">Useful</span>
+          <h3>AI Caption Generator</h3>
+          <p>Create catchy captions for Instagram posts, business pages, marketing creatives, and social media content.</p>
+          <a href="instagram-caption-generator.html">Open Tool →</a>
+        </div>
+
+        <div class="tool-card reveal">
+          <span class="tool-tag">Calculator</span>
+          <h3>Calculator</h3>
+          <p>A simple and highly useful daily utility to calculate exact age in years, months, and days instantly.</p>
+          <a href="calculator.html">Open Tool →</a>
+        </div>
+
+        <div class="tool-card reveal">
+          <span class="tool-tag">Professional</span>
+          <h3>Letter Drafter</h3>
+          <p>Generate professional summary content for resumes, portfolios, and career profile improvements.</p>
+          <a href="love-letter-generator.html">Open Tool →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5 -->
+  <section>
+    <div class="container split-section">
+      <div class="split-img reveal">
+        <div class="mockup">
+          <div class="mock-line large"></div>
+          <div class="mock-line large"></div>
+          <div class="mock-line medium"></div>
+          <div class="mock-line small"></div>
+          <div class="mock-line medium"></div>
+        </div>
+      </div>
+
+      <div class="split-content reveal">
+        <h2>Detailed Content Blocks That Help Both Users and Search Engines</h2>
+        <p>
+          For AdSense-friendly structure, the site should not look empty or low value. That is why this homepage
+          includes rich informational sections, feature descriptions, user trust elements, testimonials, stats,
+          and strong internal linking opportunities. This helps the website appear more complete, useful, and genuine.
+        </p>
+        <div class="bullet-list">
+          <div>Long-form and meaningful homepage content</div>
+          <div>Tool-based structure with clear user benefit</div>
+          <div>Brand trust via user numbers, testimonials and states coverage</div>
+          <div>Expandable pages for privacy policy, about, contact, FAQ and tools</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6 Stats -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-section reveal">
+        <div class="section-title" style="margin-bottom:40px;">
+          <h2 style="color:white;">Trusted Growth That Builds Confidence</h2>
+          <p style="color:#cbd5e1;">
+            Numbers make your platform look strong and credible. This section can help show the trust, reach,
+            and expanding value of your website in a premium and visually effective way.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <h3>15K+</h3>
+            <p>Happy users who explored tools, generated content, and used daily utilities on the platform.</p>
+          </div>
+          <div class="stat-box">
+            <h3>20+</h3>
+            <p>States reached through smart online usage, growing accessibility, and useful digital experiences.</p>
+          </div>
+          <div class="stat-box">
+            <h3>25+</h3>
+            <p>High-value tool pages planned for productivity, AI support, image help, and writing improvement.</p>
+          </div>
+          <div class="stat-box">
+            <h3>99%</h3>
+            <p>Focus on smooth experience, responsive layouts, simple navigation, and premium interface quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7 Coverage -->
+  <section id="coverage">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Available Across Multiple Regions and Growing Continuously</h2>
+        <p>
+          A strong digital platform should feel broad and scalable. Showing regional coverage adds trust,
+          reliability, and a sense of active expansion. You can later connect this section with service pages,
+          local SEO pages, or tool-specific landing pages.
+        </p>
+      </div>
+
+      <div class="states-grid">
+        <div class="state-card reveal"><h3>Maharashtra</h3><p>Strong user engagement with practical tools and content utility support.</p></div>
+        <div class="state-card reveal"><h3>Gujarat</h3><p>Helping users access smart digital tools for daily productivity and content creation.</p></div>
+        <div class="state-card reveal"><h3>Karnataka</h3><p>Growing adoption through fast-loading, mobile-ready and easy-to-use interfaces.</p></div>
+        <div class="state-card reveal"><h3>Delhi</h3><p>Useful for students, freelancers, digital creators, and general online audiences.</p></div>
+        <div class="state-card reveal"><h3>Rajasthan</h3><p>Expanding brand value by offering tools with real use case and content value.</p></div>
+        <div class="state-card reveal"><h3>Madhya Pradesh</h3><p>Simple experiences combined with modern visuals and utility-focused design.</p></div>
+        <div class="state-card reveal"><h3>Uttar Pradesh</h3><p>Useful tools with clean layouts that improve user interaction and retention.</p></div>
+        <div class="state-card reveal"><h3>Tamil Nadu</h3><p>Built to scale with future landing pages, category pages, and value-based tools.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8 Testimonials -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>What Our Users Say</h2>
+        <p>
+          A moving customer review section adds life to the homepage and gives a modern, active,
+          trusted feel to the platform. This also increases the quality impression of the brand.
+        </p>
+      </div>
+
+      <div class="testimonial-wrap reveal">
+        <div class="testimonial-track">
+          <div class="testimonial-card">
+            <p>LoveTool.in has a very clean interface and the tools feel genuinely useful. It looks modern, smooth, and much better than many basic utility websites.</p>
+            <div class="testimonial-user">
+              <h4>Ritika Sharma</h4>
+              <span>Content Creator</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>I liked the way every section is properly designed. The site feels professional and trustworthy, and the tools are easy to understand for daily use.</p>
+            <div class="testimonial-user">
+              <h4>Aman Verma</h4>
+              <span>Student User</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>This is the type of tool platform users want today — fast, attractive, responsive, and practical. The homepage itself looks very premium.</p>
+            <div class="testimonial-user">
+              <h4>Neha Patil</h4>
+              <span>Freelancer</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>The best part is that the website does not look empty. It has structure, useful content, trust factors, and a nice scrolling experience.</p>
+            <div class="testimonial-user">
+              <h4>Rahul Jadhav</h4>
+              <span>Digital User</span>
+            </div>
+          </div>
+
+          <!-- duplicate for continuous marquee -->
+          <div class="testimonial-card">
+            <p>LoveTool.in has a very clean interface and the tools feel genuinely useful. It looks modern, smooth, and much better than many basic utility websites.</p>
+            <div class="testimonial-user">
+              <h4>Ritika Sharma</h4>
+              <span>Content Creator</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>I liked the way every section is properly designed. The site feels professional and trustworthy, and the tools are easy to understand for daily use.</p>
+            <div class="testimonial-user">
+              <h4>Aman Verma</h4>
+              <span>Student User</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>This is the type of tool platform users want today — fast, attractive, responsive, and practical. The homepage itself looks very premium.</p>
+            <div class="testimonial-user">
+              <h4>Neha Patil</h4>
+              <span>Freelancer</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>The best part is that the website does not look empty. It has structure, useful content, trust factors, and a nice scrolling experience.</p>
+            <div class="testimonial-user">
+              <h4>Rahul Jadhav</h4>
+              <span>Digital User</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>Start Building a High-Value Tool Website That Users Actually Love</h2>
+        <p>
+          A successful AdSense-oriented website should look complete, useful, rich in content, easy to navigate,
+          and focused on solving real problems. LoveTool.in can become a modern multi-page tools platform with
+          strong design, high usability, and excellent potential for organic traffic growth.
+        </p>
+        <a href="all-tools.html" class="btn-primary">Get Started Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">Love<span>Tool</span></div>
+          <p>
+            LoveTool.in is a modern online tools platform designed to provide useful, responsive,
+            SEO-friendly, and visually impressive digital experiences. Our focus is to create a
+            trusted multi-tool website with real user value, better engagement, and long-term growth potential.
+          </p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Features</h3>
+          <ul>
+            <li><a href="ai-text-generator.html">AI Text Rewriter</a></li>
+            <li><a href="word-counter.html">Word Counter</a></li>
+            <li><a href="love-meter.html">Love Meter</a></li>
+            <li><a href="instagram-caption-generator.html">Generate Captions</a></li>
+            <li><a href="zodiac-love-match.html">Zodiac Match</a></li>
+            <li><a href="ai-promt-generator.html">Ai Prompt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-box">
+          <h3>Quick Contact Form</h3>
+          <form class="mini-form">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <div class="footer-box">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://www.instagram.com/_aadyaaa__09?igsh=MXR1dzVkenY2YTNiag==">Instagram</a>
+            <a href="https://www.facebook.com/share/1CGeeCQKQ6/">Facebook</a>
+            <a href="https://www.linkedin.com/in/aditya-kamble-7386673a1/">LinkedIn</a>
+            <a href="https://github.com/Aadyaaas-personal-space">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 LoveTool.in | All Rights Reserved | Designed for Smart Utility, Great User Experience & Better SEO Presence
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (revealTop < windowHeight - revealPoint) {
+          reveals[i].classList.add('active');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
+  <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+  </script>
+
+</body>
+</html>

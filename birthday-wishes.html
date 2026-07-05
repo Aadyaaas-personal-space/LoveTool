@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Wishes Generator | Heartfelt, Funny, Romantic & Professional Wishes</title>
+  <meta name="description" content="Generate beautiful birthday wishes instantly. Explore heartfelt, funny, romantic, professional, and short birthday messages with an elegant responsive UI." />
+  <meta name="keywords" content="birthday wishes, birthday wishes generator, heartfelt birthday wishes, funny birthday wishes, romantic birthday messages, professional birthday wishes, SEO tools website" />
+  <meta name="author" content="LoveTool" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #fff7fb 0%, #fdfcff 30%, #f8fbff 100%);
+      color: #1f2937;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #ff3e87;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: #6d5dfc;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #374151;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ff3e87;
+    }
+
+    .nav-btn {
+      background: linear-gradient(135deg, #ff4f93, #7c5cff);
+      color: white;
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(124, 92, 255, 0.18);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 70px 0 45px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(40px);
+      z-index: 0;
+    }
+
+    .hero::before {
+      width: 280px;
+      height: 280px;
+      background: rgba(255, 93, 143, 0.18);
+      top: -50px;
+      left: -80px;
+    }
+
+    .hero::after {
+      width: 320px;
+      height: 320px;
+      background: rgba(124, 92, 255, 0.14);
+      right: -100px;
+      top: 20px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+      color: #111827;
+      margin-bottom: 18px;
+    }
+
+    .hero-text h1 span {
+      color: #ff3e87;
+    }
+
+    .hero-text p {
+      font-size: 1.08rem;
+      color: #4b5563;
+      line-height: 1.8;
+      margin-bottom: 25px;
+      max-width: 650px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .primary-btn {
+      background: linear-gradient(135deg, #ff4c8b, #7c5cff);
+      color: white;
+      box-shadow: 0 12px 25px rgba(255, 76, 139, 0.22);
+    }
+
+    .secondary-btn {
+      border: 2px solid #e5e7eb;
+      color: #374151;
+      background: #fff;
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover,
+    .nav-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .stat-box {
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .stat-box h3 {
+      color: #111827;
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    .stat-box p {
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
+    .hero-card {
+      background: linear-gradient(160deg, #ffffff, #fff3fa);
+      border: 1px solid rgba(255, 62, 135, 0.10);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+      position: relative;
+    }
+
+    .wish-preview-tag {
+      display: inline-block;
+      background: #ffe4ef;
+      color: #d51f6f;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .hero-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .preview-wish {
+      background: #fff;
+      border-left: 5px solid #ff4c8b;
+      border-radius: 16px;
+      padding: 18px;
+      color: #4b5563;
+      line-height: 1.8;
+      margin: 18px 0;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+    }
+
+    .small-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .small-badges span {
+      background: #f4f4ff;
+      color: #5b4fd1;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.83rem;
+      font-weight: 700;
+    }
+
+    /* Sections */
+    section {
+      padding: 35px 0 70px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 2.2rem;
+      color: #111827;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 35px;
+      color: #6b7280;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    /* Generator */
+    .generator-wrap {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .generator-form,
+    .generated-output {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.06);
+    }
+
+    .generator-form h3,
+    .generated-output h3 {
+      font-size: 1.45rem;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .input-group {
+      margin-bottom: 18px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
+      color: #374151;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      outline: none;
+      font-size: 0.98rem;
+      transition: 0.3s;
+      background: #fcfcff;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus,
+    .input-group textarea:focus {
+      border-color: #ff4c8b;
+      box-shadow: 0 0 0 4px rgba(255,76,139,0.08);
+    }
+
+    .form-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .gen-btn,
+    .copy-btn,
+    .reset-btn {
+      border: none;
+      cursor: pointer;
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.96rem;
+    }
+
+    .gen-btn {
+      background: linear-gradient(135deg, #ff4c8b, #7c5cff);
+      color: #fff;
+      flex: 1;
+    }
+
+    .reset-btn {
+      background: #f3f4f6;
+      color: #374151;
+    }
+
+    .output-box {
+      min-height: 260px;
+      background: linear-gradient(180deg, #fff8fc, #ffffff);
+      border: 1px dashed #ffb0cd;
+      border-radius: 18px;
+      padding: 22px;
+      line-height: 1.9;
+      color: #4b5563;
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+
+    .output-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .copy-btn {
+      background: #111827;
+      color: white;
+    }
+
+    /* Categories */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: 0.3s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .category-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffe3ee, #efe7ff);
+    }
+
+    .category-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .category-card p {
+      color: #6b7280;
+      line-height: 1.7;
+      font-size: 0.96rem;
+      margin-bottom: 14px;
+    }
+
+    .category-card button {
+      border: none;
+      background: #f7f7ff;
+      color: #6d5dfc;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Ready wishes */
+    .wishes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .wish-card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .wish-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .wish-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .wish-card p {
+      color: #6b7280;
+      line-height: 1.8;
+      min-height: 120px;
+    }
+
+    .wish-card button {
+      margin-top: 16px;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 999px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #ff4c8b, #7c5cff);
+      color: white;
+      font-weight: 700;
+    }
+
+    /* Features */
+    .features {
+      background: linear-gradient(180deg, #fff, #f9f7ff);
+      border-top: 1px solid rgba(0,0,0,0.04);
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .feature-box {
+      background: #fff;
+      padding: 24px;
+      border-radius: 22px;
+      box-shadow: 0 12px 26px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .feature-box h4 {
+      margin-bottom: 10px;
+      color: #111827;
+      font-size: 1.1rem;
+    }
+
+    .feature-box p {
+      color: #6b7280;
+      line-height: 1.75;
+      font-size: 0.96rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #05060a;
+      color: #d1d5db;
+      padding: 70px 0 25px;
+      margin-top: 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 35px;
+    }
+
+    .footer-brand h2 {
+      color: #fff;
+      margin-bottom: 12px;
+      font-size: 2rem;
+    }
+
+    .footer-brand h2 span {
+      color: #ff4c8b;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .footer-news p {
+      color: #9ca3af;
+      line-height: 1.8;
+      font-size: 0.96rem;
+    }
+
+    .footer-links h4,
+    .footer-news h4,
+    .footer-social h4 {
+      color: #fff;
+      margin-bottom: 14px;
+      font-size: 1.1rem;
+    }
+
+    .footer-links a {
+      display: block;
+      margin-bottom: 10px;
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+      padding-left: 5px;
+    }
+
+    .footer-news form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .footer-news input {
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid #1f2937;
+      background: #111827;
+      color: white;
+      outline: none;
+    }
+
+    .footer-news button {
+      padding: 12px 14px;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ff4c8b, #7c5cff);
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #111827;
+      color: #e5e7eb;
+      font-size: 0.92rem;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: #1f2937;
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1f2937;
+      padding-top: 18px;
+      text-align: center;
+      font-size: 0.92rem;
+      color: #9ca3af;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .generator-wrap,
+      .footer-grid,
+      .feature-grid,
+      .category-grid,
+      .wishes-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-wrap {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero-grid,
+      .generator-wrap,
+      .footer-grid,
+      .feature-grid,
+      .category-grid,
+      .wishes-grid,
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      .hero-text h1 {
+        font-size: 2.15rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .generator-form,
+      .generated-output,
+      .hero-card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-wrap">
+      <div class="logo">Love<span>Tool</span></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="all-tools.html">All Tools</a>
+        <a href="caption-generator.html">Captions</a>
+        <a href="ai-writing-tools.html">AI Writing</a>
+        <a href="relationship-guidance.html">Relationship</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Create the Perfect <span>Birthday Wish</span> in Seconds</h1>
+        <p>
+          Welcome to our beautifully designed birthday wishes page where users can instantly generate meaningful,
+          heart-touching, funny, romantic, and professional birthday messages. Whether you are writing for your best friend,
+          partner, brother, sister, colleague, parents, or someone special, this responsive birthday wish generator helps
+          you craft words that truly feel personal and memorable.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#generator" class="primary-btn">Generate Wishes</a>
+          <a href="#ready-wishes" class="secondary-btn">Explore Examples</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <h3>10K+</h3>
+            <p>Wishes Generated</p>
+          </div>
+          <div class="stat-box">
+            <h3>20+</h3>
+            <p>Message Styles</p>
+          </div>
+          <div class="stat-box">
+            <h3>100%</h3>
+            <p>Mobile Friendly</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <span class="wish-preview-tag">Popular Birthday Format</span>
+        <h3>Sample Premium Birthday Wish</h3>
+        <div class="preview-wish">
+          Happy Birthday to someone truly amazing! May your day be filled with happiness, laughter,
+          sweet surprises, and unforgettable memories. You deserve all the love, success, and positivity
+          that life has to offer. Keep shining and smiling always.
+        </div>
+        <div class="small-badges">
+          <span>Heartfelt</span>
+          <span>Short & Elegant</span>
+          <span>Copy Ready</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="generator">
+    <div class="container">
+      <h2 class="section-title">Birthday Wishes Generator</h2>
+      <p class="section-subtitle">
+        Use this interactive birthday message generator to create custom wishes based on relationship, tone, and message length.
+        It is perfect for social media captions, WhatsApp messages, greeting cards, status updates, and emotional birthday notes.
+      </p>
+
+      <div class="generator-wrap">
+        <div class="generator-form">
+          <h3>Customize Your Wish</h3>
+
+          <div class="input-group">
+            <label for="personName">Recipient Name</label>
+            <input type="text" id="personName" placeholder="Enter name, e.g. Rahul" />
+          </div>
+
+          <div class="input-group">
+            <label for="relation">Relationship</label>
+            <select id="relation">
+              <option value="friend">Friend</option>
+              <option value="best friend">Best Friend</option>
+              <option value="brother">Brother</option>
+              <option value="sister">Sister</option>
+              <option value="mother">Mother</option>
+              <option value="father">Father</option>
+              <option value="partner">Partner</option>
+              <option value="husband">Husband</option>
+              <option value="wife">Wife</option>
+              <option value="colleague">Colleague</option>
+              <option value="teacher">Teacher</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="tone">Tone</label>
+            <select id="tone">
+              <option value="heartfelt">Heartfelt</option>
+              <option value="funny">Funny</option>
+              <option value="romantic">Romantic</option>
+              <option value="professional">Professional</option>
+              <option value="short">Short</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="extraLine">Extra Personal Line</label>
+            <textarea id="extraLine" rows="4" placeholder="Add a custom memory, blessing, or personal message..."></textarea>
+          </div>
+
+          <div class="form-btns">
+            <button class="gen-btn" onclick="generateWish()">Generate Wish</button>
+            <button class="reset-btn" onclick="resetForm()">Reset</button>
+          </div>
+        </div>
+
+        <div class="generated-output">
+          <h3>Your Generated Birthday Wish</h3>
+          <div class="output-box" id="outputBox">
+            Your beautiful birthday wish will appear here. Enter the details, choose the style, and click on “Generate Wish”.
+          </div>
+          <div class="output-actions">
+            <button class="copy-btn" onclick="copyWish()">Copy Wish</button>
+            <button class="reset-btn" onclick="useDefaultExample()">Show Example</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Choose Your Message Style</h2>
+      <p class="section-subtitle">
+        Different people deserve different types of birthday messages. Some require emotional and meaningful words, while others
+        deserve playful, romantic, or respectful birthday greetings. Choose the category that matches your occasion best.
+      </p>
+
+      <div class="category-grid">
+        <div class="category-card">
+          <div class="category-icon">💖</div>
+          <h4>Heartfelt Wishes</h4>
+          <p>Perfect for family members, close friends, and anyone you truly care about. These wishes feel warm, genuine, and deeply meaningful.</p>
+          <button onclick="quickCategory('heartfelt')">Use This Style</button>
+        </div>
+
+        <div class="category-card">
+          <div class="category-icon">😂</div>
+          <h4>Funny Wishes</h4>
+          <p>Bring smiles and laughter with witty birthday lines that make the celebration more fun and memorable for friends and siblings.</p>
+          <button onclick="quickCategory('funny')">Use This Style</button>
+        </div>
+
+        <div class="category-card">
+          <div class="category-icon">🌹</div>
+          <h4>Romantic Wishes</h4>
+          <p>Make your partner feel extra special with loving birthday messages that are sweet, emotional, charming, and unforgettable.</p>
+          <button onclick="quickCategory('romantic')">Use This Style</button>
+        </div>
+
+        <div class="category-card">
+          <div class="category-icon">🎓</div>
+          <h4>Professional Wishes</h4>
+          <p>Best for colleagues, teachers, team members, and formal contacts when you want your message to stay respectful and polished.</p>
+          <button onclick="quickCategory('professional')">Use This Style</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ready-wishes">
+    <div class="container">
+      <h2 class="section-title">Ready-to-Use Birthday Wishes</h2>
+      <p class="section-subtitle">
+        Here are some beautifully written sample birthday wishes that you can instantly copy and send. These examples are ideal for cards,
+        WhatsApp chats, Instagram captions, Facebook posts, and heartfelt celebration messages.
+      </p>
+
+      <div class="wishes-grid">
+        <div class="wish-card">
+          <h4>For a Best Friend</h4>
+          <p id="wish1">Happy Birthday to my incredible best friend! Thank you for being my biggest support, my loudest laughter, and one of the best parts of my life. May your day be as amazing as you are.</p>
+          <button onclick="copyText('wish1')">Copy Wish</button>
+        </div>
+
+        <div class="wish-card">
+          <h4>For a Sister</h4>
+          <p id="wish2">Happy Birthday, dear sister! You are not only family but also a blessing in my life. May your special day bring endless happiness, beautiful moments, and all the success you deserve.</p>
+          <button onclick="copyText('wish2')">Copy Wish</button>
+        </div>
+
+        <div class="wish-card">
+          <h4>For a Partner</h4>
+          <p id="wish3">Happy Birthday, my love! Every moment with you is beautiful, and today I celebrate the wonderful person who fills my life with love, joy, and warmth. You mean everything to me.</p>
+          <button onclick="copyText('wish3')">Copy Wish</button>
+        </div>
+
+        <div class="wish-card">
+          <h4>Funny Birthday Wish</h4>
+          <p id="wish4">Happy Birthday! You are not getting older, you are just becoming a limited edition masterpiece. Stay awesome, stay funny, and keep making everyone smile like always.</p>
+          <button onclick="copyText('wish4')">Copy Wish</button>
+        </div>
+
+        <div class="wish-card">
+          <h4>Formal Birthday Wish</h4>
+          <p id="wish5">Wishing you a very Happy Birthday and a wonderful year ahead. May this special day bring you happiness, prosperity, good health, and continued success in all that you do.</p>
+          <button onclick="copyText('wish5')">Copy Wish</button>
+        </div>
+
+        <div class="wish-card">
+          <h4>Short Sweet Wish</h4>
+          <p id="wish6">Happy Birthday! Wishing you joy, love, laughter, and many beautiful moments today and always.</p>
+          <button onclick="copyText('wish6')">Copy Wish</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why This Birthday Wishes Tool Is Useful</h2>
+      <p class="section-subtitle">
+        Our birthday wishes generator page is created not only to look beautiful but also to help users find the right words instantly.
+        It is crafted with user-friendly design, responsive layout, fast interactions, and meaningful content structure.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-box">
+          <h4>Instant Personalized Messages</h4>
+          <p>Enter a name, select a relationship and tone, and get a customized birthday message in seconds with a warm and attractive presentation.</p>
+        </div>
+        <div class="feature-box">
+          <h4>Perfect for Social Sharing</h4>
+          <p>These wishes are ideal for WhatsApp chats, Instagram stories, Facebook captions, greeting cards, and text messages for any age group.</p>
+        </div>
+        <div class="feature-box">
+          <h4>Responsive & SEO-Friendly</h4>
+          <p>This page uses a clean content structure, useful headings, engaging descriptions, and a responsive design layout that works beautifully on all screens.</p>
+        </div>
+        <div class="feature-box">
+          <h4>Multiple Emotional Styles</h4>
+          <p>From romantic and funny to respectful and heartfelt, users can generate the exact emotional tone needed for different people and occasions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Love<span>Tool</span></h2>
+          <p>
+            LoveTool is a modern utility and lifestyle platform designed to offer engaging, user-friendly, and SEO-rich tools for captions,
+            wishes, calculators, relationship guidance, AI content support, and many daily-use digital experiences.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Useful Links</h4>
+          <a href="index.html">Home</a>
+          <a href="all-tools.html">All Tools</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>Popular Tools</h4>
+          <a href="love-meter.html">Love Meter</a>
+          <a href="caption-generator.html">Caption Generator</a>
+          <a href="ai-writing-tools.html">AI Writing Tools</a>
+          <a href="calculator.html">Calculator</a>
+          <a href="birthday-wishes.html">Birthday Wishes</a>
+        </div>
+
+        <div class="footer-news footer-social">
+          <h4>Stay Connected</h4>
+          <p>Get updates on new tools, smart features, daily content ideas, and useful website additions.</p>
+          <form>
+            <input type="email" placeholder="Enter your email" />
+            <button type="button">Subscribe Now</button>
+          </form>
+          <div class="social-icons">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 LoveTool.in | Crafted for beautiful user experience, responsive design, and meaningful digital content.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function generateWish() {
+      const name = document.getElementById("personName").value.trim() || "Dear One";
+      const relation = document.getElementById("relation").value;
+      const tone = document.getElementById("tone").value;
+      const extraLine = document.getElementById("extraLine").value.trim();
+      const outputBox = document.getElementById("outputBox");
+
+      let wish = "";
+
+      if (tone === "heartfelt") {
+        wish = `Happy Birthday, ${name}! Having a wonderful ${relation} like you in life is truly a blessing. May your special day be filled with love, happiness, beautiful memories, and endless reasons to smile. You deserve all the success, peace, and joy in the world.`;
+      } 
+      else if (tone === "funny") {
+        wish = `Happy Birthday, ${name}! Another year older, wiser, and still just as amazing as ever. Don’t worry about your age—you're simply becoming a classic! Wishing my awesome ${relation} a day full of laughter, cake, and zero stress.`;
+      } 
+      else if (tone === "romantic") {
+        wish = `Happy Birthday, ${name}! You are the most beautiful part of my life, and I feel so lucky to have you. On your special day, I want you to know how deeply you are loved and cherished. May your birthday be as magical, sweet, and unforgettable as you are.`;
+      } 
+      else if (tone === "professional") {
+        wish = `Wishing you a very Happy Birthday, ${name}. It is a pleasure to know and appreciate a dedicated ${relation} like you. May this special occasion bring happiness, success, good health, and many rewarding moments throughout the year ahead.`;
+      } 
+      else if (tone === "short") {
+        wish = `Happy Birthday, ${name}! Wishing you joy, love, success, and a truly wonderful day ahead.`;
+      }
+
+      if (extraLine !== "") {
+        wish += ` ${extraLine}`;
+      }
+
+      outputBox.innerText = wish;
+    }
+
+    function copyWish() {
+      const text = document.getElementById("outputBox").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Birthday wish copied successfully!");
+      });
+    }
+
+    function copyText(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Wish copied successfully!");
+      });
+    }
+
+    function resetForm() {
+      document.getElementById("personName").value = "";
+      document.getElementById("relation").value = "friend";
+      document.getElementById("tone").value = "heartfelt";
+      document.getElementById("extraLine").value = "";
+      document.getElementById("outputBox").innerText = "Your beautiful birthday wish will appear here. Enter the details, choose the style, and click on “Generate Wish”.";
+    }
+
+    function useDefaultExample() {
+      document.getElementById("outputBox").innerText =
+        "Happy Birthday to someone truly special! May your day be filled with love, laughter, happiness, unforgettable memories, and all the success you dream of. You deserve the very best today and always.";
+    }
+
+    function quickCategory(style) {
+      document.getElementById("tone").value = style;
+      document.getElementById("generator").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>

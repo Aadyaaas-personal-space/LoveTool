@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crush Name Test | Fun Love Match Calculator by Name</title>
+  <meta name="description" content="Try the Crush Name Test tool to check a fun compatibility score between your name and your crush's name. Enjoy a beautiful responsive UI with playful love result messages." />
+  <meta name="keywords" content="crush name test, crush calculator, love test by name, name match test, fun love calculator, compatibility test, love tool" />
+  <meta name="author" content="LoveTool" />
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,#fff8fc 0%, #fcfcff 35%, #f5fbff 100%);
+      color:#1f2937;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1240px;
+      margin:auto;
+    }
+
+    .navbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,0.06);
+    }
+
+    .nav-wrap{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 0;
+      gap:18px;
+    }
+
+    .logo{
+      font-size:1.85rem;
+      font-weight:800;
+      color:#ff4d8d;
+    }
+
+    .logo span{
+      color:#7c5cff;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
+      font-weight:600;
+      color:#374151;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#ff4d8d;
+    }
+
+    .nav-btn{
+      background:linear-gradient(135deg,#ff4d8d,#7c5cff);
+      color:#fff !important;
+      padding:11px 18px;
+      border-radius:999px;
+      box-shadow:0 12px 24px rgba(255,77,141,0.18);
+    }
+
+    .hero{
+      padding:72px 0 48px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before,
+    .hero::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      filter:blur(42px);
+      z-index:0;
+    }
+
+    .hero::before{
+      width:290px;
+      height:290px;
+      left:-90px;
+      top:-40px;
+      background:rgba(255,77,141,0.17);
+    }
+
+    .hero::after{
+      width:330px;
+      height:330px;
+      right:-100px;
+      top:20px;
+      background:rgba(124,92,255,0.14);
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.08fr 0.92fr;
+      gap:32px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:3rem;
+      line-height:1.14;
+      margin-bottom:18px;
+      color:#111827;
+    }
+
+    .hero-text h1 span{
+      color:#ff4d8d;
+    }
+
+    .hero-text p{
+      font-size:1.04rem;
+      color:#4b5563;
+      line-height:1.9;
+      margin-bottom:25px;
+      max-width:670px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:26px;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+      padding:13px 22px;
+      border-radius:999px;
+      font-weight:700;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .primary-btn{
+      background:linear-gradient(135deg,#ff4d8d,#7c5cff);
+      color:#fff;
+      box-shadow:0 14px 28px rgba(255,77,141,0.2);
+    }
+
+    .secondary-btn{
+      background:#fff;
+      border:2px solid #e5e7eb;
+      color:#374151;
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover,
+    .test-btn:hover,
+    .mini-card button:hover,
+    .copy-btn:hover,
+    .reset-btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .stat-box{
+      background:rgba(255,255,255,0.86);
+      border:1px solid rgba(0,0,0,0.05);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 10px 28px rgba(0,0,0,0.05);
+      text-align:center;
+    }
+
+    .stat-box h3{
+      font-size:1.48rem;
+      margin-bottom:6px;
+      color:#111827;
+    }
+
+    .stat-box p{
+      color:#6b7280;
+      font-size:0.95rem;
+    }
+
+    .hero-card{
+      background:linear-gradient(160deg,#ffffff,#fff1f8);
+      border:1px solid rgba(255,77,141,0.12);
+      border-radius:28px;
+      padding:28px;
+      box-shadow:0 20px 45px rgba(0,0,0,0.08);
+    }
+
+    .hero-card .tag{
+      display:inline-block;
+      background:#ffe5f1;
+      color:#d62f72;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:0.84rem;
+      font-weight:700;
+      margin-bottom:15px;
+    }
+
+    .hero-card h3{
+      font-size:1.48rem;
+      margin-bottom:14px;
+      color:#111827;
+    }
+
+    .preview-box{
+      background:#fff;
+      border-left:5px solid #ff4d8d;
+      border-radius:16px;
+      padding:18px;
+      color:#4b5563;
+      line-height:1.88;
+      box-shadow:inset 0 0 0 1px rgba(0,0,0,0.04);
+    }
+
+    .chips{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+
+    .chips span{
+      background:#f4efff;
+      color:#624bdb;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:0.83rem;
+      font-weight:700;
+    }
+
+    section{
+      padding:40px 0 72px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.2rem;
+      color:#111827;
+      margin-bottom:14px;
+    }
+
+    .section-subtitle{
+      max-width:860px;
+      margin:0 auto 34px;
+      text-align:center;
+      color:#6b7280;
+      line-height:1.85;
+      font-size:1rem;
+    }
+
+    .test-grid{
+      display:grid;
+      grid-template-columns:0.95fr 1.05fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .panel{
+      background:#fff;
+      border-radius:24px;
+      padding:28px;
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow:0 14px 35px rgba(0,0,0,0.06);
+    }
+
+    .panel h3{
+      font-size:1.42rem;
+      margin-bottom:20px;
+      color:#111827;
+    }
+
+    .input-group{
+      margin-bottom:18px;
+    }
+
+    .input-group label{
+      display:block;
+      margin-bottom:8px;
+      font-weight:700;
+      color:#374151;
+    }
+
+    .input-group input,
+    .input-group select{
+      width:100%;
+      padding:14px 15px;
+      border-radius:14px;
+      border:1px solid #e5e7eb;
+      outline:none;
+      background:#fcfcff;
+      font-size:0.98rem;
+      transition:0.3s;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus{
+      border-color:#ff4d8d;
+      box-shadow:0 0 0 4px rgba(255,77,141,0.08);
+    }
+
+    .btn-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .test-btn,
+    .reset-btn,
+    .copy-btn{
+      border:none;
+      cursor:pointer;
+      padding:13px 18px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:0.96rem;
+      transition:0.3s;
+    }
+
+    .test-btn{
+      background:linear-gradient(135deg,#ff4d8d,#7c5cff);
+      color:#fff;
+      flex:1;
+    }
+
+    .reset-btn{
+      background:#f3f4f6;
+      color:#374151;
+    }
+
+    .copy-btn{
+      background:#111827;
+      color:#fff;
+    }
+
+    .result-top{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:22px;
+    }
+
+    .circle-wrap{
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      background:conic-gradient(#ff4d8d 0deg, #ffd7e8 0deg);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      box-shadow:0 18px 40px rgba(255,77,141,0.18);
+      transition:0.7s ease;
+    }
+
+    .circle-wrap::before{
+      content:"";
+      position:absolute;
+      inset:14px;
+      background:#fff;
+      border-radius:50%;
+      box-shadow:inset 0 0 0 1px rgba(0,0,0,0.04);
+    }
+
+    .circle-content{
+      position:relative;
+      z-index:2;
+      text-align:center;
+    }
+
+    .circle-content h2{
+      font-size:2.7rem;
+      color:#ff4d8d;
+      margin-bottom:4px;
+    }
+
+    .circle-content p{
+      font-size:0.95rem;
+      color:#6b7280;
+      font-weight:700;
+    }
+
+    .result-box{
+      min-height:170px;
+      background:linear-gradient(180deg,#fff7fb,#ffffff);
+      border:1px dashed #ffc2d9;
+      border-radius:18px;
+      padding:22px;
+      line-height:1.9;
+      color:#4b5563;
+      font-size:1rem;
+      margin-bottom:18px;
+      text-align:center;
+    }
+
+    .name-line{
+      font-weight:700;
+      color:#111827;
+      margin-bottom:10px;
+      font-size:1.04rem;
+    }
+
+    .result-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .mini-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    .mini-card{
+      background:#fff;
+      border-radius:22px;
+      padding:24px;
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow:0 14px 30px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .mini-card:hover,
+    .feature-box:hover{
+      transform:translateY(-6px);
+    }
+
+    .mini-icon{
+      width:58px;
+      height:58px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      font-size:1.45rem;
+      margin-bottom:16px;
+      background:linear-gradient(135deg,#ffe7f1,#efe7ff);
+    }
+
+    .mini-card h4{
+      font-size:1.14rem;
+      color:#111827;
+      margin-bottom:10px;
+    }
+
+    .mini-card p{
+      color:#6b7280;
+      line-height:1.75;
+      font-size:0.96rem;
+      margin-bottom:14px;
+    }
+
+    .mini-card button{
+      border:none;
+      background:#fff1f7;
+      color:#d12c6f;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .examples-section{
+      background:linear-gradient(180deg,#ffffff,#f9f7ff);
+      border-top:1px solid rgba(0,0,0,0.04);
+      border-bottom:1px solid rgba(0,0,0,0.04);
+    }
+
+    .example-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .example-card{
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:0 14px 30px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .example-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .example-card .small-tag{
+      display:inline-block;
+      padding:7px 12px;
+      border-radius:999px;
+      background:#fce9f2;
+      color:#d62d72;
+      font-size:0.8rem;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+
+    .example-card h4{
+      font-size:1.08rem;
+      color:#111827;
+      margin-bottom:10px;
+    }
+
+    .example-card p{
+      color:#6b7280;
+      line-height:1.85;
+      font-size:0.96rem;
+      min-height:118px;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    .feature-box{
+      background:#fff;
+      border-radius:22px;
+      padding:24px;
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow:0 14px 30px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .feature-box h4{
+      font-size:1.08rem;
+      color:#111827;
+      margin-bottom:10px;
+    }
+
+    .feature-box p{
+      color:#6b7280;
+      line-height:1.76;
+      font-size:0.96rem;
+    }
+
+    footer{
+      background:#05060a;
+      color:#d1d5db;
+      padding:70px 0 24px;
+      margin-top:30px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.3fr 1fr 1fr 1fr;
+      gap:30px;
+      margin-bottom:34px;
+    }
+
+    .footer-brand h2{
+      color:#fff;
+      font-size:2rem;
+      margin-bottom:12px;
+    }
+
+    .footer-brand h2 span{
+      color:#ff4d8d;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .footer-news p{
+      color:#9ca3af;
+      line-height:1.8;
+      font-size:0.96rem;
+    }
+
+    .footer-links h4,
+    .footer-news h4,
+    .footer-social h4{
+      color:#fff;
+      margin-bottom:14px;
+      font-size:1.08rem;
+    }
+
+    .footer-links a{
+      display:block;
+      margin-bottom:10px;
+      transition:0.3s;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+      padding-left:5px;
+    }
+
+    .footer-news form{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .footer-news input{
+      padding:12px 14px;
+      border-radius:12px;
+      border:1px solid #1f2937;
+      background:#111827;
+      color:#fff;
+      outline:none;
+    }
+
+    .footer-news button{
+      padding:12px 14px;
+      border:none;
+      border-radius:999px;
+      background:linear-gradient(135deg,#ff4d8d,#7c5cff);
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .social-icons{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .social-icons a{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#111827;
+      color:#e5e7eb;
+      font-size:0.92rem;
+      transition:0.3s;
+    }
+
+    .social-icons a:hover{
+      background:#1f2937;
+      transform:translateY(-2px);
+    }
+
+    .footer-bottom{
+      border-top:1px solid #1f2937;
+      padding-top:18px;
+      text-align:center;
+      font-size:0.92rem;
+      color:#9ca3af;
+    }
+
+    @media (max-width:1100px){
+      .hero-grid,
+      .test-grid,
+      .mini-grid,
+      .example-grid,
+      .feature-grid,
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .hero-text h1{
+        font-size:2.45rem;
+      }
+    }
+
+    @media (max-width:768px){
+      .nav-wrap{
+        flex-direction:column;
+      }
+
+      .nav-links{
+        justify-content:center;
+      }
+
+      .hero-grid,
+      .test-grid,
+      .mini-grid,
+      .example-grid,
+      .feature-grid,
+      .footer-grid,
+      .hero-stats{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding-top:50px;
+      }
+
+      .hero-text h1{
+        font-size:2.05rem;
+      }
+
+      .section-title{
+        font-size:1.8rem;
+      }
+
+      .panel,
+      .hero-card{
+        padding:20px;
+      }
+
+      .circle-wrap{
+        width:190px;
+        height:190px;
+      }
+
+      .circle-content h2{
+        font-size:2.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-wrap">
+      <div class="logo">Love<span>Tool</span></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="all-tools.html">All Tools</a>
+        <a href="love-meter.html">Love Meter</a>
+        <a href="relationship-guidance.html">Relationship Guidance</a>
+        <a href="romantic-msg-generate.html">Romantic Messages</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Try the Fun <span>Crush Name Test</span> by Names</h1>
+        <p>
+          The Crush Name Test page is a playful and attractive tool where users can enter their name and their crush’s name to get a fun compatibility score. It is designed with a romantic modern layout, responsive structure, smooth interactions, and entertaining result messages for social sharing and daily fun.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#crush-test" class="primary-btn">Start Test</a>
+          <a href="#examples" class="secondary-btn">View Results</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <h3>25K+</h3>
+            <p>Fun Tests Played</p>
+          </div>
+          <div class="stat-box">
+            <h3>Instant</h3>
+            <p>Name Match Result</p>
+          </div>
+          <div class="stat-box">
+            <h3>100%</h3>
+            <p>Responsive Design</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <span class="tag">Cute Love Fun Tool</span>
+        <h3>Check Your Name Match</h3>
+        <div class="preview-box">
+          Add your name and your crush’s name to get a fun love-style score with a sweet result line. Perfect for sharing with friends and enjoying a playful moment.
+        </div>
+        <div class="chips">
+          <span>Fun Result</span>
+          <span>Name Based</span>
+          <span>Share Ready</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="crush-test">
+    <div class="container">
+      <h2 class="section-title">Crush Name Test Calculator</h2>
+      <p class="section-subtitle">
+        Enter your name and your crush's name below to reveal a fun compatibility result. This tool is designed for entertainment, light-hearted romance, and interactive user engagement with a premium visual experience.
+      </p>
+
+      <div class="test-grid">
+        <div class="panel">
+          <h3>Enter the Names</h3>
+
+          <div class="input-group">
+            <label for="yourName">Your Name</label>
+            <input type="text" id="yourName" placeholder="Enter your name" />
+          </div>
+
+          <div class="input-group">
+            <label for="crushName">Crush Name</label>
+            <input type="text" id="crushName" placeholder="Enter your crush name" />
+          </div>
+
+          <div class="input-group">
+            <label for="relationMood">Result Mood</label>
+            <select id="relationMood">
+              <option value="cute">Cute & Sweet</option>
+              <option value="romantic">Romantic</option>
+              <option value="funny">Funny</option>
+              <option value="dramatic">Dramatic</option>
+            </select>
+          </div>
+
+          <div class="btn-row">
+            <button class="test-btn" onclick="calculateCrushTest()">Check Match</button>
+            <button class="reset-btn" onclick="resetCrushTest()">Reset</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Your Crush Test Result</h3>
+
+          <div class="result-top">
+            <div class="circle-wrap" id="scoreCircle">
+              <div class="circle-content">
+                <h2 id="scoreValue">0%</h2>
+                <p>Love Score</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="result-box">
+            <div class="name-line" id="nameLine">Your result names will appear here.</div>
+            <div id="resultText">Type the names and click on “Check Match” to see your fun crush compatibility result.</div>
+          </div>
+
+          <div class="result-actions">
+            <button class="copy-btn" onclick="copyCrushResult()">Copy Result</button>
+            <button class="reset-btn" onclick="showDemoResult()">Show Example</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Fun Result Types</h2>
+      <p class="section-subtitle">
+        The Crush Name Test becomes even more interesting with different result moods. Users can choose the style they like and enjoy a unique playful message according to the generated score.
+      </p>
+
+      <div class="mini-grid">
+        <div class="mini-card">
+          <div class="mini-icon">🥰</div>
+          <h4>Cute Result</h4>
+          <p>Sweet and soft result lines that feel adorable, charming, and light-hearted for crush-based fun.</p>
+          <button onclick="setMood('cute')">Use Cute</button>
+        </div>
+
+        <div class="mini-card">
+          <div class="mini-icon">❤️</div>
+          <h4>Romantic Result</h4>
+          <p>Romantic-style messages with warm words, dreamy feelings, and affectionate reactions to the match score.</p>
+          <button onclick="setMood('romantic')">Use Romantic</button>
+        </div>
+
+        <div class="mini-card">
+          <div class="mini-icon">😂</div>
+          <h4>Funny Result</h4>
+          <p>Playful and entertaining lines with a humorous touch for users who want a more casual and teasing vibe.</p>
+          <button onclick="setMood('funny')">Use Funny</button>
+        </div>
+
+        <div class="mini-card">
+          <div class="mini-icon">✨</div>
+          <h4>Dramatic Result</h4>
+          <p>A slightly dreamy and dramatic style that makes the result feel bold, fun, and extra expressive.</p>
+          <button onclick="setMood('dramatic')">Use Dramatic</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="examples-section" id="examples">
+    <div class="container">
+      <h2 class="section-title">Sample Crush Test Results</h2>
+      <p class="section-subtitle">
+        Here are some example result styles users may see after testing a name pair. These examples make the page more interactive, useful, and visually engaging.
+      </p>
+
+      <div class="example-grid">
+        <div class="example-card">
+          <span class="small-tag">82% Match</span>
+          <h4>Strong Cute Vibe</h4>
+          <p>Looks like this pair shares a very sweet and adorable connection. The score shows a lovely spark with a lot of playful energy and charming potential.</p>
+        </div>
+
+        <div class="example-card">
+          <span class="small-tag">64% Match</span>
+          <h4>Growing Connection</h4>
+          <p>This result suggests a nice and interesting vibe. There may be a slow but exciting connection that could become stronger with time and fun moments.</p>
+        </div>
+
+        <div class="example-card">
+          <span class="small-tag">91% Match</span>
+          <h4>Dreamy Romantic Spark</h4>
+          <p>That is a very high score. The names bring out a dreamy, romantic, and magical pairing vibe that feels full of chemistry and sweet possibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Why Users Enjoy This Tool</h2>
+      <p class="section-subtitle">
+        This page is designed to entertain users while also giving your website an attractive, content-rich, responsive, and engagement-focused tool experience.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-box">
+          <h4>Fun Interactive Tool</h4>
+          <p>Users can quickly test names and instantly receive a stylish compatibility score with a fun message.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>Attractive Love UI</h4>
+          <p>The page includes a premium layout, animated-style circular score meter, and a romantic visual theme.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>Mobile Responsive Design</h4>
+          <p>The complete page adapts nicely on different screen sizes for smooth user engagement everywhere.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>SEO-Friendly Structure</h4>
+          <p>Helpful headings, readable content, tool-focused text, and internal sections support stronger page value.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Love<span>Tool</span></h2>
+          <p>
+            LoveTool offers playful, romantic, and useful digital tools including love meters, crush tests, message generators, relationship guidance pages, wishes, and many interactive lifestyle experiences.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Useful Links</h4>
+          <a href="index.html">Home</a>
+          <a href="all-tools.html">All Tools</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>Popular Pages</h4>
+          <a href="love-meter.html">Love Meter</a>
+          <a href="birthday-wishes.html">Birthday Wishes</a>
+          <a href="relationship-guidance.html">Relationship Guidance</a>
+          <a href="romantic-msg-generate.html">Romantic Messages</a>
+          <a href="crush-name-test.html">Crush Name Test</a>
+        </div>
+
+        <div class="footer-news footer-social">
+          <h4>Stay Connected</h4>
+          <p>Get updates on fun love tools, romantic pages, wish generators, and new interactive experiences.</p>
+          <form>
+            <input type="email" placeholder="Enter your email" />
+            <button type="button">Subscribe Now</button>
+          </form>
+          <div class="social-icons">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 LoveTool.in | Crafted for fun, romance, responsive design, and engaging digital experiences.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function generateScore(name1, name2){
+      let combined = (name1 + name2).toLowerCase().replace(/\s/g, "");
+      let total = 0;
+      for(let i = 0; i < combined.length; i++){
+        total += combined.charCodeAt(i);
+      }
+      return (total % 51) + 50; 
+    }
+
+    function getResultMessage(score, mood){
+      if(mood === "cute"){
+        if(score >= 90) return "This is an ultra-sweet crush match. Your names look absolutely adorable together and give a lovely vibe full of excitement and charm.";
+        if(score >= 75) return "This looks like a very cute connection. There is a sweet spark here that feels fun, soft, and full of happy energy.";
+        if(score >= 60) return "A nice little crush vibe is visible here. The connection feels playful and interesting with a lot of room for fun moments.";
+        return "Every crush story starts somewhere. This score says keep smiling, enjoy the fun, and let the vibe grow naturally.";
+      }
+
+      if(mood === "romantic"){
+        if(score >= 90) return "A dreamy romantic score like this suggests a beautiful spark. The pairing feels full of chemistry, attraction, and soft emotional magic.";
+        if(score >= 75) return "This match shows a warm romantic possibility. There is a lovely balance of affection, sweetness, and emotional pull.";
+        if(score >= 60) return "There is definitely a gentle romantic signal here. The names carry a light but attractive connection.";
+        return "Not every love story begins with fireworks. Sometimes the most beautiful feelings grow slowly and unexpectedly.";
+      }
+
+      if(mood === "funny"){
+        if(score >= 90) return "Warning: this crush score is dangerously high. At this level, smiling too much and overthinking every text message is fully possible.";
+        if(score >= 75) return "This result is pretty strong. Your names might be out here creating secret movie-style chemistry already.";
+        if(score >= 60) return "This is a fun score. Not bad at all — enough to make your friends tease you for sure.";
+        return "This score says: relax, have fun, and maybe don’t plan the wedding just yet.";
+      }
+
+      if(mood === "dramatic"){
+        if(score >= 90) return "The universe seems to be whispering something dramatic and beautiful about this name pair. This score feels bold, dreamy, and full of sparkling tension.";
+        if(score >= 75) return "A meaningful pull is visible in this result. The connection carries a romantic mystery with a bright emotional glow.";
+        if(score >= 60) return "There is a rising spark in this pairing. It may be gentle now, but the energy feels expressive and promising.";
+        return "Even the quietest stories can turn unforgettable. This result suggests patience, curiosity, and a little bit of hope.";
+      }
+
+      return "This is a fun crush result with a positive and playful connection.";
+    }
+
+    function calculateCrushTest(){
+      const yourName = document.getElementById("yourName").value.trim();
+      const crushName = document.getElementById("crushName").value.trim();
+      const mood = document.getElementById("relationMood").value;
+
+      if(yourName === "" || crushName === ""){
+        alert("Please enter both names first.");
+        return;
+      }
+
+      const score = generateScore(yourName, crushName);
+      const message = getResultMessage(score, mood);
+
+      document.getElementById("scoreValue").innerText = score + "%";
+      document.getElementById("nameLine").innerText = yourName + " ❤️ " + crushName;
+      document.getElementById("resultText").innerText = message;
+
+      const deg = (score / 100) * 360;
+      document.getElementById("scoreCircle").style.background =
+        `conic-gradient(#ff4d8d ${deg}deg, #ffd7e8 ${deg}deg)`;
+    }
+
+    function resetCrushTest(){
+      document.getElementById("yourName").value = "";
+      document.getElementById("crushName").value = "";
+      document.getElementById("relationMood").value = "cute";
+      document.getElementById("scoreValue").innerText = "0%";
+      document.getElementById("nameLine").innerText = "Your result names will appear here.";
+      document.getElementById("resultText").innerText = "Type the names and click on “Check Match” to see your fun crush compatibility result.";
+      document.getElementById("scoreCircle").style.background =
+        "conic-gradient(#ff4d8d 0deg, #ffd7e8 0deg)";
+    }
+
+    function copyCrushResult(){
+      const nameLine = document.getElementById("nameLine").innerText;
+      const score = document.getElementById("scoreValue").innerText;
+      const resultText = document.getElementById("resultText").innerText;
+      const finalText = nameLine + " - " + score + "\n" + resultText;
+
+      navigator.clipboard.writeText(finalText).then(() => {
+        alert("Crush test result copied successfully!");
+      });
+    }
+
+    function showDemoResult(){
+      const score = 88;
+      document.getElementById("scoreValue").innerText = score + "%";
+      document.getElementById("nameLine").innerText = "Aarav ❤️ Anaya";
+      document.getElementById("resultText").innerText = "This looks like a very cute connection. There is a sweet spark here that feels fun, soft, and full of happy energy.";
+      const deg = (score / 100) * 360;
+      document.getElementById("scoreCircle").style.background =
+        `conic-gradient(#ff4d8d ${deg}deg, #ffd7e8 ${deg}deg)`;
+    }
+
+    function setMood(mood){
+      document.getElementById("relationMood").value = mood;
+      document.getElementById("crush-test").scrollIntoView({behavior:"smooth"});
+    }
+  </script>
+
+</body>
+</html>

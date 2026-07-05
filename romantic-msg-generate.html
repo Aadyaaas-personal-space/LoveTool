@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Romantic Message Generator | Sweet, Cute, Deep & Love Messages</title>
+  <meta name="description" content="Generate beautiful romantic messages instantly. Create cute, emotional, deep, flirty, and heartfelt love messages for your partner with a modern responsive UI." />
+  <meta name="keywords" content="romantic message generator, love messages, sweet message, romantic text, cute love message, flirty message, emotional love lines" />
+  <meta name="author" content="LoveTool" />
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,#fff8fb 0%, #fefcff 38%, #f7fbff 100%);
+      color:#1f2937;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1240px;
+      margin:auto;
+    }
+
+    .navbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,0.06);
+    }
+
+    .nav-wrap{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 0;
+      gap:18px;
+    }
+
+    .logo{
+      font-size:1.85rem;
+      font-weight:800;
+      color:#ff4d8d;
+    }
+
+    .logo span{
+      color:#7c5cff;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:22px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
+      font-weight:600;
+      color:#374151;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#ff4d8d;
+    }
+
+    .nav-btn{
+      background:linear-gradient(135deg,#ff4d8d,#7c5cff);
+      color:#fff !important;
+      padding:11px 18px;
+      border-radius:999px;
+      box-shadow:0 12px 24px rgba(255,77,141,0.18);
+    }
+
+    .hero{
+      padding:72px 0 48px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before,
+    .hero::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      filter:blur(42px);
+      z-index:0;
+    }
+
+    .hero::before{
+      width:280px;
+      height:280px;
+      left:-80px;
+      top:-35px;
+      background:rgba(255,77,141,0.17);
+    }
+
+    .hero::after{
+      width:330px;
+      height:330px;
+      right:-100px;
+      top:20px;
+      background:rgba(124,92,255,0.13);
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.08fr 0.92fr;
+      gap:32px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:3rem;
+      line-height:1.14;
+      margin-bottom:18px;
+      color:#111827;
+    }
+
+    .hero-text h1 span{
+      color:#ff4d8d;
+    }
+
+    .hero-text p{
+      font-size:1.04rem;
+      color:#4b5563;
+      line-height:1.9;
+      margin-bottom:25px;
+      max-width:670px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:26px;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+      padding:13px 22px;
+      border-radius:999px;
+      font-weight:700;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .primary-btn{
+      background:linear-gradient(135deg,#ff4d8d,#7c5cff);
+      color:#fff;
+      box-shadow:0 14px 28px rgba(255,77,141,0.2);
+    }
+
+    .secondary-btn{
+      background:#fff;
+      border:2px solid #e5e7eb;
+      color:#374151;
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover,
+    .gen-btn:hover,
+    .template-card button:hover{
+      transform:translateY(-2px);
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .stat-box{
+      background:rgba(255,255,255,0.85);
+      border:1px solid rgba(0,0,0,0.05);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 10px 28px rgba(0,0,0,0.05);
+      text-align:center;
+    }
+
+    .stat-box h3{
+      font-size:1.48rem;
+      margin-bottom:6px;
+      color:#111827;
+    }
+
+    .stat-box p{
+      color:#6b7280;
+      font-size:0.95rem;
+    }
+
+    .hero-card{
+      background:linear-gradient(160deg,#ffffff,#fff2f8);
+      border:1px solid rgba(255,77,141,0.12);
+      border-radius:28px;
+      padding:28px;
+      box-shadow:0 20px 45px rgba(0,0,0,0.08);
+    }
+
+    .hero-card .tag{
+      display:inline-block;
+      background:#ffe6f1;
+      color:#d62f72;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:0.84rem;
+      font-weight:700;
+      margin-bottom:15px;
+    }
+
+    .hero-card h3{
+      font-size:1.48rem;
+      margin-bottom:14px;
+      color:#111827;
+    }
+
+    .message-preview{
+      background:#fff;
+      border-left:5px solid #ff4d8d;
+      border-radius:16px;
+      padding:18px;
+      color:#4b5563;
+      line-height:1.88;
+      box-shadow:inset 0 0 0 1px rgba(0,0,0,0.04);
+    }
+
+    .chips{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+
+    .chips span{
+      background:#f4efff;
+      color:#624bdb;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:0.83rem;
+      font-weight:700;
+    }
+
+    section{
+      padding:40px 0 72px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.2rem;
+      color:#111827;
+      margin-bottom:14px;
+    }
+
+    .section-subtitle{
+      max-width:850px;
+      margin:0 auto 34px;
+      text-align:center;
+      color:#6b7280;
+      line-height:1.85;
+      font-size:1rem;
+    }
+
+    .generator-grid{
+      display:grid;
+      grid-template-columns:0.95fr 1.05fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .panel{
+      background:#fff;
+      border-radius:24px;
+      padding:28px;
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow:0 14px 35px rgba(0,0,0,0.06);
+    }
+
+    .panel h3{
+      font-size:1.42rem;
+      margin-bottom:20px;
+      color:#111827;
+    }
+
+    .input-group{
+      margin-bottom:18px;
+    }
+
+    .input-group label{
+      display:block;
+      margin-bottom:8px;
+      font-weight:700;
+      color:#374151;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea{
+      width:100%;
+      padding:14px 15px;
+      border-radius:14px;
+      border:1px solid #e5e7eb;
+      outline:none;
+      background:#fcfcff;
+      font-size:0.98rem;
+      transition:0.3s;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus,
+    .input-group textarea:focus{
+      border-color:#ff4d8d;
+      box-shadow:0 0 0 4px rgba(255,77,141,0.08);
+    }
+
+    .btn-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .gen-btn,
+    .reset-btn,
+    .copy-btn{
+      border:none;
+      cursor:pointer;
+      padding:13px 18px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:0.96rem;
+      transition:0.3s;
+    }
+
+    .gen-btn{
+      background:linear-gradient(135deg,#ff4d8d,#7c5cff);
+      color:#fff;
+      flex:1;
+    }
+
+    .reset-btn{
+      background:#f3f4f6;
+      color:#374151;
+    }
+
+    .copy-btn{
+      background:#111827;
+      color:#fff;
+    }
+
+    .output-box{
+      min-height:280px;
+      background:linear-gradient(180deg,#fff7fb,#ffffff);
+      border:1px dashed #ffc2d9;
+      border-radius:18px;
+      padding:22px;
+      line-height:1.95;
+      color:#4b5563;
+      font-size:1rem;
+      margin-bottom:18px;
+      white-space:pre-line;
+    }
+
+    .style-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    .style-card{
+      background:#fff;
+      border-radius:22px;
+      padding:24px;
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow:0 14px 30px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .style-card:hover,
+    .template-card:hover,
+    .feature-box:hover{
+      transform:translateY(-6px);
+    }
+
+    .style-icon{
+      width:58px;
+      height:58px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      font-size:1.45rem;
+      margin-bottom:16px;
+      background:linear-gradient(135deg,#ffe7f1,#efe7ff);
+    }
+
+    .style-card h4{
+      font-size:1.14rem;
+      color:#111827;
+      margin-bottom:10px;
+    }
+
+    .style-card p{
+      color:#6b7280;
+      line-height:1.75;
+      font-size:0.96rem;
+      margin-bottom:14px;
+    }
+
+    .style-card button{
+      border:none;
+      background:#fff1f7;
+      color:#d12c6f;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .template-section{
+      background:linear-gradient(180deg,#ffffff,#f9f7ff);
+      border-top:1px solid rgba(0,0,0,0.04);
+      border-bottom:1px solid rgba(0,0,0,0.04);
+    }
+
+    .template-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .template-card{
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:0 14px 30px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .template-card .small-tag{
+      display:inline-block;
+      padding:7px 12px;
+      border-radius:999px;
+      background:#fce9f2;
+      color:#d62d72;
+      font-size:0.8rem;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+
+    .template-card h4{
+      font-size:1.08rem;
+      color:#111827;
+      margin-bottom:10px;
+    }
+
+    .template-card p{
+      color:#6b7280;
+      line-height:1.85;
+      font-size:0.96rem;
+      min-height:122px;
+    }
+
+    .template-card button{
+      margin-top:16px;
+      border:none;
+      padding:10px 15px;
+      border-radius:999px;
+      cursor:pointer;
+      background:linear-gradient(135deg,#ff4d8d,#7c5cff);
+      color:#fff;
+      font-weight:700;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    .feature-box{
+      background:#fff;
+      border-radius:22px;
+      padding:24px;
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow:0 14px 30px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .feature-box h4{
+      font-size:1.08rem;
+      color:#111827;
+      margin-bottom:10px;
+    }
+
+    .feature-box p{
+      color:#6b7280;
+      line-height:1.76;
+      font-size:0.96rem;
+    }
+
+    footer{
+      background:#05060a;
+      color:#d1d5db;
+      padding:70px 0 24px;
+      margin-top:30px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.3fr 1fr 1fr 1fr;
+      gap:30px;
+      margin-bottom:34px;
+    }
+
+    .footer-brand h2{
+      color:#fff;
+      font-size:2rem;
+      margin-bottom:12px;
+    }
+
+    .footer-brand h2 span{
+      color:#ff4d8d;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .footer-news p{
+      color:#9ca3af;
+      line-height:1.8;
+      font-size:0.96rem;
+    }
+
+    .footer-links h4,
+    .footer-news h4,
+    .footer-social h4{
+      color:#fff;
+      margin-bottom:14px;
+      font-size:1.08rem;
+    }
+
+    .footer-links a{
+      display:block;
+      margin-bottom:10px;
+      transition:0.3s;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+      padding-left:5px;
+    }
+
+    .footer-news form{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .footer-news input{
+      padding:12px 14px;
+      border-radius:12px;
+      border:1px solid #1f2937;
+      background:#111827;
+      color:#fff;
+      outline:none;
+    }
+
+    .footer-news button{
+      padding:12px 14px;
+      border:none;
+      border-radius:999px;
+      background:linear-gradient(135deg,#ff4d8d,#7c5cff);
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .social-icons{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .social-icons a{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#111827;
+      color:#e5e7eb;
+      font-size:0.92rem;
+      transition:0.3s;
+    }
+
+    .social-icons a:hover{
+      background:#1f2937;
+      transform:translateY(-2px);
+    }
+
+    .footer-bottom{
+      border-top:1px solid #1f2937;
+      padding-top:18px;
+      text-align:center;
+      font-size:0.92rem;
+      color:#9ca3af;
+    }
+
+    @media (max-width:1100px){
+      .hero-grid,
+      .generator-grid,
+      .style-grid,
+      .template-grid,
+      .feature-grid,
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .hero-text h1{
+        font-size:2.45rem;
+      }
+    }
+
+    @media (max-width:768px){
+      .nav-wrap{
+        flex-direction:column;
+      }
+
+      .nav-links{
+        justify-content:center;
+      }
+
+      .hero-grid,
+      .generator-grid,
+      .style-grid,
+      .template-grid,
+      .feature-grid,
+      .footer-grid,
+      .hero-stats{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding-top:50px;
+      }
+
+      .hero-text h1{
+        font-size:2.05rem;
+      }
+
+      .section-title{
+        font-size:1.8rem;
+      }
+
+      .panel,
+      .hero-card{
+        padding:20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-wrap">
+      <div class="logo">Love<span>Tool</span></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="all-tools.html">All Tools</a>
+        <a href="love-meter.html">Love Meter</a>
+        <a href="relationship-guidance.html">Relationship Guidance</a>
+        <a href="birthday-wishes.html">Birthday Wishes</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Create Beautiful <span>Romantic Messages</span> in Seconds</h1>
+        <p>
+          This romantic message generator helps users instantly create sweet, emotional, cute, flirty, and deep love messages for someone special. It is perfect for WhatsApp chats, good morning texts, anniversary notes, late-night love messages, Instagram captions, and heartfelt words that make your partner smile.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#romantic-generator" class="primary-btn">Generate Message</a>
+          <a href="#templates" class="secondary-btn">View Templates</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <h3>50+</h3>
+            <p>Romantic Templates</p>
+          </div>
+          <div class="stat-box">
+            <h3>5</h3>
+            <p>Love Styles</p>
+          </div>
+          <div class="stat-box">
+            <h3>100%</h3>
+            <p>Mobile Friendly</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <span class="tag">Featured Love Message</span>
+        <h3>Soft & Heartfelt</h3>
+        <div class="message-preview">
+          Every time I think about you, my heart feels calm and happy. You bring warmth, peace, and love into my life in the most beautiful way. I am truly lucky to have you.
+        </div>
+        <div class="chips">
+          <span>Cute</span>
+          <span>Heartfelt</span>
+          <span>Copy Ready</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="romantic-generator">
+    <div class="container">
+      <h2 class="section-title">Romantic Message Generator</h2>
+      <p class="section-subtitle">
+        Enter your partner’s name, select your message style, and generate a personalized love message instantly. This page is ideal for users who want sweet words but do not know how to express them perfectly.
+      </p>
+
+      <div class="generator-grid">
+        <div class="panel">
+          <h3>Create Your Love Message</h3>
+
+          <div class="input-group">
+            <label for="partnerName">Partner Name</label>
+            <input type="text" id="partnerName" placeholder="Enter name, e.g. Priya" />
+          </div>
+
+          <div class="input-group">
+            <label for="messageType">Message Type</label>
+            <select id="messageType">
+              <option value="cute">Cute</option>
+              <option value="deep">Deep Love</option>
+              <option value="flirty">Flirty</option>
+              <option value="heartfelt">Heartfelt</option>
+              <option value="goodnight">Good Night Love Message</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="moodType">Mood</label>
+            <select id="moodType">
+              <option value="soft">Soft & Gentle</option>
+              <option value="passionate">Passionate</option>
+              <option value="sweet">Sweet</option>
+              <option value="emotional">Emotional</option>
+              <option value="playful">Playful</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="customLine">Extra Personal Line</label>
+            <textarea id="customLine" rows="5" placeholder="Add a memory, compliment, or a special line for your partner..."></textarea>
+          </div>
+
+          <div class="btn-row">
+            <button class="gen-btn" onclick="generateRomanticMsg()">Generate Message</button>
+            <button class="reset-btn" onclick="resetRomanticMsg()">Reset</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Your Romantic Message</h3>
+          <div class="output-box" id="romanticOutput">
+            Your romantic message will appear here. Fill in the details and click on “Generate Message”.
+          </div>
+          <button class="copy-btn" onclick="copyRomanticMsg()">Copy Message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Choose Your Romantic Style</h2>
+      <p class="section-subtitle">
+        Every relationship has a different emotional language. Some couples enjoy sweet messages, while others prefer emotional depth, playful flirting, or soft affectionate lines. Choose the style that suits your love best.
+      </p>
+
+      <div class="style-grid">
+        <div class="style-card">
+          <div class="style-icon">🥰</div>
+          <h4>Cute Messages</h4>
+          <p>Sweet and simple messages that make your partner smile and feel special in the most adorable way.</p>
+          <button onclick="setMessageType('cute')">Use This Style</button>
+        </div>
+
+        <div class="style-card">
+          <div class="style-icon">❤️</div>
+          <h4>Deep Love Messages</h4>
+          <p>Meaningful lines for expressing emotional depth, commitment, admiration, and heartfelt love.</p>
+          <button onclick="setMessageType('deep')">Use This Style</button>
+        </div>
+
+        <div class="style-card">
+          <div class="style-icon">😉</div>
+          <h4>Flirty Messages</h4>
+          <p>Playful and charming love messages that are light, romantic, teasing, and fun to send.</p>
+          <button onclick="setMessageType('flirty')">Use This Style</button>
+        </div>
+
+        <div class="style-card">
+          <div class="style-icon">🌙</div>
+          <h4>Good Night Love</h4>
+          <p>Beautiful late-night romantic texts that bring warmth, comfort, and affection before sleep.</p>
+          <button onclick="setMessageType('goodnight')">Use This Style</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="template-section" id="templates">
+    <div class="container">
+      <h2 class="section-title">Ready-to-Use Romantic Templates</h2>
+      <p class="section-subtitle">
+        These sample love messages are crafted for instant use. Users can copy them directly for daily chats, romantic captions, love notes, special occasions, or sweet reminders of affection.
+      </p>
+
+      <div class="template-grid">
+        <div class="template-card">
+          <span class="small-tag">Cute</span>
+          <h4>Sweet Daily Message</h4>
+          <p id="temp1">You are one of the sweetest parts of my life, and every day feels better because of you. Just thinking about you brings a smile to my face.</p>
+          <button onclick="copyTemplate('temp1')">Copy Message</button>
+        </div>
+
+        <div class="template-card">
+          <span class="small-tag">Deep Love</span>
+          <h4>Heartfelt Love Note</h4>
+          <p id="temp2">Loving you feels like the most natural and beautiful thing in my life. Your presence brings peace to my heart and meaning to my world.</p>
+          <button onclick="copyTemplate('temp2')">Copy Message</button>
+        </div>
+
+        <div class="template-card">
+          <span class="small-tag">Flirty</span>
+          <h4>Playful Romantic Text</h4>
+          <p id="temp3">I don’t know what kind of magic you have, but every time I talk to you, my mood gets better and my heart starts smiling.</p>
+          <button onclick="copyTemplate('temp3')">Copy Message</button>
+        </div>
+
+        <div class="template-card">
+          <span class="small-tag">Heartfelt</span>
+          <h4>Emotional Message</h4>
+          <p id="temp4">No matter how busy life gets, my heart always finds its way back to you. You are my comfort, my happiness, and my favorite feeling.</p>
+          <button onclick="copyTemplate('temp4')">Copy Message</button>
+        </div>
+
+        <div class="template-card">
+          <span class="small-tag">Good Night</span>
+          <h4>Night Love Message</h4>
+          <p id="temp5">Good night, my love. May your dreams be peaceful and beautiful, just like the happiness you bring into my life every single day.</p>
+          <button onclick="copyTemplate('temp5')">Copy Message</button>
+        </div>
+
+        <div class="template-card">
+          <span class="small-tag">Soft Romance</span>
+          <h4>Gentle Love Line</h4>
+          <p id="temp6">There is something so calm and beautiful about loving you. You make my heart feel safe, warm, and quietly happy.</p>
+          <button onclick="copyTemplate('temp6')">Copy Message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Why Users Love This Romantic Message Tool</h2>
+      <p class="section-subtitle">
+        This page is made to be simple, elegant, and useful. It gives users a quick way to create warm and beautiful messages while maintaining a premium look and smooth responsive experience.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-box">
+          <h4>Fast Message Creation</h4>
+          <p>Generate love messages quickly without needing to think too much about the right words.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>Multiple Romantic Styles</h4>
+          <p>Users can choose cute, deep, heartfelt, flirty, and good-night message formats based on mood.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>Modern Responsive UI</h4>
+          <p>The page layout looks attractive and organized across desktop, tablet, and smartphone screens.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>SEO-Rich Content</h4>
+          <p>Strong headings, useful sections, readable descriptions, and keyword-rich structure support good search visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Love<span>Tool</span></h2>
+          <p>
+            LoveTool offers modern, interactive, and beautifully designed tools for love messages, romantic guidance, daily wishes, captions, calculators, and user-friendly digital experiences.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Useful Links</h4>
+          <a href="index.html">Home</a>
+          <a href="all-tools.html">All Tools</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>Popular Pages</h4>
+          <a href="love-meter.html">Love Meter</a>
+          <a href="birthday-wishes.html">Birthday Wishes</a>
+          <a href="relationship-guidance.html">Relationship Guidance</a>
+          <a href="caption-generator.html">Caption Generator</a>
+          <a href="romantic-msg-generate.html">Romantic Messages</a>
+        </div>
+
+        <div class="footer-news footer-social">
+          <h4>Stay Connected</h4>
+          <p>Receive updates on new romantic tools, daily love content, wishes, and digital lifestyle pages.</p>
+          <form>
+            <input type="email" placeholder="Enter your email" />
+            <button type="button">Subscribe Now</button>
+          </form>
+          <div class="social-icons">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 LoveTool.in | Crafted for love, expression, responsive design, and beautiful user experience.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function generateRomanticMsg(){
+      const name = document.getElementById("partnerName").value.trim() || "my love";
+      const messageType = document.getElementById("messageType").value;
+      const moodType = document.getElementById("moodType").value;
+      const customLine = document.getElementById("customLine").value.trim();
+      const output = document.getElementById("romanticOutput");
+
+      let message = "";
+
+      if(messageType === "cute"){
+        message = `${name}, you make my days brighter and my heart softer in the sweetest way. Every little moment with you feels extra special, and I cannot help smiling whenever I think about you.`;
+      } else if(messageType === "deep"){
+        message = `${name}, loving you has changed my heart in the most beautiful way. You bring meaning, comfort, and emotional peace into my life, and I truly feel lucky to walk through life with someone as special as you.`;
+      } else if(messageType === "flirty"){
+        message = `${name}, I think you should be blamed for one thing — making my heart skip a beat every single time you cross my mind. You are cute, charming, and way too hard to stop thinking about.`;
+      } else if(messageType === "heartfelt"){
+        message = `${name}, no matter how many words I use, they never feel enough to explain how much you mean to me. You are my peace, my joy, and one of the most precious parts of my life.`;
+      } else if(messageType === "goodnight"){
+        message = `Good night, ${name}. As the day ends, I just want you to know that you are one of the most beautiful thoughts in my heart. Sleep peacefully and wake up with the same lovely smile I adore so much.`;
+      }
+
+      let moodLine = "";
+      if(moodType === "soft"){
+        moodLine = " Being with you feels calm, gentle, and beautifully safe.";
+      } else if(moodType === "passionate"){
+        moodLine = " My heart feels deeply drawn to you in a way that words can barely explain.";
+      } else if(moodType === "sweet"){
+        moodLine = " You make even ordinary moments feel warm and wonderful.";
+      } else if(moodType === "emotional"){
+        moodLine = " Your presence touches my heart more deeply than you may ever know.";
+      } else if(moodType === "playful"){
+        moodLine = " You have this cute habit of making my heart smile without even trying.";
+      }
+
+      let extra = customLine ? " " + customLine : "";
+
+      output.innerText = message + moodLine + extra;
+    }
+
+    function resetRomanticMsg(){
+      document.getElementById("partnerName").value = "";
+      document.getElementById("messageType").value = "cute";
+      document.getElementById("moodType").value = "soft";
+      document.getElementById("customLine").value = "";
+      document.getElementById("romanticOutput").innerText = "Your romantic message will appear here. Fill in the details and click on “Generate Message”.";
+    }
+
+    function copyRomanticMsg(){
+      const text = document.getElementById("romanticOutput").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Romantic message copied successfully!");
+      });
+    }
+
+    function copyTemplate(id){
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Message copied successfully!");
+      });
+    }
+
+    function setMessageType(type){
+      document.getElementById("messageType").value = type;
+      document.getElementById("romantic-generator").scrollIntoView({behavior:"smooth"});
+    }
+  </script>
+
+</body>
+</html>
